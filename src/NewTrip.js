@@ -6,8 +6,11 @@ class NewTrip extends React.Component {
         super()
         this.state = {
           guestCount: 0,
-          date: new Date()
-        }
+          date: new Date(),
+          destination: '',
+          // value: ''
+        };
+        this.handleChange = this.handleChange.bind(this);
     }
     addGuest = (e) => {
       e.preventDefault()  
@@ -24,16 +27,26 @@ class NewTrip extends React.Component {
     onChange = (date) => {
       this.setState({ date })
     }
-    onSubmit() {
 
+    handleChange(e) {
+      this.setState({destination: e.target.value});
     }
+
+    onSubmit(e) {
+      e.preventDefault()
+
+      // handle submit stuff here...
+      console.log("Hi Step")
+      console.log(this.state)
+    }
+
     render() {
         return (
            <div>
                 Plan A New Trip 
                 <form>
                     Where are you going?
-                    <input placeholder="destination"/>
+                    <input placeholder="destination" value={this.state.destination} onChange={this.handleChange}/>
                     <br />
 
                     When are you planning on going?
@@ -57,7 +70,9 @@ class NewTrip extends React.Component {
                     <input placeholder="" />
                     <br /> */}
                 </form>
-                <input type="submit" onClick={this.onSubmit} />
+                <input type="submit" onClick={(e) => {
+                  this.onSubmit(e)
+                }} />
            </div> 
         )
     }
