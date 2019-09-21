@@ -1,9 +1,12 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
-import Existing from './Existing'
-import Home from './Home'
+import Dashboard from './Dashboard'
 import Destination from './Destination'
+import Existing from './Existing'
+import Guests from './Guests'
+import Home from './Home'
+import TravelDates from './TravelDates'
 
 class App extends React.Component {
   render() {
@@ -13,6 +16,7 @@ class App extends React.Component {
           <Route path="/" exact component={Home} />
           <Route path="/destination" component={Destination} />
           <Route path="/existing" component={Existing} />
+          <Route path="/travel-dates" component={TravelDates} />
         </Router>
       </div>
     )
