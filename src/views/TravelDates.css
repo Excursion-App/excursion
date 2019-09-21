@@ -1,10 +1,6 @@
-.destination {
+.travel-dates {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.idk-what-to-call-this-sorry {
-  margin: 25px;
 }

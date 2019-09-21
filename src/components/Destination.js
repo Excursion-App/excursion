@@ -8,11 +8,16 @@ class NewTrip extends React.Component {
       <div class="destination">
         <h1> Where are you going? </h1>
         <div>
-          popular destinations
+          <span> img of paris </span>
+          <span> img of hawaii </span>
+          <span> img of sydney </span>
         </div>
-        <div>
-          From--- To --
+        <div class="idk-what-to-call-this-sorry">
+          From: <input type="text"/> To: <input type="text"/>
         </div>
+        <button>
+          <a href="/travel-dates"> Next </a>  
+        </button>
       </div>
     )
   }
