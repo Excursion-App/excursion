@@ -6,6 +6,7 @@ class TravelDates extends React.Component {
         return (
             <div class="travel-dates">
                 <h1> Travels Dates </h1>
+                <h3> When are you planning on going?</h3>
                 <button>  
                     <a href="/guests"> Next </a> 
                 </button>

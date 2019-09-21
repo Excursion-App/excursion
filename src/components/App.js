@@ -15,7 +15,9 @@ class App extends React.Component {
         <Router>
           <Route path="/" exact component={Home} />
           <Route path="/destination" component={Destination} />
+          <Route path="/dashboard" component={Dashboard} />
           <Route path="/existing" component={Existing} />
+          <Route path="/guests" component={Guests} />
           <Route path="/travel-dates" component={TravelDates} />
         </Router>
       </div>
