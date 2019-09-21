@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import  './Home.css';
 
 class Home extends React.Component {
     render() {
@@ -9,9 +10,6 @@ class Home extends React.Component {
                 <button>  
                     <a href="/new-trip"> Plan A New Trip </a> 
                 </button>
-                {/* <button>
-                    <a href="/existing"> Edit An Exisiting Trip </a>
-                </button> */}
             </div>
         )
     }
