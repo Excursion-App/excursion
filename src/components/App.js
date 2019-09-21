@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import Existing from './Existing'
 import Home from './Home'
-import NewTrip from './NewTrip'
+import Destination from './Destination'
 
 class App extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class App extends React.Component {
       <div>
         <Router>
           <Route path="/" exact component={Home} />
-          <Route path="/new-trip" component={NewTrip} />
+          <Route path="/destination" component={Destination} />
           <Route path="/existing" component={Existing} />
         </Router>
       </div>
