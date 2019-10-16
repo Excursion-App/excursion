@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../views/Dashboard.css';
 
-class Dashboard extends React.Component {
+class Dashboard extends Component {
     render() {
         return (
             <div class="dashboard">

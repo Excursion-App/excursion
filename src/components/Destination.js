@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../views/Destination.css';
 // import Calendar from 'react-calendar';
 
-class NewTrip extends React.Component {
+class NewTrip extends Component {
   render() {
     return (
       <div class="destination">

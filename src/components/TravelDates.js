@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import  '../views/TravelDates.css';
 
-class TravelDates extends React.Component {
+class TravelDates extends Component {
     render() {
         return (
             <div class="travel-dates">

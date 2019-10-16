@@ -1,5 +1,5 @@
-import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Dashboard from './Dashboard'
 import Destination from './Destination'
@@ -8,7 +8,7 @@ import Guests from './Guests'
 import Home from './Home'
 import TravelDates from './TravelDates'
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div>
