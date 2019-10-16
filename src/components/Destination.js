@@ -15,9 +15,16 @@ class NewTrip extends React.Component {
         <div class="idk-what-to-call-this-sorry">
           From: <input type="text"/> To: <input type="text"/>
         </div>
-        <button>
-          <a href="/travel-dates"> Next </a>  
-        </button>
+        <div>
+          <button>
+            <a href="/"> Back </a>  
+          </button>
+          
+          <button>
+            <a href="/travel-dates"> Next </a>  
+          </button>
+        </div>
+        
       </div>
     )
   }
