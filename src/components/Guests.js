@@ -6,9 +6,15 @@ class Guests extends React.Component {
     return (
       <div class="guests">
         <h1> Who all coming? </h1>
-        <button>
-          <a href="/dashboard"> Done </a> 
-        </button>
+        
+        <div>
+          <button>
+            <a href="/travel-dates"> Back </a> 
+          </button>
+          <button>
+            <a href="/dashboard"> Done </a> 
+          </button>
+        </div>
       </div>
     )
   }
