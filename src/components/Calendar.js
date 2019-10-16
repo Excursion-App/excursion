@@ -3,7 +3,7 @@ import moment from 'moment';
 // import tail.Datetime from 'tail.Datetime';
 
 class Calendar extends React.Component {
-  weekdayshort = moment.weekdaysShort();
+  // weekdayshort = moment.weekdaysShort();
   render() {
     let weekdayshortname = this.weekdayshort.map(day => {
       return (
