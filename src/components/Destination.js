@@ -12,9 +12,10 @@ class NewTrip extends React.Component {
           <span> img of hawaii </span>
           <span> img of sydney </span>
         </div>
-        <div class="idk-what-to-call-this-sorry">
+        <div class="destination">
           From: <input type="text"/> To: <input type="text"/>
         </div>
+
         <div>
           <button>
             <a href="/"> Back </a>  
