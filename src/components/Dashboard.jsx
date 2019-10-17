@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../views/Dashboard.css';
 
-class Dashboard extends Component {
-    render() {
-        return (
-            <div class="dashboard">
-                <h1> Dashboard </h1>
-                <div>
-                <button>
-                    <a href="/guests"> Back </a>
-                </button>
-                </div>
-                <p> This is where things will go. </p>
-            </div>
-        )
-    }
-}
+const Dashboard = () => (
+  <div className="dashboard">
+    <h1> Dashboard </h1>
+    <div>
+      <button type="button">
+        <a href="/guests"> Back </a>
+      </button>
+    </div>
+    <p> This is where things will go. </p>
+  </div>
+);
 
-export default Dashboard
+export default Dashboard;

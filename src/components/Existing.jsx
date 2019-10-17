@@ -1,13 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-class Existing extends Component {
-  render() {
-    return (
-      <div>
-        This feature has not been built out yet. Sorry.
-      </div>
-    )
-  }
-}
+const Existing = () => (
+  <div>
+    This feature has not been built out yet.
+  </div>
+);
 
-export default Existing
+
+export default Existing;
