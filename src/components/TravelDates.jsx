@@ -14,7 +14,10 @@ class TravelDates extends Component {
                 <h1> Travels Dates </h1>
                 <h3> When are you planning on going?</h3>
 
-                <div>
+                <Calendar 
+                    onChange={this.onChage}
+                    value={this.state.date}
+                />
 
                
                 <button type="button">
@@ -25,7 +28,6 @@ class TravelDates extends Component {
                     <a href="/guests"> Next </a>  
                 </button>
 
-                </div>
             </div>
         )
     }
