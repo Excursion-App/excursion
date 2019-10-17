@@ -1,6 +1,7 @@
 .navbar {
   height: 60px;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 10px #13232f4d;
 }
 .brand{
   height: 50px;
@@ -16,6 +17,8 @@
   padding: 0;
   margin-right: 30px;
   color: rgb(51, 51, 51);
+  text-decoration: none;
+  color:rgb(103, 103, 103);
 }
 .navbar .list:hover {
   color: rgb(187, 187, 187);
