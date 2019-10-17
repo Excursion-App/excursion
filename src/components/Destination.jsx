@@ -8,13 +8,9 @@ const Destination = () => (
   <div className="destination">
     <h1> Where are you going? </h1>
     <div>
-      <span>
-        <img src={paris} alt="eiffel tower" className="destination-images" />
-      </span>
-      <span>
-        <img src={mexico} alt="egypt pyramids" className="destination-images" />
-      </span>
-      <img src={sydney} width="360" alt="sydney opera house" className="destination-images" />
+      <img src={paris} alt="eiffel tower" className="destination-images" />
+      <img src={sydney} width="360" height="240" alt="sydney opera house" className="destination-images" />
+      <img src={mexico} alt="chichen itza" height="240" width="360" className="destination-images" />
     </div>
     <div className="destination">
       From:
