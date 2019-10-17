@@ -1,23 +1,34 @@
-import React from 'react';
-import '../views/TravelDates.css';
+import React, { Component } from 'react';
+import Calendar from 'react-calendar';
+import  '../views/TravelDates.css';
 
-const TravelDates = () => (
-  <div className="travel-dates">
-    <h1> Travel Dates </h1>
-    <h3> When are you planning on going?</h3>
+class TravelDates extends Component {
+    state = {
+        date: new Date(),
+    }
+    onChange = date => this.setState({ date })
+    
+    render() {
+        return (
+            <div class="travel-dates">
+                <h1> Travels Dates </h1>
+                <h3> When are you planning on going?</h3>
 
-    <div>
+                <div>
 
+               
+                <button type="button">
+                    <a href="/destination"> Back </a>  
+                </button>
+                
+                <button type="button">
+                    <a href="/guests"> Next </a>  
+                </button>
 
-      <button type="button">
-        <a href="/destination"> Back </a>
-      </button>
+                </div>
+            </div>
+        )
+    }
+}
 
-      <button type="button">
-        <a href="/guests"> Next </a>
-      </button>
-
-    </div>
-  </div>
-);
 export default TravelDates;

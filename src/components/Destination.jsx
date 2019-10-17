@@ -1,7 +1,8 @@
 import React from 'react';
 import '../views/Destination.css';
-// import Calendar from 'react-calendar';
+import paris from '../paris.jpg';
 
+<<<<<<< HEAD:src/components/Destination.jsx
 const Destination = () => (
   <div className="destination">
     <h1> Where are you going? </h1>
@@ -33,6 +34,35 @@ const Destination = () => (
   </div>
 );
 
+=======
+class NewTrip extends React.Component {
+  render() {
+    return (
+      <div className="destination">
+        <h1> Where are you going? </h1>
+        <div>
+          <img src={paris} alt="" />
+          <span> img of hawaii </span>
+          <span> img of sydney </span>
+        </div>
+        <div className="idk-what-to-call-this-sorry">
+          From: <input type="text"/> To: <input type="text"/>
+        </div>
+        <div>
+          <button>
+            <a href="/"> Back </a>  
+          </button>
+          
+          <button>
+            <a href="/travel-dates"> Next </a>  
+          </button>
+        </div>
+        
+      </div>
+    )
+  }
+}
+>>>>>>> 2208ec0639746540989c0ae1e27d1fa6ff28fcb4:src/components/Destination.js
 // class NewTrip extends React.Component {
 //     constructor(props) {
 //         super()
