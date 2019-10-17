@@ -21,3 +21,9 @@ body, html {
   border-radius: 20px;  
   text-align: center;
 }
+
+@media only screen and (min-height: 600px) {
+  .home2 {
+    margin-top: -125px;
+  }
+}
