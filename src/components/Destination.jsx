@@ -1,16 +1,20 @@
 import React from 'react';
 import '../views/Destination.css';
-import '../images/paris.jpg';
+import paris from '../images/paris.jpg';
+import mexico from '../images/chichen-itza-mexico.jpg';
+import sydney from '../images/sydney-opera-house.jpg';
 
 const Destination = () => (
   <div className="destination">
     <h1> Where are you going? </h1>
     <div>
       <span>
-        <img src="{paris.jpg}" alt="eiffel tower" />
+        <img src={paris} alt="eiffel tower" className="destination-images" />
       </span>
-      <span> img of greece </span>
-      <span> img of sydney </span>
+      <span>
+        <img src={mexico} alt="egypt pyramids" className="destination-images" />
+      </span>
+      <img src={sydney} width="360" alt="sydney opera house" className="destination-images" />
     </div>
     <div className="destination">
       From:
