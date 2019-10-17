@@ -19,12 +19,12 @@ class TravelDates extends Component {
                     value={this.state.date}
                 />
                 <div className="button">
-                    <button type="button">
+                    <button type="button" className="user-flow">
                         <a href="/destination"> Back </a>  
                     </button>
                 
                     
-                    <button type="button">
+                    <button type="button" className="user-flow">
                         <a href="/guests"> Next </a>  
                     </button>
                 </div>
