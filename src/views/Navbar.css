@@ -1,0 +1,25 @@
+.navbar {
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+}
+.brand{
+  height: 50px;
+  padding-left: 30px;
+  padding-top: 8px;
+}
+.navbar .list {
+  display: flex;
+  align-items: center;
+  float: right;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
+  color: rgb(51, 51, 51);
+}
+.navbar .list:hover {
+  color: rgb(187, 187, 187);
+}
+.fas {
+  margin-right: 7px;
+}

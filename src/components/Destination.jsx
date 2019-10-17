@@ -1,35 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../views/Destination.css';
 // import Calendar from 'react-calendar';
 
-class NewTrip extends Component {
-  render() {
-    return (
-      <div class="destination">
-        <h1> Where are you going? </h1>
-        <div>
-          <span> img of paris </span>
-          <span> img of hawaii </span>
-          <span> img of sydney </span>
-        </div>
-        <div class="destination">
-          From: <input type="text"/> To: <input type="text"/>
-        </div>
+const Destination = () => (
+  <div className="destination">
+    <h1> Where are you going? </h1>
+    <div>
+      <span> img of paris </span>
+      <span> img of greece </span>
+      <span> img of sydney </span>
+    </div>
+    <div className="destination">
+      From:
+      {' '}
+      <input type="text" />
+      {' '}
+      To:
+      {' '}
+      <input type="text" />
+    </div>
 
-        <div>
-          <button>
-            <a href="/"> Back </a>  
-          </button>
-          
-          <button>
-            <a href="/travel-dates"> Next </a>  
-          </button>
-        </div>
-        
-      </div>
-    )
-  }
-}
+    <div>
+      <button type="button">
+        <a href="/"> Back </a>
+      </button>
+
+      <button type="button">
+        <a href="/travel-dates"> Next </a>
+      </button>
+    </div>
+
+  </div>
+);
+
 // class NewTrip extends React.Component {
 //     constructor(props) {
 //         super()
@@ -42,7 +45,7 @@ class NewTrip extends Component {
 //         this.handleChange = this.handleChange.bind(this);
 //     }
 //     addGuest = (e) => {
-//       e.preventDefault()  
+//       e.preventDefault()
 //       this.setState({
 //         guestCount: this.state.guestCount + 1
 //       })
@@ -72,7 +75,7 @@ class NewTrip extends Component {
 //     render() {
 //         return (
 //            <div>
-//                 Plan A New Trip 
+//                 Plan A New Trip
 //                 <form>
 //                     Where are you going?
 //                     <input placeholder="destination" value={this.state.destination} onChange={this.handleChange}/>
@@ -102,9 +105,9 @@ class NewTrip extends Component {
 //                 <input type="submit" onClick={(e) => {
 //                   this.onSubmit(e)
 //                 }} />
-//            </div> 
+//            </div>
 //         )
 //     }
 // }
 
-export default NewTrip
+export default Destination;
