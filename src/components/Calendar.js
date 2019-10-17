@@ -7,7 +7,13 @@ class Calendar extends React.Component {
     dateObject: moment()
   }
 
-  // weekdayshort = moment.weekdaysShort();
+  firstDayOfMonth = () => {
+    let dateObject = this.state.dateObject;
+    let firstDay = moment.weekdays(dateObject).startOf('month').format('d');
+      return firstDay;
+  }
+
+  weekdayshort = moment.weekdaysShort();
   render() {
     let weekdayshortname = this.weekdayshort.map(day => {
       return (

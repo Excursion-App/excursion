@@ -1,18 +1,18 @@
 import React from 'react';
 import '../views/Destination.css';
-// import Calendar from 'react-calendar';
+import paris from '../paris.jpg';
 
 class NewTrip extends React.Component {
   render() {
     return (
-      <div class="destination">
+      <div className="destination">
         <h1> Where are you going? </h1>
         <div>
-          <span> img of paris </span>
+          <img src={paris} alt="" />
           <span> img of hawaii </span>
           <span> img of sydney </span>
         </div>
-        <div class="idk-what-to-call-this-sorry">
+        <div className="idk-what-to-call-this-sorry">
           From: <input type="text"/> To: <input type="text"/>
         </div>
         <button>
