@@ -15,19 +15,19 @@ class TravelDates extends Component {
                 <h3> When are you planning on going?</h3>
 
                 <Calendar 
-                    onChange={this.onChage}
+                    selectRange={this.onChange}
                     value={this.state.date}
                 />
-
-               
-                <button type="button">
-                    <a href="/destination"> Back </a>  
-                </button>
+                <div className="button">
+                    <button type="button">
+                        <a href="/destination"> Back </a>  
+                    </button>
                 
-                <button type="button">
-                    <a href="/guests"> Next </a>  
-                </button>
-
+                    
+                    <button type="button">
+                        <a href="/guests"> Next </a>  
+                    </button>
+                </div>
             </div>
         )
     }
