@@ -28,14 +28,11 @@ These instructions will get you a copy of the project up and running on your loc
 You would need [Node.js](https://nodejs.org) to install and run scripts.
 Clone the project project and run the command `npm install` or `yarn install` to install all dependencies.
 Start the project using `npm start` or `yarn start`.
-Browser access is at `http://localhost:3000/`.
+Browser access is at `http://localhost:3000/`. Press `Ctrl + C` to kill http-server process.
 
 ### Building
 Compile with babel using the command `npm run build`. The compiled files will be in
 the `/server` and `/public/scripts` directories.
-
-### Running
-The compiled project can be run with the command `npm start`. Press `Ctrl + C` to kill http-server process.
 
 ## License
 
