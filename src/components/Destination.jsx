@@ -8,15 +8,16 @@ class Destination extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      start: "",
-      end: ""
+      start: '',
+      end: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
   handleChange(event) {
-    this.setState({start: event.target.start});
-    this.setState({end: event.target.end})
+    this.setState({ start: event.target.start });
+    this.setState({ end: event.target.end });
   }
 
   handleSubmit(event) {
@@ -34,21 +35,21 @@ class Destination extends React.Component {
           <img src={mexico} alt="chichen itza" height="240" width="360" className="destination-images" />
         </div>
         <form onSubmit={this.handleSubmit}>
-        <label>
+          <label>
           From:
           <input type="text" start={this.state.start} onChange={this.handleChange} />
         </label>
-        <label>
+          <label>
           To:
           <input type="text" end={this.state.end} onChange={this.handleChange} />
         </label>
 
         <br/>
 
-        <button type="button" className="user-flow">
+          <button type="button" className="user-flow">
           <a href="/"> Back </a>
         </button>
-        <button type="button" className="user-flow">
+          <button type="button" className="user-flow">
           <a href="/travel-dates"> Next </a>
         </button>
 
@@ -56,11 +57,9 @@ class Destination extends React.Component {
 
         {/* <a href="/travel-dates">
         </a> */}
-
-      </form>
-      
+        </form>
       </div>
-    )
+    );
   }
 }
 
