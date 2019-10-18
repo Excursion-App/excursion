@@ -43,6 +43,7 @@ class Destination extends React.Component {
           <input type="text" end={this.state.end} onChange={this.handleChange} />
         </label>
 
+        <br/>
 
         <button type="button" className="user-flow">
           <a href="/"> Back </a>
@@ -51,10 +52,10 @@ class Destination extends React.Component {
           <a href="/travel-dates"> Next </a>
         </button>
 
-        <input type="submit" className="user-flow" value="Next" />
+        {/* <input type="submit" className="user-flow" value="Next" /> */}
 
-        <a href="/travel-dates">
-        </a>
+        {/* <a href="/travel-dates">
+        </a> */}
 
       </form>
       
