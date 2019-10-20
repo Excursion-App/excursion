@@ -35,11 +35,11 @@ class Destination extends React.Component {
           <img src={mexico} alt="chichen itza" height="240" width="360" className="destination-images" />
         </div>
         <form onSubmit={this.handleSubmit}>
-          <label>
+          <label className="formLabel">
           From:
           <input type="text" start={this.state.start} onChange={this.handleChange} />
         </label>
-          <label>
+        <label className="formLabel">
           To:
           <input type="text" end={this.state.end} onChange={this.handleChange} />
         </label>
