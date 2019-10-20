@@ -40,3 +40,7 @@ a {
   color: white;
   text-decoration: none;
 }
+.formLabel {
+	margin: 15px;
+	padding-top: 15px;
+}
