@@ -24,22 +24,31 @@ Dates 3/16-3/25
 ## Objective 1: Add breadcrumbs for user to keep track where they are to complete it.
 
 **Why do you want to meet this objective? How will it improve your project?** 
+
    There are currently 4 pages before the user gets to the dashboard and more will be added. We would like the user to be able to know where they are in the process. I also would like to add a modal to show completion.
 **How will you demonstrate completion of your objective?** 
+
    The user will be able to see breadcrumbs on each page except for the first page 
 
 ## Objective 2: Add user authentication
-**Why do you want to meet this objective? How will it improve your project?**  Users need to be able to login in order to see their trips. Each user or group of users should have a personalized dashboard.
+**Why do you want to meet this objective? How will it improve your project?**
+
+Users need to be able to login in order to see their trips. Each user or group of users should have a personalized dashboard.
 **How will you demonstrate completion of your objective?** 
+
 The login and signin buttons on the nav bar should work.
+
 ## Objective 3: ... say your objective to accomplish here …
 **Why do you want to meet this objective? How will it improve your project?** 
+
    Login is very essential to how our project works. We would like to create a sense of personalization.
 **How will you demonstrate completion of your objective?** 
+
    User login will work.
 ## Stretch goals (optional):
 
 **What stretch goals do you have for your project?**
+
    Add user authorization based on roles
 ## Evaluation
 
