@@ -3,17 +3,21 @@
 
 Dates 3/16-3/25
 
-**My Name: Stephanie Cherubin**
+**My Name: **
 
+Stephanie Cherubin
 
-**Project Name: Exursions** 
+**Project Name:** 
 
+Excursions
 
-**Is your project New or Old?: Old**
+**Is your project New or Old?: **
 
+Old
 
-**Is your project Solo or Team?: Team**
+**Is your project Solo or Team?:**
 
+ Team
 
 ## Description
 
@@ -34,25 +38,24 @@ Dates 3/16-3/25
 ## Objective 2: Add user authentication
 **Why do you want to meet this objective? How will it improve your project?**
 
-Users need to be able to login in order to see their trips. Each user or group of users should have a personalized dashboard.
+Login is very essential to how our project works. We would like to create a sense of personalization. Users need to be able to login in order to see their trips. Each user or group of users should have a personalized dashboard.
 
 **How will you demonstrate completion of your objective?** 
 
 The login and signin buttons on the nav bar should work.
 
-## Objective 3: ... say your objective to accomplish here …
+## Objective 3: Add dropdown of locations for guest to travel to
 **Why do you want to meet this objective? How will it improve your project?** 
 
-   Login is very essential to how our project works. We would like to create a sense of personalization.
-   
+To minimize spelling errors, it is essential to use a dropdown menu. It will also be a better experience for the user.
 **How will you demonstrate completion of your objective?** 
+Drop down menu will be on `/destination` route.
 
-   User login will work.
 ## Stretch goals (optional):
 
 **What stretch goals do you have for your project?**
 
-   Add user authorization based on roles
+   Add user authorization based on roles (Trip leader vs guests)
 ## Evaluation
 
 **You must meet the following criteria in order to pass the intensive:**
