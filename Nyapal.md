@@ -77,6 +77,6 @@ We gone cross that bridge when we get there
 ### Sign off
 
 **Student Name:**                
-> Name / Date
+> Nyapal Gatkuoth / March 16, 2020
 **Make School Advisor Name**
-> TBD
+> Mitchell
