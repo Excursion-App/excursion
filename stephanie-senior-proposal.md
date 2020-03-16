@@ -19,30 +19,29 @@ Dates 3/16-3/25
 
 **Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
 
-###My teammate and I will be scoping the project with a summary and a user narratives.###
-###We have already begun to research travel apps and articles and creating a STEP analysis to evaluate current trends in group travel. We also completed all non coding tasks such as creating a Github repo. We will be creating a project board on Github Projects, creating a wireframe and ERD, and conducting user interviews. Our Github README and wiki will show those documents.###
-###I hope to complete the app to be able for users to create a stress free booking experience with a great user interface and without spreadsheets. We are using our software development tools to complete it and stay on task.###
+### The status of my project at this moment is that there are for pages where a user can navigate to each page, but it does not populate the choices of the user on the last page (dashboard). Also there are buttons on the nav bar for user login but at the moment, it doesn't work.
 
-## Objective 1: say your objective here, you must have at least three objectives to get credit for the intensive… accomplishing objective should be done by soley you
+## Objective 1: Add breadcrumbs for user to keep track where they are to complete it.
 
 **Why do you want to meet this objective? How will it improve your project?** 
-
+### There are currently 4 pages before the user gets to the dashboard and more will be added. We would like the user to be able to know where they are in the process. I also would like to add a modal to show completion.
 **How will you demonstrate completion of your objective?** 
+### The user will be able to see breadcrumbs on each page except for the first page 
 
-## Objective 2: ... say your objective to accomplish here …
+## Objective 2: Add user authentication
 **Why do you want to meet this objective? How will it improve your project?** 
-
+### Users need to be able to login in order to see their trips. Each user or group of users should have a personalized dashboard.
 **How will you demonstrate completion of your objective?** 
-
+### The login and signin buttons on the nav bar should work.
 ## Objective 3: ... say your objective to accomplish here …
 **Why do you want to meet this objective? How will it improve your project?** 
-
+### Login is very essential to how our project works. We would like to create a sense of personalization.
 **How will you demonstrate completion of your objective?** 
-
+### User login will work.
 ## Stretch goals (optional):
 
 **What stretch goals do you have for your project?**
-
+### Add user authorization based on roles
 ## Evaluation
 
 **You must meet the following criteria in order to pass the intensive:**
@@ -61,13 +60,13 @@ Dates 3/16-3/25
 
 
 ## Approval Checklist
-- [ ] If I have a team project, I wrote this proposal to represent my work and only my work
-- [ ] I have completed all the necessary parts of this proposal
-- [ ] I linked my proposal in the Spring Intensive Tracker
+- [x] If I have a team project, I wrote this proposal to represent my work and only my work
+- [x] I have completed all the necessary parts of this proposal
+- [x] I linked my proposal in the Spring Intensive Tracker
 
 ### Sign off
 
 **Student Name:**                
-> Name / Date
+> Stephanie Cherubin /  March 16, 2020
 **Make School Advisor Name**
-> TBD
+> Megan Dias
