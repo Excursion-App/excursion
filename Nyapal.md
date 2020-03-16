@@ -22,21 +22,21 @@ Team
 Excurison is an app that helps people plan group vacations. We currently have a basic react app, the front end is mostly build out and people are able to plan a basic trip. 
 
 ## Objective 1: say your objective here, you must have at least three objectives to get credit for the intensive… accomplishing objective should be done by soley you
-First objective is to be able to add a person to the vacation 
+First objective is to be able to save a planned vacation to the dashboard. 
 
 **Why do you want to meet this objective? How will it improve your project?** 
-The entire point of the project is to be able to plan group vacations with multiple people.
+Currently if you plan a trip out, once you get to the dashboard everything that you were working on saving disappears. Our goal is for each pending trip to be visible on the dashboard.
 
 **How will you demonstrate completion of your objective?** 
-When you get to the last page in the app of planning your dashboard, you'll be able to invite an individual to join the trip 
+When you get to the dashboard you will be able to see all of your future trips. Currently there dashboard is an empty page with placeholder text.
 
 ## Objective 2: ... say your objective to accomplish here …
-User auth 
+Incorporate an api that has real time locations  
 **Why do you want to meet this objective? How will it improve your project?** 
-user auth is essential to any good web app 
+It would be great for someone to begin searching & be able to have cities load it real time 
 
 **How will you demonstrate completion of your objective?** 
-User's will be able to log in and view their previous trips 
+User's will be able to start typing a city & different locations will pop up
 
 ## Objective 3: ... say your objective to accomplish here …
 Add a database 
