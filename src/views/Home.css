@@ -1,6 +1,7 @@
 body, html {
   background-color:rgb(255,144, 0);
-  width: 100%;
+  /* background-image: url(https://picsum.photos//580?random=${id}); */
+  background-size: cover;
   height: 100%;
 }
 
