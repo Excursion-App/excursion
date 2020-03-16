@@ -30,7 +30,7 @@ Dates 3/16-3/25
 
 ## Objective 2: Add user authentication
 **Why do you want to meet this objective? How will it improve your project?** 
-### Users need to be able to login in order to see their trips. Each user or group of users should have a personalized dashboard.
+ Users need to be able to login in order to see their trips. Each user or group of users should have a personalized dashboard.
 **How will you demonstrate completion of your objective?** 
 ## The login and signin buttons on the nav bar should work.
 ## Objective 3: ... say your objective to accomplish here …
