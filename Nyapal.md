@@ -19,28 +19,38 @@ Team
 ## Description
 
 **Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
-Excurison is an app that helps people plan group vacations. We currently have a basic react app, the front end is kind of build out and people are able to plan a basic trip. 
+Excurison is an app that helps people plan group vacations. We currently have a basic react app, the front end is mostly build out and people are able to plan a basic trip. 
 
 ## Objective 1: say your objective here, you must have at least three objectives to get credit for the intensive… accomplishing objective should be done by soley you
-
+First objective is to be able to add a person to the vacation 
 
 **Why do you want to meet this objective? How will it improve your project?** 
+The entire point of the project is to be able to plan group vacations with multiple people.
 
 **How will you demonstrate completion of your objective?** 
+When you get to the last page in the app of planning your dashboard, you'll be able to invite an individual to join the trip 
 
 ## Objective 2: ... say your objective to accomplish here …
+User auth 
 **Why do you want to meet this objective? How will it improve your project?** 
+user auth is essential to any good web app 
 
 **How will you demonstrate completion of your objective?** 
+User's will be able to log in and view their previous trips 
 
 ## Objective 3: ... say your objective to accomplish here …
+Add a database 
+
 **Why do you want to meet this objective? How will it improve your project?** 
+We want users to be able to store information such as past trips & future trips 
 
 **How will you demonstrate completion of your objective?** 
+There will be a database 
 
 ## Stretch goals (optional):
-
+Awesome UI 
 **What stretch goals do you have for your project?**
+We gone cross that bridge when we get there 
 
 ## Evaluation
 
@@ -60,13 +70,13 @@ Excurison is an app that helps people plan group vacations. We currently have a 
 
 
 ## Approval Checklist
-- [ ] If I have a team project, I wrote this proposal to represent my work and only my work
-- [ ] I have completed all the necessary parts of this proposal
-- [ ] I linked my proposal in the Spring Intensive Tracker
+- [X] If I have a team project, I wrote this proposal to represent my work and only my work
+- [X] I have completed all the necessary parts of this proposal
+- [X] I linked my proposal in the Spring Intensive Tracker
 
 ### Sign off
 
 **Student Name:**                
-> Name / Date
+> Nyapal Gatkuoth / March 16, 2020
 **Make School Advisor Name**
-> TBD
+> Mitchell
