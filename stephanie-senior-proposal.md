@@ -1,56 +1,47 @@
-# Nya's Spring Intensive Deliverable Proposal 
+# Stephanie's Seniors Spring Intensive Deliverable Proposal 
 
-## Copy this file, fill it out, and push it up to your project's repo.
 
 Dates 3/16-3/25
 
-**My Name:**
-Nyapal Gatkuoth
+**My Name: Stephanie Cherubin**
 
-**Project Name:** 
-Excurison
 
-**Is your project New or Old?**
-Old
+**Project Name: Exursions** 
 
-**Is your project Solo or Team?**
-Team
+
+**Is your project New or Old?: Old**
+
+
+**Is your project Solo or Team?: Team**
+
 
 ## Description
 
 **Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
-Excurison is an app that helps people plan group vacations. We currently have a basic react app, the front end is mostly build out and people are able to plan a basic trip. 
+
+###My teammate and I will be scoping the project with a summary and a user narratives.###
+###We have already begun to research travel apps and articles and creating a STEP analysis to evaluate current trends in group travel. We also completed all non coding tasks such as creating a Github repo. We will be creating a project board on Github Projects, creating a wireframe and ERD, and conducting user interviews. Our Github README and wiki will show those documents.###
+###I hope to complete the app to be able for users to create a stress free booking experience with a great user interface and without spreadsheets. We are using our software development tools to complete it and stay on task.###
 
 ## Objective 1: say your objective here, you must have at least three objectives to get credit for the intensive… accomplishing objective should be done by soley you
-First objective is to be able to save a planned vacation to the dashboard. 
 
 **Why do you want to meet this objective? How will it improve your project?** 
-Currently if you plan a trip out, once you get to the dashboard everything that you were working on saving disappears. Our goal is for each pending trip to be visible on the dashboard.
 
 **How will you demonstrate completion of your objective?** 
-When you get to the dashboard you will be able to see all of your future trips. Currently there dashboard is an empty page with placeholder text.
 
 ## Objective 2: ... say your objective to accomplish here …
-Incorporate an api that has real time locations  
 **Why do you want to meet this objective? How will it improve your project?** 
-It would be great for someone to begin searching & be able to have cities load it real time 
 
 **How will you demonstrate completion of your objective?** 
-User's will be able to start typing a city & different locations will pop up
 
 ## Objective 3: ... say your objective to accomplish here …
-Add a database 
-
 **Why do you want to meet this objective? How will it improve your project?** 
-We want users to be able to store information such as past trips & future trips 
 
 **How will you demonstrate completion of your objective?** 
-There will be a database 
 
 ## Stretch goals (optional):
-Awesome UI 
+
 **What stretch goals do you have for your project?**
-We gone cross that bridge when we get there 
 
 ## Evaluation
 
@@ -70,13 +61,13 @@ We gone cross that bridge when we get there
 
 
 ## Approval Checklist
-- [X] If I have a team project, I wrote this proposal to represent my work and only my work
-- [X] I have completed all the necessary parts of this proposal
-- [X] I linked my proposal in the Spring Intensive Tracker
+- [ ] If I have a team project, I wrote this proposal to represent my work and only my work
+- [ ] I have completed all the necessary parts of this proposal
+- [ ] I linked my proposal in the Spring Intensive Tracker
 
 ### Sign off
 
 **Student Name:**                
-> Nyapal Gatkuoth / March 16, 2020
+> Name / Date
 **Make School Advisor Name**
-> Mitchell
+> TBD
