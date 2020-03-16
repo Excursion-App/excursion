@@ -19,29 +19,28 @@ Dates 3/16-3/25
 
 **Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
 
-### The status of my project at this moment is that there are for pages where a user can navigate to each page, but it does not populate the choices of the user on the last page (dashboard). Also there are buttons on the nav bar for user login but at the moment, it doesn't work.
+   The status of my project at this moment is that there are for pages where a user can navigate to each page, but it does not populate the choices of the user on the last page (dashboard). Also there are buttons on the nav bar for user login but at the moment, it doesn't work.
 
 ## Objective 1: Add breadcrumbs for user to keep track where they are to complete it.
 
 **Why do you want to meet this objective? How will it improve your project?** 
-### There are currently 4 pages before the user gets to the dashboard and more will be added. We would like the user to be able to know where they are in the process. I also would like to add a modal to show completion.
+   There are currently 4 pages before the user gets to the dashboard and more will be added. We would like the user to be able to know where they are in the process. I also would like to add a modal to show completion.
 **How will you demonstrate completion of your objective?** 
-### The user will be able to see breadcrumbs on each page except for the first page 
+   The user will be able to see breadcrumbs on each page except for the first page 
 
 ## Objective 2: Add user authentication
-**Why do you want to meet this objective? How will it improve your project?** 
- Users need to be able to login in order to see their trips. Each user or group of users should have a personalized dashboard.
+**Why do you want to meet this objective? How will it improve your project?**  Users need to be able to login in order to see their trips. Each user or group of users should have a personalized dashboard.
 **How will you demonstrate completion of your objective?** 
-## The login and signin buttons on the nav bar should work.
+The login and signin buttons on the nav bar should work.
 ## Objective 3: ... say your objective to accomplish here …
 **Why do you want to meet this objective? How will it improve your project?** 
-### Login is very essential to how our project works. We would like to create a sense of personalization.
+   Login is very essential to how our project works. We would like to create a sense of personalization.
 **How will you demonstrate completion of your objective?** 
-### User login will work.
+   User login will work.
 ## Stretch goals (optional):
 
 **What stretch goals do you have for your project?**
-### Add user authorization based on roles
+   Add user authorization based on roles
 ## Evaluation
 
 **You must meet the following criteria in order to pass the intensive:**
@@ -64,7 +63,7 @@ Dates 3/16-3/25
 - [x] I have completed all the necessary parts of this proposal
 - [x] I linked my proposal in the Spring Intensive Tracker
 
-### Sign off
+   Sign off
 
 **Student Name:**                
 > Stephanie Cherubin /  March 16, 2020
