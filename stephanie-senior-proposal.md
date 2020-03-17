@@ -3,7 +3,7 @@
 
 Dates 3/16-3/25
 
-**My Name: **
+**My Name:**
 
 Stephanie Cherubin
 
@@ -11,7 +11,7 @@ Stephanie Cherubin
 
 Excursions
 
-**Is your project New or Old?: **
+**Is your project New or Old?:**
 
 Old
 
@@ -23,7 +23,11 @@ Old
 
 **Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
 
+   Excurison is an app that helps people plan group vacations. We currently have a basic react app, the front end is mostly build out and people are able to plan a basic trip. 
+   
    The status of my project at this moment is that there are for pages where a user can navigate to each page, but it does not populate the choices of the user on the last page (dashboard). Also there are buttons on the nav bar for user login but at the moment, it doesn't work.
+   
+   I hope to achieve more user functionality where a user can store a vacation and populate the dashboard.
 
 ## Objective 1: Add breadcrumbs for user to keep track where they are to complete it.
 
@@ -48,6 +52,7 @@ The login and signin buttons on the nav bar should work.
 **Why do you want to meet this objective? How will it improve your project?** 
 
 To minimize spelling errors, it is essential to use a dropdown menu. It will also be a better experience for the user.
+
 **How will you demonstrate completion of your objective?** 
 Drop down menu will be on `/destination` route.
 
