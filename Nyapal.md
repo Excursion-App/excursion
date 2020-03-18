@@ -21,16 +21,16 @@ Team
 **Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
 Excurison is an app that helps people plan group vacations. We currently have a basic react app, the front end is mostly build out and people are able to plan a basic trip. 
 
-## Objective 1: say your objective here, you must have at least three objectives to get credit for the intensive… accomplishing objective should be done by soley you
-First objective is to be able to save a planned vacation to the dashboard. 
+## Objective 1: ... say your objective to accomplish here …
+Add a database 
 
 **Why do you want to meet this objective? How will it improve your project?** 
-Currently if you plan a trip out, once you get to the dashboard everything that you were working on saving disappears. Our goal is for each pending trip to be visible on the dashboard.
+We want users to be able to store information such as past trips & future trips 
 
 **How will you demonstrate completion of your objective?** 
-When you get to the dashboard you will be able to see all of your future trips. Currently there dashboard is an empty page with placeholder text.
+There will be a database 
 
-## Objective 2: ... say your objective to accomplish here …
+## Objective 1: ... say your objective to accomplish here …
 Incorporate an api that has real time locations  
 **Why do you want to meet this objective? How will it improve your project?** 
 It would be great for someone to begin searching & be able to have cities load it real time 
@@ -39,13 +39,12 @@ It would be great for someone to begin searching & be able to have cities load i
 User's will be able to start typing a city & different locations will pop up
 
 ## Objective 3: ... say your objective to accomplish here …
-Add a database 
-
+Incorporate an api that has real time locations  
 **Why do you want to meet this objective? How will it improve your project?** 
-We want users to be able to store information such as past trips & future trips 
+It would be great for someone to begin searching & be able to have cities load it real time 
 
 **How will you demonstrate completion of your objective?** 
-There will be a database 
+User's will be able to start typing a city & different locations will pop up
 
 ## Stretch goals (optional):
 Awesome UI 
