@@ -15,11 +15,11 @@ const Navbar = () => (
     </Link>
     <Link to="/dashboard" className="list">
       <i className="fas fa-user-alt" />
-        Sign up
+      Sign up
     </Link>
     <Link to="/dashboard" className="list">
       <i className="fas fa-user-alt" />
-        Log in
+      Log in
     </Link>
   </div>
 );
