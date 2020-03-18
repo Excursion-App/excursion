@@ -11,27 +11,27 @@ const Breadcrumbs = () => (
     {sizes.map((size) => (
       <React.Fragment key={size}>
         <Breadcrumb size={size}>
-          <Link to="/" className="list">
+          <Link to="/" className="list-item">
             <i className="fas fa-home" />
             Home
           </Link>
           <Breadcrumb.Divider icon="right arrow" />
-          <Link to="/destination" className="list">
+          <Link to="/destination" className="list-item">
             <i className="fas fa-plane-arrival" />
             Destination
           </Link>
           <Breadcrumb.Divider icon="right arrow" />
-          <Link to="/travel-dates" className="list">
+          <Link to="/travel-dates" className="list-item">
             <i className="fas fa-calendar-alt" />
             Travel Dates
           </Link>
           <Breadcrumb.Divider icon="right arrow" />
-          <Link to="/guests" className="list">
+          <Link to="/guests" className="list-item">
             <i className="fas fa-users" />
             Add Guests
           </Link>
           <Breadcrumb.Divider icon="right arrow" />
-          <Link to="/dashboard" className="list">
+          <Link to="/dashboard" className="list-item">
             <i className="fas fa-money-check" />
             Dashboard
           </Link>
