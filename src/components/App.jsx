@@ -1,4 +1,5 @@
 import React from 'react';
+import 'semantic-ui-css/semantic.min.css'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Dashboard from './Dashboard';
@@ -8,6 +9,7 @@ import Guests from './Guests';
 import Home from './Home';
 import Navbar from './Navbar';
 import TravelDates from './TravelDates';
+
 
 const App = () => (
   <Router>
