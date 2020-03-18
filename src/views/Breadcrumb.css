@@ -1,0 +1,28 @@
+.breadcrumbs {
+	padding-top: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .breadcrumbs .list-item {
+		background: #fff;
+		color: rgb(103, 103, 103) !important;
+		text-decoration: none;
+		position: relative;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 10px 0 5px;
+		text-align: center;
+		margin-right: 23px;
+		padding: 10px;
+		border-radius: 14px;
+  }
+  
+  .breadcrumbs .list-item a {
+	  color:black;
+  }
+.breadcrumbs .list-item:hover{
+	color: rgb(187, 187, 187);
+}

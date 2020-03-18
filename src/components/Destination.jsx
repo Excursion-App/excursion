@@ -36,26 +36,26 @@ class Destination extends React.Component {
         </div>
         <form onSubmit={this.handleSubmit}>
           <label className="formLabel">
-          From:
-          <input type="text" start={this.state.start} onChange={this.handleChange} />
-        </label>
-        <label className="formLabel">
-          To:
-          <input type="text" end={this.state.end} onChange={this.handleChange} />
-        </label>
+            From:
+            <input type="text" start={this.state.start} onChange={this.handleChange} />
+          </label>
+          <label className="formLabel">
+            To:
+            <input type="text" end={this.state.end} onChange={this.handleChange} />
+          </label>
 
-        <br/>
+          <br/>
 
           <button type="button" className="user-flow">
-          <a href="/"> Back </a>
-        </button>
+            <a href="/"> Back </a>
+          </button>
           <button type="button" className="user-flow">
-          <a href="/travel-dates"> Next </a>
-        </button>
+            <a href="/travel-dates"> Next </a>
+          </button>
 
-        {/* <input type="submit" className="user-flow" value="Next" /> */}
+          {/* <input type="submit" className="user-flow" value="Next" /> */}
 
-        {/* <a href="/travel-dates">
+          {/* <a href="/travel-dates">
         </a> */}
         </form>
       </div>
