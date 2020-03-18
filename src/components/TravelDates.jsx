@@ -10,7 +10,7 @@ class TravelDates extends Component {
     
     render() {
         return (
-            <div class="travel-dates">
+            <div className="travel-dates">
                 <h1> Travel Dates </h1>
                 <h3> When are you planning on going?</h3>
 
