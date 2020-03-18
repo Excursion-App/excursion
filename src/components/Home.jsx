@@ -5,7 +5,7 @@ const Home = () => (
 
   <div className="home">
     <div className="home2">
-      <h1> Excursion App </h1>
+      <h1> Excursions </h1>
       <p> Group Vacations made easy. </p>
       <button type="button" className="user-flow">
         <a href="/destination"> Plan A New Trip </a>
