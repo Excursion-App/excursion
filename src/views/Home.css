@@ -1,11 +1,16 @@
 body, html {
-  /* background-image: url(https://picsum.photos//580?random=${id}); */
-  background-color: rgba(255, 167, 0, 0.5);
   background-size: cover;
   height: 100%;
+  background-size: 0 70px;
 }
 
 .home {
+  background-image: url(https://source.unsplash.com/1600x900/?travel);
+  width: 100vw;
+  height: 100vh !important; 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
