@@ -18,7 +18,7 @@ class TravelDates extends Component {
                     selectRange={this.onChange}
                     value={this.state.date}
                 />
-                <div className="button">
+                <div>
                     <button type="button" className="user-flow">
                         <a href="/destination"> Back </a>  
                     </button>
