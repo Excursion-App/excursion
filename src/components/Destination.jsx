@@ -28,7 +28,7 @@ class Destination extends React.Component {
   render() {
     return (
       <div className="destination">
-        <h1> Where are you going? </h1>
+        <h1> Top Destinations </h1>
         <div>
           <img src={paris} alt="eiffel tower" className="destination-images" />
           <img src={sydney} width="360" height="240" alt="sydney opera house" className="destination-images" />

@@ -1,45 +1,43 @@
 import React from 'react';
-import { Breadcrumb, Divider } from 'semantic-ui-react';
-import '../views/Breadcrumb.css';
 import { Link } from 'react-router-dom';
+import '../views/Breadcrumb.css';
 
+const Breadcrumb = () => (
 
-const sizes = ['large'];
-
-const Breadcrumbs = () => (
-  <div className="breadcrumbs">
-    {sizes.map((size) => (
-      <React.Fragment key={size}>
-        <Breadcrumb size={size}>
-          <Link to="/" className="list-item">
-            <i className="fas fa-home" />
-            Home
-          </Link>
-          <Breadcrumb.Divider icon="right arrow" />
-          <Link to="/destination" className="list-item">
-            <i className="fas fa-plane-arrival" />
-            Destination
-          </Link>
-          <Breadcrumb.Divider icon="right arrow" />
-          <Link to="/travel-dates" className="list-item">
-            <i className="fas fa-calendar-alt" />
-            Travel Dates
-          </Link>
-          <Breadcrumb.Divider icon="right arrow" />
-          <Link to="/guests" className="list-item">
-            <i className="fas fa-users" />
-            Add Guests
-          </Link>
-          <Breadcrumb.Divider icon="right arrow" />
-          <Link to="/dashboard" className="list-item">
-            <i className="fas fa-money-check" />
-            Dashboard
-          </Link>
-        </Breadcrumb>
-        <Divider hidden />
-      </React.Fragment>
-    ))}
+  <div id="breadcrumbs">
+    <ul id="breadcrumb">
+      <li>
+        <Link to="/">
+          <i className="fas fa-home" />
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link to="/destination">
+          <i className="fas fa-plane-arrival" />
+          Destination
+        </Link>
+      </li>
+      <li>
+        <Link to="/travel-dates">
+          <i className="fas fa-calendar-alt" />
+          Travel Dates
+        </Link>
+      </li>
+      <li>
+        <Link to="/guests">
+          <i className="fas fa-users" />
+          Add Guests
+        </Link>
+      </li>
+      <li>
+        <Link to="/dashboard">
+          <i className="fas fa-money-check" />
+          Dashboard
+        </Link>
+      </li>
+    </ul>
   </div>
 );
 
-export default Breadcrumbs;
+export default Breadcrumb;
