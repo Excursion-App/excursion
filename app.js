@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-
+ /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
 // MOCK ARRAY OF TRIPS
 let trips = [
   {destination: 'Miami, FL', dates: [05152020, 05202020], guest: ['Stephanie', 'Nya', 'Erica']},

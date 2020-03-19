@@ -3,6 +3,7 @@ import '../views/Destination.css';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
 import sydney from '../images/sydney-opera-house.jpg';
+import firebase from '../firebase.js'
 
 class Destination extends React.Component {
   constructor(props) {
@@ -11,18 +12,21 @@ class Destination extends React.Component {
       start: '',
       end: '',
     };
-    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({ start: event.target.start });
-    this.setState({ end: event.target.end });
-  }
-
   handleSubmit(event) {
-    // alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
+    firebase
+      .firestore()
+      .collection('Trips')
+      .doc(this.state.end)
+      .set({
+        start: this.state.start,
+        end: this.state.end
+      })
+      .then(function() {console.log('Successfully created new trip!')})
+      .catch(function(error) {console.error('Error creating new trip', error )})
   }
 
   render() {
@@ -37,26 +41,23 @@ class Destination extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label className="formLabel">
             From:
-            <input type="text" start={this.state.start} onChange={this.handleChange} />
+            <input 
+              type="text" 
+              value={this.state.start} 
+              onChange={(event) => {this.setState({start: event.target.value})}} 
+          />
           </label>
           <label className="formLabel">
             To:
-            <input type="text" end={this.state.end} onChange={this.handleChange} />
+            <input 
+              type="text" 
+              value={this.state.end} 
+              onChange={(event) => {this.setState({end: event.target.value})}} 
+          />
           </label>
 
           <br/>
-
-          <button type="button" className="user-flow">
-            <a href="/"> Back </a>
-          </button>
-          <button type="button" className="user-flow">
-            <a href="/travel-dates"> Next </a>
-          </button>
-
-          {/* <input type="submit" className="user-flow" value="Next" /> */}
-
-          {/* <a href="/travel-dates">
-        </a> */}
+          <button type="button" className="user-flow" onClick={this.handleSubmit}> Next </button>
         </form>
       </div>
     );
