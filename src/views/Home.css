@@ -1,5 +1,5 @@
 body, html {
-  background-color:rgb(255,144, 0);
+  background-color: rgb(238,239,240);
   /* background-image: url(https://picsum.photos//580?random=${id}); */
   background-size: cover;
   height: 100%;
@@ -10,14 +10,14 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
 }
 
 .home2 {
   width: 960px;
   padding: 2em 2em 4em 2em;
   box-shadow: 0 4px 10px 4px #13232f4d;
-  max-width: 16em;
+  max-width: 17em;
   background-color: aliceblue;
   border-radius: 20px;  
   text-align: center;

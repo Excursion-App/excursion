@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../views/Navbar.css';
-import brand from '../images/excursion-logo.png';
+import brand from '../images/excursions-2020.png';
 
 const Navbar = () => (
   <div className="navbar">
