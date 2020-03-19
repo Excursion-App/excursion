@@ -21,30 +21,31 @@ Team
 **Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
 Excurison is an app that helps people plan group vacations. We currently have a basic react app, the front end is mostly build out and people are able to plan a basic trip. 
 
-## Objective 1: ... say your objective to accomplish here …
+## Objective 1: 
 Add a database 
 
 **Why do you want to meet this objective? How will it improve your project?** 
 We want users to be able to store information such as past trips & future trips 
 
 **How will you demonstrate completion of your objective?** 
-There will be a database 
+There will be a database and data will be persistent instead of just disappearing after the app is refreshed. 
 
-## Objective 1: ... say your objective to accomplish here …
-Incorporate an api that has real time locations  
+## Objective 2:
+Incorporate an api that has real time locations 
+
 **Why do you want to meet this objective? How will it improve your project?** 
 It would be great for someone to begin searching & be able to have cities load it real time 
 
 **How will you demonstrate completion of your objective?** 
 User's will be able to start typing a city & different locations will pop up
 
-## Objective 3: ... say your objective to accomplish here …
-Incorporate an api that has real time locations  
+## Objective 3: 
+Complete the dashboard page 
 **Why do you want to meet this objective? How will it improve your project?** 
-It would be great for someone to begin searching & be able to have cities load it real time 
+The dashboard page contains all of the future trips that a user has planned. This is an essential function for the app to be complete
 
 **How will you demonstrate completion of your objective?** 
-User's will be able to start typing a city & different locations will pop up
+User's planned trips will be saved on the dashboard vs the placeholder text that is currently there
 
 ## Stretch goals (optional):
 Awesome UI 
