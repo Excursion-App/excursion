@@ -44,6 +44,7 @@ class Destination extends React.Component {
             <input 
               type="text" 
               value={this.state.start} 
+              required
               onChange={(event) => {this.setState({start: event.target.value})}} 
           />
           </label>
@@ -52,6 +53,7 @@ class Destination extends React.Component {
             <input 
               type="text" 
               value={this.state.end} 
+              required
               onChange={(event) => {this.setState({end: event.target.value})}} 
           />
           </label>
