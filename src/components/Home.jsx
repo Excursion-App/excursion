@@ -5,8 +5,8 @@ const Home = () => (
 
   <div className="home">
     <div className="home2">
-      <h1> Excursions </h1>
-      <p> Group Vacations made easy. </p>
+      <h1 className="title"> EXCURSION </h1>
+      <p> Group Travel Made Easy. </p>
       <button type="button" className="user-flow">
         <a href="/destination"> Plan A New Trip </a>
       </button>
