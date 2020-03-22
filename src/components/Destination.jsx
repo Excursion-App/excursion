@@ -30,9 +30,10 @@ class Destination extends React.Component {
       <div className="destination">
         <h1> Top Destinations </h1>
         <div>
-          <img src={paris} alt="eiffel tower" className="destination-images" />
-          <img src={sydney} width="360" height="240" alt="sydney opera house" className="destination-images" />
-          <img src={mexico} alt="chichen itza" height="240" width="360" className="destination-images" />
+          <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
+          <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
+          <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
+          <img src="url(https://source.unsplash.com/240x160/?travel)" alt="" width="240" height="160" />
         </div>
         <form onSubmit={this.handleSubmit}>
           <label className="formLabel">
@@ -43,8 +44,7 @@ class Destination extends React.Component {
             To:
             <input type="text" end={this.state.end} onChange={this.handleChange} />
           </label>
-
-          <br/>
+          <br />
 
           <button type="button" className="user-flow">
             <a href="/"> Back </a>
@@ -52,6 +52,7 @@ class Destination extends React.Component {
           <button type="button" className="user-flow">
             <a href="/travel-dates"> Next </a>
           </button>
+          <br />
 
           {/* <input type="submit" className="user-flow" value="Next" /> */}
 
