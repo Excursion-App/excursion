@@ -3,7 +3,7 @@ import '../views/Destination.css';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
 import sydney from '../images/sydney-opera-house.jpg';
-import firebase from '../firebase.js'
+import firebase from '../firebase.js';
 
 class Destination extends React.Component {
   constructor(props) {
@@ -13,6 +13,8 @@ class Destination extends React.Component {
       end: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleStartChange = this.handleStartChange.bind(this);
+    this.handleEndChange = this.handleEndChange.bind(this);
   }
 
   handleSubmit(event) {
@@ -23,11 +25,22 @@ class Destination extends React.Component {
       .doc(this.state.end)
       .set({
         start: this.state.start,
-        end: this.state.end
+        end: this.state.end,
       })
-      .then(function() {console.log('Successfully created new trip!')})
-      .catch(function(error) {console.error('Error creating new trip', error )})
+      .then(() => { console.log('Successfully created new trip!'); })
+      .catch((error) => { console.error('Error creating new trip', error); });
   }
+
+  handleStartChange(event) {
+    this.setState({ start: event.target.value });
+    console.log(this.state);
+  }
+  
+  handleEndChange(event) {
+    this.setState({ end: event.target.value });
+    console.log(this.state);
+  }
+
 
   render() {
     return (
@@ -37,29 +50,30 @@ class Destination extends React.Component {
           <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
           <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
           <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
-          <img src="url(https://source.unsplash.com/240x160/?travel)" alt="" width="240" height="160" />
+
         </div>
         <form onSubmit={this.handleSubmit}>
           <label className="formLabel">
             From:
-            <input 
-              type="text" 
-              value={this.state.start} 
+            <br />
+            <input
+              type="text"
+              value={this.state.start}
               required
-              onChange={(event) => {this.setState({start: event.target.value})}} 
-          />
+              onChange={this.handleStartChange}
+            />
           </label>
           <label className="formLabel">
             To:
-            <input 
-              type="text" 
-              value={this.state.end} 
+            <input
+              type="text"
+              value={this.state.end}
               required
-              onChange={(event) => {this.setState({end: event.target.value})}} 
-          />
+              onChange={this.handleEndChange}
+            />
           </label>
 
-          <br/>
+          <br />
           <button type="button" className="user-flow" onClick={this.handleSubmit}>
             <a href="/destination"> Next </a>
           </button>
