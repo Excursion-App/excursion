@@ -17,10 +17,10 @@
   padding: 0;
   margin-right: 30px;
   text-decoration: none;
-  color:rgb(27, 40, 93);
+  color: aliceblue;
 }
 .navbar .list:hover {
-  color: rgb(187, 187, 187);
+  color:rgb(27, 40, 93);
 }
 .fas {
   margin-right: 7px;

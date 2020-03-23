@@ -7,15 +7,11 @@ import Destination from './Destination';
 import Existing from './Existing';
 import Guests from './Guests';
 import Home from './Home';
-import Navbar from './Navbar';
 import TravelDates from './TravelDates';
-import Breadcrumb from './Breadcrumb';
 
 const App = () => (
   <Router>
     <div>
-      <Navbar />
-      <Breadcrumb />
       <Route path="/" exact component={Home} />
       <Route path="/destination" component={Destination} />
       <Route path="/dashboard" component={Dashboard} />
