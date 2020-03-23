@@ -10,11 +10,11 @@
     float: left;
   }
   #breadcrumb li a {
+    position: relative;
     color: #FFF;
     display: block;
     background: #3498db;
     text-decoration: none;
-    position: relative;
     height: 40px;
     line-height: 40px;
     padding: 0 10px 0 5px;
@@ -68,14 +68,14 @@
     border-left-color: #3498db;
   }
   #breadcrumb li a:hover {
-    background-color: #1abc9c;
+    background-color: rgb(255, 167, 0);
   }
   #breadcrumb li a:hover:before {
-    border-color: #1abc9c;
+    border-color: rgb(255, 167, 0);
     border-left-color: transparent;
   }
   #breadcrumb li a:hover:after {
-    border-left-color: #1abc9c;
+    border-left-color: rgb(255, 167, 0);
   }
   #breadcrumb li a:active {
     background-color: #16a085;
