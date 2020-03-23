@@ -58,26 +58,9 @@ class Destination extends React.Component {
               onChange={(event) => {this.setState({end: event.target.value})}} 
           />
           </label>
-<<<<<<< HEAD
 
           <br/>
           <button type="button" className="user-flow" onClick={this.handleSubmit}> Next </button>
-=======
-          <br />
-
-          <button type="button" className="user-flow">
-            <a href="/"> Back </a>
-          </button>
-          <button type="button" className="user-flow">
-            <a href="/travel-dates"> Next </a>
-          </button>
-          <br />
-
-          {/* <input type="submit" className="user-flow" value="Next" /> */}
-
-          {/* <a href="/travel-dates">
-        </a> */}
->>>>>>> e2cc96b5aa5757137dd287443b322daaee6009e3
         </form>
       </div>
     );
