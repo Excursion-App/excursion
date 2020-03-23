@@ -3,7 +3,7 @@ import '../views/Destination.css';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
 import sydney from '../images/sydney-opera-house.jpg';
-import firebase from '../firebase.js'
+import firebase from '../firebase.js';
 
 class Destination extends React.Component {
   constructor(props) {
@@ -23,10 +23,10 @@ class Destination extends React.Component {
       .doc(this.state.end)
       .set({
         start: this.state.start,
-        end: this.state.end
+        end: this.state.end,
       })
-      .then(function() {console.log('Successfully created new trip!')})
-      .catch(function(error) {console.error('Error creating new trip', error )})
+      .then(() => { console.log('Successfully created new trip!'); })
+      .catch((error) => { console.error('Error creating new trip', error); });
   }
 
   render() {
@@ -42,24 +42,24 @@ class Destination extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label className="formLabel">
             From:
-            <input 
-              type="text" 
-              value={this.state.start} 
+            <input
+              type="text"
+              value={this.state.start}
               required
-              onChange={(event) => {this.setState({start: event.target.value})}} 
-          />
+              onChange={(event) => { this.setState({ start: event.target.value }); }}
+            />
           </label>
           <label className="formLabel">
             To:
-            <input 
-              type="text" 
-              value={this.state.end} 
+            <input
+              type="text"
+              value={this.state.end}
               required
-              onChange={(event) => {this.setState({end: event.target.value})}} 
-          />
+              onChange={(event) => { this.setState({ end: event.target.value }); }}
+            />
           </label>
 
-          <br/>
+          <br />
           <button type="button" className="user-flow" onClick={this.handleSubmit}>
             <a href="/destination"> Next </a>
           </button>
