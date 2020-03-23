@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../views/Destination.css';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
 import sydney from '../images/sydney-opera-house.jpg';
 import firebase from '../firebase.js';
 
-class Destination extends React.Component {
+class Destination extends Component {
   constructor(props) {
     super(props);
     this.state = {
