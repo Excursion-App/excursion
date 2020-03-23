@@ -59,7 +59,9 @@ class Destination extends React.Component {
           </label>
 
           <br/>
-          <button type="button" className="user-flow" onClick={this.handleSubmit}> Next </button>
+          <button type="button" className="user-flow" onClick={this.handleSubmit}>
+            <a href="/destination"> Next </a>
+          </button>
         </form>
       </div>
     );

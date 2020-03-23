@@ -3,10 +3,18 @@ import Calendar from 'react-calendar';
 import  '../views/TravelDates.css';
 
 class TravelDates extends Component {
-    state = {
-        date: new Date(),
+    constructor(props) {
+        super(props)
+        this.state = {
+            date: new Date()
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
-    onChange = date => this.setState({ date })
+    
+    handleSubmit(event) {
+        event.preventDefault();
+        console.log(this.state)
+    }
     
     render() {
         return (
@@ -15,7 +23,7 @@ class TravelDates extends Component {
                 <h3> When are you planning on going?</h3>
 
                 <Calendar 
-                    selectRange={this.onChange}
+                    selectRange={this.handleSubmit}
                     value={this.state.date}
                 />
                 <div>
