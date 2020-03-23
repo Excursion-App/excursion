@@ -8,21 +8,17 @@
 .destination-images {
   margin: 5px;
 }
-.user-flow {
-  margin: 5px;
-}
 .input {
-  margin: 20px;
+	margin: 20px;
 }
 .user-flow {
-   box-shadow: 0px 10px 14px -7px rgb(27, 40, 93);
-	background:linear-gradient(to bottom, rgb(91, 112, 194) 5%, rgb(9, 11, 19) 100%);
-	background-color:rgb(27, 40, 93);
-	border-radius:8px;
+	margin: 5px;
+	background:linear-gradient(to bottom, #48a2df 5%, rgb(22, 63, 118) 100%);
+	border-radius:4px;
 	color: white;
 	display:inline-block;
 	cursor:pointer;
-  font-family: 'Source Sans Pro';
+	font-family: 'Source Sans Pro';
 	font-size: 16px;
 	font-weight: bold;
 	padding:13px 32px;
@@ -42,3 +38,4 @@ a {
 	margin: 15px;
 	padding-top: 15px;
 }
+a:hover{}
