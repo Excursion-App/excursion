@@ -6,6 +6,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/react-fontawesome": "^0.1.6",
+    "axios": "^0.19.2",
     "firebase": "^7.11.0",
     "gh-pages": "^1.2.0",
     "moment": "^2.24.0",
