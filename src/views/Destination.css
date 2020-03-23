@@ -8,19 +8,17 @@
 .destination-images {
   margin: 5px;
 }
-
 .input {
 	margin: 20px;
 }
 .user-flow {
 	margin: 5px;
 	background:linear-gradient(to bottom, #48a2df 5%, rgb(22, 63, 118) 100%);
-	/* background-color:#2980b9; */
 	border-radius:4px;
 	color: white;
 	display:inline-block;
 	cursor:pointer;
-  font-family: 'Source Sans Pro';
+	font-family: 'Source Sans Pro';
 	font-size: 16px;
 	font-weight: bold;
 	padding:13px 32px;
@@ -40,3 +38,4 @@ a {
 	margin: 15px;
 	padding-top: 15px;
 }
+a:hover{}
