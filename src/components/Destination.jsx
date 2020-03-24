@@ -1,5 +1,5 @@
 import React from 'react';
-import { throttle } from lodash;
+import { throttle } from 'lodash';
 // import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
 import axios from 'axios';
