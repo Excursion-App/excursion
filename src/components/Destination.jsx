@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Navbar from "./Navbar";
-import Breadcrumb from "./Breadcrumb";
 import * as _ from 'underscore';
+import axios from 'axios';
+import Navbar from './Navbar';
+import Breadcrumb from './Breadcrumb';
 // import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
-import axios from 'axios';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
 import sydney from '../images/sydney-opera-house.jpg';
-import firebase from '../firebase.js';
+import firebase from '../firebase';
 
 class Destination extends Component {
   constructor(props) {
@@ -73,52 +73,47 @@ class Destination extends Component {
 
     return (
       <>
-      <Navbar />
-      <Breadcrumb />
-      <div className="destination">
-        <h1> Top Destinations </h1>
-        <div>
-          <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
-          <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
-          <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
+        <Navbar />
+        <Breadcrumb />
+        <div className="destination">
+          <h1> Top Destinations </h1>
+          <div>
+            <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
+            <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
+            <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
 
 
-        </div>
-        <form onSubmit={this.handleSubmit}>
-          <label className="formLabel">
-            From:
+          </div>
+          <form onSubmit={this.handleSubmit}>
             <input
               type="text"
               value={this.state.start}
-              placeholder
+              placeholder="From?"
               required
-              onChange={(e) =>this.handleStartThrottled(e)}
+              onChange={(e) => this.handleStartThrottled(e)}
             />
-          </label>
-          {/* <Dropdown
+            {/* <Dropdown
             placeholder="Select Which"
             fluid
             search
             selection
             options={countryOptions}
           /> */}
-          <label className="formLabel">
-            To:
             <input
               type="text"
               value={this.state.end}
+              placeholder="To?"
               required
               onChange={this.handleEndChange}
             />
-          </label>
 
-          <br />
-          <button type="button" className="user-flow" onClick={this.handleSubmit}>
-            <a href="/destination"> Next </a>
-          </button>
-        </form>
-      </div>
-</>
+            <br />
+            <button type="button" className="user-flow" onClick={this.handleSubmit}>
+              <a href="/destination"> Next </a>
+            </button>
+          </form>
+        </div>
+      </>
     );
   }
 }
