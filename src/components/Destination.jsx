@@ -1,6 +1,6 @@
 import React from 'react';
-import { throttle } from lodash;
-// import { Dropdown } from 'semantic-ui-react';
+// import { throttle } from 'lodash';
+import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
 import axios from 'axios';
 import paris from '../images/paris.jpg';
@@ -14,8 +14,9 @@ class Destination extends React.Component {
     this.state = {
       start: '',
       end: '',
+      startCities: []
     };
-    this.handleInputThrottled = throttle(this.handleInput, 100)
+    // this.handleInputThrottled = throttle(this.handleInput, 100)
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleStartChange = this.handleStartChange.bind(this);
     this.handleEndChange = this.handleEndChange.bind(this);
@@ -23,11 +24,12 @@ class Destination extends React.Component {
 
   handleInput = event => {
     const value = event.target.value
-    const filteredRes = data.filter((item)=> {
-        // algorithm to search through the `data` array
-    })
-    this.setState({ start: filteredRes })
-}
+    // const filteredRes = data.filter((item)=> {
+    //     // algorithm to search through the `data` array
+    // })
+
+    // this.setState({ start: event.target.start })
+  }
 
   handleSubmit(event) {
     event.preventDefault();
@@ -44,28 +46,30 @@ class Destination extends React.Component {
   }
 
   handleStartChange(event) {
-    this.setState({ start: event.target.value });
-
     axios({
-      method: 'GET',
-      url: 'https://wft-geo-db.p.rapidapi.com/v1/locale/locales',
-      headers: {
-        'content-type': 'application/octet-stream',
-        'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
-        'x-rapidapi-key': 'a62194236emsh5fea71981b5dd1bp1025fejsna249327b54d0',
-      },
-    })
-      .then((response) => {
-        console.log(response);
+      "method":"GET",
+      "url":"https://andruxnet-world-cities-v1.p.rapidapi.com/",
+      "headers":{
+      "content-type":"application/octet-stream",
+      "x-rapidapi-host":"andruxnet-world-cities-v1.p.rapidapi.com",
+      "x-rapidapi-key":"a62194236emsh5fea71981b5dd1bp1025fejsna249327b54d0"
+      },"params":{
+      "query": this.state.start,
+      // "searchby":"city"
+      }
       })
-      .catch((error) => {
-        if (error === 'Error: Request failed with status code 429') {
-          console.log(`Our Error 429: ${error}`);
-        } else {
-          console.log(error);
-        }
-      });
+      .then((response)=>{
+        let cities = response.data.slice(0, 5)
+        this.setState({ startCities: cities })
+        console.log(this.state.startCities)
+      })
+      .catch((error)=>{
+        console.log(error)
+      })
+    this.setState({ start: event.target.value });
   }
+
+
 
   handleEndChange(event) {
     this.setState({ end: event.target.value });
@@ -74,37 +78,27 @@ class Destination extends React.Component {
 
 
   render() {
-    let { start } = this.state;
-
+    // let cities = {response.data}
     return (
-      
       <div className="destination">
         <h1> Top Destinations </h1>
         <div>
           <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
           <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
           <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
-
-
         </div>
         <form onSubmit={this.handleSubmit}>
           <label className="formLabel">
-            From:
-            <br />
-            <input
-              type="text"
-              value={this.state.start}
-              required
-              onChange={this.handleStartChange}
-            />
+            <span style={{padding: "5px"}}> From: </span>
+            <input type="text" value={this.state.start} onChange={this.handleStartChange}/>
+            {/* <ul> { this.state.startCities.map((item, index) => (<li key={index}>{item}</li>)) }</ul> */}
+            {/* <div className="menu">
+              <div className="item"> {this.state.startCities[0]} </div>
+              <div className="item"> </div>
+              <div className="item"> </div>
+            </div>    */}
           </label>
-          {/* <Dropdown
-            placeholder="Select Which"
-            fluid
-            search
-            selection
-            options={countryOptions}
-          /> */}
+
           <label className="formLabel">
             To:
             <input
@@ -114,18 +108,16 @@ class Destination extends React.Component {
               onChange={this.handleEndChange}
             />
           </label>
-
           <br />
           <button type="button" className="user-flow" onClick={this.handleSubmit}>
             <a href="/destination"> Next </a>
           </button>
         </form>
-          <div className='autocomp_wrapper'>
-                <input placeholder="Enter your search.." onChange={this.handleInputThrottled} />
-                <div>
-                    {start.map(result=>{start})}
-                </div>
-            </div>
+        <div>
+          <div className="item"> {this.props.cities} </div>
+          <div className="item"> </div>
+          <div className="item"> </div>
+        </div>
       </div>
     );
   }
