@@ -90,6 +90,7 @@ class Destination extends Component {
             <input
               type="text"
               value={this.state.start}
+              placeholder
               required
               onChange={(e) =>this.handleStartThrottled(e)}
             />
@@ -116,12 +117,6 @@ class Destination extends Component {
             <a href="/destination"> Next </a>
           </button>
         </form>
-          <div className='autocomp_wrapper'>
-                <input placeholder="Enter your search.." onChange={this.handleInputThrottled} />
-                <div>
-                    {/* {start.map(result=>{start})} */}
-                </div>
-            </div>
       </div>
 </>
     );
