@@ -1,6 +1,7 @@
 import React from 'react';
 // import { throttle } from 'lodash';
 import { Dropdown } from 'semantic-ui-react';
+import Breadcrumbs from './Breadcrumbs';
 import '../views/Destination.css';
 import axios from 'axios';
 import paris from '../images/paris.jpg';
@@ -81,6 +82,7 @@ class Destination extends React.Component {
     // let cities = {response.data}
     return (
       <div className="destination">
+        <Breadcrumbs />
         <h1> Top Destinations </h1>
         <div>
           <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
