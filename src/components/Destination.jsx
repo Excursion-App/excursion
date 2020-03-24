@@ -100,7 +100,7 @@ class Destination extends React.Component {
               <div className="item"> </div>
             </div>    */}
           </label>
-
+          
           <label className="formLabel">
             To:
             <input
