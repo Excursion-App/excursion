@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React, { Component } from 'react';
-=======
-import React from 'react';
 import { throttle } from lodash;
 // import { Dropdown } from 'semantic-ui-react';
->>>>>>> 80457c7c78f8af6290d0e73f6289e34f37603357
 import '../views/Destination.css';
 import axios from 'axios';
 import paris from '../images/paris.jpg';
@@ -12,13 +8,8 @@ import mexico from '../images/chichen-itza-mexico.jpg';
 import sydney from '../images/sydney-opera-house.jpg';
 import firebase from '../firebase.js';
 
-<<<<<<< HEAD
 class Destination extends Component {
   constructor(props) {
-=======
-class Destination extends React.Component {
-  constructor(props) {  
->>>>>>> 80457c7c78f8af6290d0e73f6289e34f37603357
     super(props);
     this.state = {
       start: '',
@@ -47,11 +38,6 @@ class Destination extends React.Component {
       .set({
         start: this.state.start,
         end: this.state.end,
-<<<<<<< HEAD
-      })
-      .then(() => { console.log('Successfully created new trip!'); })
-      .catch((error) => { console.error('Error creating new trip', error); });
-=======
       })
       .then(() => { console.log('Successfully created new trip!'); })
       .catch((error) => { console.error('Error creating new trip', error); });
@@ -79,7 +65,6 @@ class Destination extends React.Component {
           console.log(error);
         }
       });
->>>>>>> 80457c7c78f8af6290d0e73f6289e34f37603357
   }
 
   handleEndChange(event) {
@@ -105,19 +90,11 @@ class Destination extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label className="formLabel">
             From:
-<<<<<<< HEAD
-=======
-            <br />
->>>>>>> 80457c7c78f8af6290d0e73f6289e34f37603357
             <input
               type="text"
               value={this.state.start}
               required
-<<<<<<< HEAD
-              onChange={(event) => { this.setState({ start: event.target.value }); }}
-=======
               onChange={this.handleStartChange}
->>>>>>> 80457c7c78f8af6290d0e73f6289e34f37603357
             />
           </label>
           {/* <Dropdown
@@ -133,11 +110,7 @@ class Destination extends React.Component {
               type="text"
               value={this.state.end}
               required
-<<<<<<< HEAD
-              onChange={(event) => { this.setState({ end: event.target.value }); }}
-=======
               onChange={this.handleEndChange}
->>>>>>> 80457c7c78f8af6290d0e73f6289e34f37603357
             />
           </label>
 
