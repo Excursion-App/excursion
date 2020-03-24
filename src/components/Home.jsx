@@ -1,7 +1,7 @@
 import React from 'react';
 import '../views/Home.css';
 import { Link } from 'react-router-dom';
-import Breadcrumb from './Breadcrumb';
+import Breadcrumb from './Breadcrumbs';
 import Navbar from './Navbar';
 
 const Home = () => (
