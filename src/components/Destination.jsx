@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Navbar from "./Navbar";
+import Breadcrumb from "./Breadcrumb";
 import { throttle } from 'lodash';
 // import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
@@ -77,7 +79,9 @@ class Destination extends Component {
     let { start } = this.state;
 
     return (
-      
+      <>
+      <Navbar />
+      <Breadcrumb />
       <div className="destination">
         <h1> Top Destinations </h1>
         <div>
@@ -126,6 +130,7 @@ class Destination extends Component {
                 </div>
             </div>
       </div>
+</>
     );
   }
 }
