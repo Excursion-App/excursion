@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from "./Navbar";
 import Breadcrumb from "./Breadcrumb";
-import { throttle } from 'lodash';
+import * as _ from 'underscore';
 // import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
 import axios from 'axios';
@@ -17,19 +17,11 @@ class Destination extends Component {
       start: '',
       end: '',
     };
-    this.handleInputThrottled = throttle(this.handleInput, 100)
+    this.handleStartThrottled = _.throttle(this.handleStartChange.bind(this), 100);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleStartChange = this.handleStartChange.bind(this);
     this.handleEndChange = this.handleEndChange.bind(this);
   }
-
-  handleInput = event => {
-    const value = event.target.value
-    // const filteredRes = data.filter((item)=> {
-    //     // algorithm to search through the `data` array
-    // })
-    // this.setState({ start: filteredRes })
-}
 
   handleSubmit(event) {
     event.preventDefault();
@@ -46,6 +38,7 @@ class Destination extends Component {
   }
 
   handleStartChange(event) {
+    console.log(event);
     this.setState({ start: event.target.value });
 
     axios({
@@ -98,7 +91,7 @@ class Destination extends Component {
               type="text"
               value={this.state.start}
               required
-              onChange={this.handleStartChange}
+              onChange={(e) =>this.handleStartThrottled(e)}
             />
           </label>
           {/* <Dropdown
@@ -136,3 +129,8 @@ class Destination extends Component {
 }
 
 export default Destination;
+
+// function that sets state and calls handleStartThrottle
+// remove set state from handleStartChange
+// call new function with input on change.
+// increase time
