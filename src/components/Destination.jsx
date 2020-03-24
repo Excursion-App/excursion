@@ -1,63 +1,123 @@
 import React from 'react';
+import { throttle } from 'lodash';
+// import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
+import axios from 'axios';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
 import sydney from '../images/sydney-opera-house.jpg';
+import firebase from '../firebase.js';
 
 class Destination extends React.Component {
-  constructor(props) {
+  constructor(props) {  
     super(props);
     this.state = {
       start: '',
       end: '',
+      startCities: []
     };
-    this.handleChange = this.handleChange.bind(this);
+    // this.handleInputThrottled = throttle(this.handleInput, 100)
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleStartChange = this.handleStartChange.bind(this);
+    this.handleEndChange = this.handleEndChange.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({ start: event.target.start });
-    this.setState({ end: event.target.end });
+  handleInput = event => {
+    const value = event.target.value
+    // const filteredRes = data.filter((item)=> {
+    //     // algorithm to search through the `data` array
+    // })
+
+    // this.setState({ start: event.target.start })
   }
 
   handleSubmit(event) {
-    // alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
+    firebase
+      .firestore()
+      .collection('Trips')
+      .doc(this.state.end)
+      .set({
+        start: this.state.start,
+        end: this.state.end,
+      })
+      .then(() => { console.log('Successfully created new trip!'); })
+      .catch((error) => { console.error('Error creating new trip', error); });
   }
 
+  handleStartChange(event) {
+    axios({
+      "method":"GET",
+      "url":"https://andruxnet-world-cities-v1.p.rapidapi.com/",
+      "headers":{
+      "content-type":"application/octet-stream",
+      "x-rapidapi-host":"andruxnet-world-cities-v1.p.rapidapi.com",
+      "x-rapidapi-key":"a62194236emsh5fea71981b5dd1bp1025fejsna249327b54d0"
+      },"params":{
+      "query": this.state.start,
+      // "searchby":"city"
+      }
+      })
+      .then((response)=>{
+        let cities = response.data.slice(0, 5)
+        this.setState({ startCities: cities })
+        console.log(this.state.startCities)
+      })
+      .catch((error)=>{
+        console.log(error)
+      })
+    this.setState({ start: event.target.value });
+  }
+
+
+
+  handleEndChange(event) {
+    this.setState({ end: event.target.value });
+    console.log(this.state);
+  }
+
+
   render() {
+    // let cities = {response.data}
     return (
       <div className="destination">
-        <h1> Where are you going? </h1>
+        <h1> Top Destinations </h1>
         <div>
-          <img src={paris} alt="eiffel tower" className="destination-images" />
-          <img src={sydney} width="360" height="240" alt="sydney opera house" className="destination-images" />
-          <img src={mexico} alt="chichen itza" height="240" width="360" className="destination-images" />
+          <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
+          <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
+          <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
         </div>
         <form onSubmit={this.handleSubmit}>
           <label className="formLabel">
-            From:
-            <input type="text" start={this.state.start} onChange={this.handleChange} />
+            <span style={{padding: "5px"}}> From: </span>
+            <input type="text" value={this.state.start} onChange={this.handleStartChange}/>
+            {/* <ul> { this.state.startCities.map((item, index) => (<li key={index}>{item}</li>)) }</ul> */}
+            {/* <div className="menu">
+              <div className="item"> {this.state.startCities[0]} </div>
+              <div className="item"> </div>
+              <div className="item"> </div>
+            </div>    */}
           </label>
+
           <label className="formLabel">
             To:
-            <input type="text" end={this.state.end} onChange={this.handleChange} />
+            <input
+              type="text"
+              value={this.state.end}
+              required
+              onChange={this.handleEndChange}
+            />
           </label>
-
-          <br/>
-
-          <button type="button" className="user-flow">
-            <a href="/"> Back </a>
+          <br />
+          <button type="button" className="user-flow" onClick={this.handleSubmit}>
+            <a href="/destination"> Next </a>
           </button>
-          <button type="button" className="user-flow">
-            <a href="/travel-dates"> Next </a>
-          </button>
-
-          {/* <input type="submit" className="user-flow" value="Next" /> */}
-
-          {/* <a href="/travel-dates">
-        </a> */}
         </form>
+        <div>
+          <div className="item"> {this.props.cities} </div>
+          <div className="item"> </div>
+          <div className="item"> </div>
+        </div>
       </div>
     );
   }

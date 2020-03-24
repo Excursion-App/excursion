@@ -1,26 +1,33 @@
-body, html {
-  background-color: rgb(238,239,240);
-  /* background-image: url(https://picsum.photos//580?random=${id}); */
-  background-size: cover;
-  height: 100%;
+.title {
+  font-size: 40px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: rgb(27, 41, 94);
 }
-
 .home {
+  position: absolute;
+  font-family: 'Josefin Sans', sans-serif;
+  background: url(https://source.unsplash.com/1600x900/?travel) no-repeat;
+  width: 100vw;
+  height: 90vh;
+  background-size: 100% 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .home2 {
-  width: 960px;
-  padding: 2em 2em 4em 2em;
-  box-shadow: 0 4px 10px 4px #13232f4d;
-  max-width: 16em;
-  background-color: aliceblue;
-  border-radius: 20px;  
+  font-size: 25px;
+  color: rgb(240, 132, 2);
+  text-shadow: 1px 1px 2px #000;
   text-align: center;
+  width: 960px;
+  padding: 25px 10px 30px 10px;
+  box-shadow: 0 4px 10px 4px #13232f4d;
+  max-width: 14em;
+  background-color: rgba(0, 176, 234, 0.4);
+  border-radius: 12px; 
 }
 
 @media only screen and (min-height: 600px) {

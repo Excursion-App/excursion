@@ -1,17 +1,23 @@
 import React from 'react';
 import '../views/Home.css';
+import { Link } from 'react-router-dom';
+import Breadcrumbs from './Breadcrumbs';
+import Navbar from './Navbar';
 
 const Home = () => (
-
-  <div className="home">
-    <div className="home2">
-      <h1> Excursion App </h1>
-      <p> Group Vacations made easy. </p>
-      <button type="button" className="user-flow">
-        <a href="/destination"> Plan A New Trip </a>
-      </button>
+  <>
+    <Navbar />
+    <div className="home">
+      <Breadcrumbs />
+      <div className="home2">
+        <h1 className="title"> EXCURSION </h1>
+        <p> Group Travel Made Easy. </p>
+        <button type="button" className="user-flow">
+          <Link to="/destination"> Plan A New Trip </Link>
+        </button>
+      </div>
     </div>
-  </div>
+  </ >
 );
 
 export default Home;
