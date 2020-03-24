@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { throttle } from lodash;
+import { throttle } from 'lodash';
 // import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
 import axios from 'axios';
@@ -23,10 +23,10 @@ class Destination extends Component {
 
   handleInput = event => {
     const value = event.target.value
-    const filteredRes = data.filter((item)=> {
-        // algorithm to search through the `data` array
-    })
-    this.setState({ start: filteredRes })
+    // const filteredRes = data.filter((item)=> {
+    //     // algorithm to search through the `data` array
+    // })
+    // this.setState({ start: filteredRes })
 }
 
   handleSubmit(event) {
@@ -122,7 +122,7 @@ class Destination extends Component {
           <div className='autocomp_wrapper'>
                 <input placeholder="Enter your search.." onChange={this.handleInputThrottled} />
                 <div>
-                    {start.map(result=>{start})}
+                    {/* {start.map(result=>{start})} */}
                 </div>
             </div>
       </div>
