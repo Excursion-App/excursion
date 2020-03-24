@@ -1,6 +1,7 @@
 import React from 'react';
+import Navbar from './Navbar';
 import '../views/Dashboard.css';
-import firebase from '../firebase.js'
+import firebase from '../firebase';
 
 const db = firebase.firestore();
 
@@ -8,27 +9,28 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      trips: []
-    }
+      trips: [],
+    };
   }
+
   componentDidMount() {
     firebase
       .firestore()
       .collection('Trips')
       .get()
-      .then(querySnapshot => {
-        const Trips = []
+      .then((querySnapshot) => {
+        const Trips = [];
 
-        querySnapshot.forEach(function(doc) {
+        querySnapshot.forEach((doc) => {
           // console.log(doc.id, '=>', doc.data())
           Trips.push({
-            destination: doc.data().end
-            //Starting: doc.data().starting
-          })
-        })
+            destination: doc.data().end,
+            //  Starting: doc.data().starting
+          });
+        });
         // console.log(this.state.trips)
-        this.setState({ trips: Trips })
-      })
+        this.setState({ trips: Trips });
+      });
   }
 
   // getTrips() {
@@ -53,14 +55,20 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
+        <Navbar />
         <h1> Dashboard </h1>
-        <div>{this.state.trips.map((el, indx) => {
-          return (
-            <p key={indx}> {el.destination} Trip </p>
-          )
-        })}</div>
+        <div>
+          {this.state.trips.map((el, indx) => (
+            <p
+              key={indx}
+            >
+              {el.destination}
+              Trip
+            </p>
+          ))}
+        </div>
       </div>
-    )
+    );
   }
 }
 // const Dashboard = () => (
