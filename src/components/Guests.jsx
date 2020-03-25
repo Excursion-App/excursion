@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
 import '../views/Guests.css';
-import Breadcrumbs from './Breadcrumbs';
 
 const Guests = () => (
   <>
