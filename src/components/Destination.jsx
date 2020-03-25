@@ -93,14 +93,17 @@ class Destination extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label className="formLabel">
             <span style={{padding: "5px"}}> From: </span>
-            <input type="text" value={this.state.start} onChange={this.handleStartChange}/>
+            <input type="text" 
+            value={this.state.start} 
+            placeholder="Where are you coming from?"
+            onChange={this.handleStartChange}/>
           </label>
-
           <label className="formLabel">
             To:
             <input
               type="text"
               value={this.state.end}
+              placeholder="Where would you like to go?"
               required
               onChange={this.handleEndChange}
             />
