@@ -2,6 +2,7 @@ import React from 'react';
 import { throttle } from 'lodash';
 // import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
+import Breadcrumbs from './Breadcrumbs';
 import axios from 'axios';
 import Navbar from './Navbar';
 import paris from '../images/paris.jpg';
