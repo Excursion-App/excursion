@@ -84,24 +84,29 @@ class Destination extends Component {
           </div>
 
           <form className="form-inline" action="/action_page.php" onSubmit={this.handleSubmit}>
-            <label htmlFor="startFrom">From:</label>
-            <input
-              type="text"
-              id="startFrom"
-              value={this.state.start}
-              placeholder="Where are you coming from?"
-              onChange={this.handleStartChange}
-              size="25"
-            />
-            <label htmlFor="endTo">To:</label>
-            <input
-              type="text"
-              id="endTo"
-              value={this.state.end}
-              placeholder="Where would you like to go?"
-              onChange={this.handleEndChange}
-              size="25"
-            />
+            <label htmlFor="startFrom">
+              From:
+              <input
+                type="text"
+                id="startFrom"
+                value={this.state.start}
+                placeholder="Where are you coming from?"
+                onChange={this.handleStartChange}
+                size="25"
+              />
+            </label>
+
+            <label htmlFor="endTo">
+              To:
+              <input
+                type="text"
+                id="endTo"
+                value={this.state.end}
+                placeholder="Where would you like to go?"
+                onChange={this.handleEndChange}
+                size="25"
+              />
+            </label>
             <button type="button" className="button" onClick={this.handleSubmit}>
               <i className="fas fa-search-location" />
               <a href="/travel-dates"> Next </a>
