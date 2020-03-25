@@ -1,11 +1,11 @@
 import React from 'react';
+import Navbar from './Navbar';
 import '../views/Guests.css';
-import Breadcrumbs from './Breadcrumbs';
 
 const Guests = () => (
   <>
+    <Navbar />
     <div className="guests">
-      <Breadcrumbs />
       <h1> Add your guests </h1>
       <i className="fas fa-plus-circle" />
       <br />
