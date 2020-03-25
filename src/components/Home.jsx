@@ -1,14 +1,14 @@
 import React from 'react';
 import '../views/Home.css';
 import { Link } from 'react-router-dom';
-import Breadcrumb from './Breadcrumbs';
+import Breadcrumbs from './Breadcrumbs';
 import Navbar from './Navbar';
 
 const Home = () => (
   <>
     <Navbar />
     <div className="home">
-      <Breadcrumb />
+      <Breadcrumbs />
       <div className="home2">
         <h1 className="title"> EXCURSION </h1>
         <p> Group Travel Made Easy. </p>

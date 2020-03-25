@@ -1,9 +1,9 @@
 import React from 'react';
-// import { throttle } from 'lodash';
-import { Dropdown } from 'semantic-ui-react';
-import Breadcrumbs from './Breadcrumbs';
+import { throttle } from 'lodash';
+// import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
 import axios from 'axios';
+import Navbar from './Navbar';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
 import sydney from '../images/sydney-opera-house.jpg';
@@ -81,6 +81,8 @@ class Destination extends React.Component {
   render() {
     // let cities = {response.data}
     return (
+      <div>
+        <Navbar />
       <div className="destination">
         <Breadcrumbs />
         <h1> Top Destinations </h1>
@@ -92,20 +94,17 @@ class Destination extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label className="formLabel">
             <span style={{padding: "5px"}}> From: </span>
-            <input type="text" value={this.state.start} onChange={this.handleStartChange}/>
-            {/* <ul> { this.state.startCities.map((item, index) => (<li key={index}>{item}</li>)) }</ul> */}
-            {/* <div className="menu">
-              <div className="item"> {this.state.startCities[0]} </div>
-              <div className="item"> </div>
-              <div className="item"> </div>
-            </div>    */}
+            <input type="text" 
+            value={this.state.start} 
+            placeholder="Where are you coming from?"
+            onChange={this.handleStartChange}/>
           </label>
-          
           <label className="formLabel">
             To:
             <input
               type="text"
               value={this.state.end}
+              placeholder="Where would you like to go?"
               required
               onChange={this.handleEndChange}
             />
@@ -120,6 +119,7 @@ class Destination extends React.Component {
           <div className="item"> </div>
           <div className="item"> </div>
         </div>
+      </div>
       </div>
     );
   }
