@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Calendar from 'react-calendar';
-import '../views/TravelDates.css';
 import Navbar from './Navbar';
+import '../views/TravelDates.css';  
 
 class TravelDates extends Component {
   constructor(props) {
@@ -19,8 +19,8 @@ class TravelDates extends Component {
 
   render() {
     return (
-      <>
-        <Navbar />
+      <div>
+          <Navbar />
         <div className="travel-dates">
           <h1> Travel Dates </h1>
           <h3> When are you planning on going?</h3>
@@ -40,7 +40,7 @@ class TravelDates extends Component {
             </button>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }

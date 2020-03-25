@@ -8,12 +8,10 @@ import Existing from './Existing';
 import Guests from './Guests';
 import Home from './Home';
 import TravelDates from './TravelDates';
-import Breadcrumb from './Breadcrumb';
 
 const App = () => (
   <Router>
     <div>
-      <Breadcrumb />
       <Route path="/" exact component={Home} />
       <Route path="/excursion" component={Home} />
       <Route path="/destination" component={Destination} />

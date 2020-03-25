@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Breadcrumb from './Breadcrumb';
+import Breadcrumbs from './Breadcrumbs';
 import '../views/Navbar.css';
 import brand from '../images/excursions-2020.png';
 
@@ -24,7 +24,7 @@ const Navbar = () => (
         Log in
       </Link>
     </div>
-    <Breadcrumb />
+    <Breadcrumbs />
   </>
 );
 

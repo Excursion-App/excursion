@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { throttle } from 'lodash';
 import * as _ from 'underscore';
-import axios from 'axios';
-import Navbar from './Navbar';
-import Breadcrumb from './Breadcrumb';
 // import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
+import Breadcrumbs from './Breadcrumbs';
+import axios from 'axios';
+import Navbar from './Navbar';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
 import sydney from '../images/sydney-opera-house.jpg';
@@ -16,6 +17,7 @@ class Destination extends Component {
     this.state = {
       start: '',
       end: '',
+      startCities: []
     };
     this.handleStartThrottled = _.throttle(this.handleStartChange.bind(this), 100);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,29 +40,30 @@ class Destination extends Component {
   }
 
   handleStartChange(event) {
-    console.log(event);
-    this.setState({ start: event.target.value });
-
     axios({
-      method: 'GET',
-      url: 'https://wft-geo-db.p.rapidapi.com/v1/locale/locales',
-      headers: {
-        'content-type': 'application/octet-stream',
-        'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
-        'x-rapidapi-key': 'a62194236emsh5fea71981b5dd1bp1025fejsna249327b54d0',
-      },
-    })
-      .then((response) => {
-        console.log(response);
+      "method":"GET",
+      "url":"https://andruxnet-world-cities-v1.p.rapidapi.com/",
+      "headers":{
+      "content-type":"application/octet-stream",
+      "x-rapidapi-host":"andruxnet-world-cities-v1.p.rapidapi.com",
+      "x-rapidapi-key":"a62194236emsh5fea71981b5dd1bp1025fejsna249327b54d0"
+      },"params":{
+      "query": this.state.start,
+      // "searchby":"city"
+      }
       })
-      .catch((error) => {
-        if (error === 'Error: Request failed with status code 429') {
-          console.log(`Our Error 429: ${error}`);
-        } else {
-          console.log(error);
-        }
-      });
+      .then((response)=>{
+        let cities = response.data.slice(0, 5)
+        this.setState({ startCities: cities })
+        console.log(this.state.startCities)
+      })
+      .catch((error)=>{
+        console.log(error)
+      })
+    this.setState({ start: event.target.value });
   }
+
+
 
   handleEndChange(event) {
     this.setState({ end: event.target.value });
@@ -69,51 +72,48 @@ class Destination extends Component {
 
 
   render() {
-    let { start } = this.state;
-
+    // let cities = {response.data}
     return (
-      <>
+      <div>
         <Navbar />
-        <Breadcrumb />
-        <div className="destination">
-          <h1> Top Destinations </h1>
-          <div>
-            <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
-            <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
-            <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
-
-
-          </div>
-          <form onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              value={this.state.start}
-              placeholder="From?"
-              required
-              onChange={(e) => this.handleStartThrottled(e)}
-            />
-            {/* <Dropdown
-            placeholder="Select Which"
-            fluid
-            search
-            selection
-            options={countryOptions}
-          /> */}
+      <div className="destination">
+        <Breadcrumbs />
+        <h1> Top Destinations </h1>
+        <div>
+          <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
+          <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
+          <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
+        </div>
+        <form onSubmit={this.handleSubmit}>
+          <label className="formLabel">
+            <span style={{padding: "5px"}}> From: </span>
+            <input type="text" 
+            value={this.state.start} 
+            placeholder="Where are you coming from?"
+            onChange={this.handleStartChange}/>
+          </label>
+          <label className="formLabel">
+            To:
             <input
               type="text"
               value={this.state.end}
-              placeholder="To?"
+              placeholder="Where would you like to go?"
               required
               onChange={this.handleEndChange}
             />
-
-            <br />
-            <button type="button" className="user-flow" onClick={this.handleSubmit}>
-              <a href="/destination"> Next </a>
-            </button>
-          </form>
+          </label>
+          <br />
+          <button type="button" className="user-flow" onClick={this.handleSubmit}>
+            <a href="/destination"> Next </a>
+          </button>
+        </form>
+        <div>
+          <div className="item"> {this.props.cities} </div>
+          <div className="item"> </div>
+          <div className="item"> </div>
         </div>
-      </>
+      </div>
+      </div>
     );
   }
 }
