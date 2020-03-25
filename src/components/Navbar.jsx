@@ -20,7 +20,7 @@ const Navbar = () => (
         Sign up
       </Link>
       <Link to="/dashboard" className="list">
-        <i className="fas fa-user-alt" />
+        <i className="fas fa-sign-in-alt" />
         Log in
       </Link>
     </div>

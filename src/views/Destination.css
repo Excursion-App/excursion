@@ -8,9 +8,6 @@
 .destination-images {
   margin: 5px;
 }
-.input {
-	margin: 20px;
-}
 .user-flow {
 	margin: 5px;
 	background:linear-gradient(to bottom, #48a2df 5%, rgb(22, 63, 118) 100%);
@@ -34,7 +31,50 @@ a {
   color: white;
   text-decoration: none;
 }
-.formLabel {
-	margin: 15px;
-	padding-top: 15px;
+.button {
+	border-radius: 4px;
 }
+.form-inline {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+  }
+  
+  /* Add some margins for each label */
+  .form-inline label {
+	margin: 5px 10px 5px 0;
+	font-weight: bold;
+  }
+  
+  /* Style the input fields */
+  .form-inline input {
+	vertical-align: middle;
+	margin: 5px 10px 5px 0;
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius:4px;
+
+  }
+  
+  /* Style the submit button */
+  .form-inline button {
+	padding: 10px 20px;
+	background-color: rgb(0, 149, 226);
+	border: 1px solid #ddd;
+	color: white;
+  }
+  
+  /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+  @media (max-width: 800px) {
+	.form-inline input {
+	  margin: 10px 0;
+	}
+  
+	.form-inline {
+	  flex-direction: column;
+	  align-items: stretch;
+	}
+  }
+
+

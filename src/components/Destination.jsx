@@ -82,31 +82,32 @@ class Destination extends Component {
             <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
             <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
           </div>
-          <form onSubmit={this.handleSubmit}>
-            <label className="formLabel">
-              <span style={{ padding: '5px' }}> From: </span>
-              <input
-                type="text"
-                value={this.state.start}
-                placeholder="Where are you coming from?"
-                onChange={this.handleStartChange}
-              />
-            </label>
-            <label className="formLabel">
-              To:
-              <input
-                type="text"
-                value={this.state.end}
-                placeholder="Where would you like to go?"
-                required
-                onChange={this.handleEndChange}
-              />
-            </label>
-            <br />
-            <button type="button" className="user-flow" onClick={this.handleSubmit}>
-              <a href="/destination"> Next </a>
+
+          <form className="form-inline" action="/action_page.php" onSubmit={this.handleSubmit}>
+            <label htmlFor="startFrom">From:</label>
+            <input
+              type="text"
+              id="startFrom"
+              value={this.state.start}
+              placeholder="Where are you coming from?"
+              onChange={this.handleStartChange}
+              size="25"
+            />
+            <label htmlFor="endTo">To:</label>
+            <input
+              type="text"
+              id="endTo"
+              value={this.state.end}
+              placeholder="Where would you like to go?"
+              onChange={this.handleEndChange}
+              size="25"
+            />
+            <button type="button" className="button" onClick={this.handleSubmit}>
+              <i className="fas fa-search-location" />
+              <a href="/travel-dates"> Next </a>
             </button>
           </form>
+
           <div>
             <div className="item">
               {' '}
