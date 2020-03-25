@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Calendar from 'react-calendar';
 import Navbar from './Navbar';
-import '../views/TravelDates.css';
+import '../views/TravelDates.css';  
 
 class TravelDates extends Component {
   constructor(props) {
