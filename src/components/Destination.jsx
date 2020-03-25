@@ -9,6 +9,7 @@ import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
 import sydney from '../images/sydney-opera-house.jpg';
 import firebase from '../firebase';
+import Breadcrumbs from './Breadcrumbs';
 
 class Destination extends Component {
   constructor(props) {
@@ -75,6 +76,7 @@ class Destination extends Component {
     return (
       <div>
         <Navbar />
+        <Breadcrumbs />
         <div className="destination">
           <h1> Top Destinations </h1>
           <div>
