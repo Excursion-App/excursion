@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../views/Breadcrumb.css';
 
-const Breadcrumb = () => (
+const Breadcrumbs = () => (
 
   <div id="breadcrumbs">
     <ul id="breadcrumb">
@@ -40,4 +40,4 @@ const Breadcrumb = () => (
   </div>
 );
 
-export default Breadcrumb;
+export default Breadcrumbs;

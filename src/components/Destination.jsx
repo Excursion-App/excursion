@@ -1,34 +1,27 @@
-import React from 'react';
-// import { throttle } from 'lodash';
-import { Dropdown } from 'semantic-ui-react';
+import React, { Component } from 'react';
+import { throttle } from 'lodash';
+import * as _ from 'underscore';
+// import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
 import axios from 'axios';
+import Navbar from './Navbar';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
 import sydney from '../images/sydney-opera-house.jpg';
-import firebase from '../firebase.js';
+import firebase from '../firebase';
 
-class Destination extends React.Component {
-  constructor(props) {  
+class Destination extends Component {
+  constructor(props) {
     super(props);
     this.state = {
       start: '',
       end: '',
-      startCities: []
+      startCities: [],
     };
-    // this.handleInputThrottled = throttle(this.handleInput, 100)
+    this.handleStartThrottled = _.throttle(this.handleStartChange.bind(this), 100);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleStartChange = this.handleStartChange.bind(this);
     this.handleEndChange = this.handleEndChange.bind(this);
-  }
-
-  handleInput = event => {
-    const value = event.target.value
-    // const filteredRes = data.filter((item)=> {
-    //     // algorithm to search through the `data` array
-    // })
-
-    // this.setState({ start: event.target.start })
   }
 
   handleSubmit(event) {
@@ -47,28 +40,28 @@ class Destination extends React.Component {
 
   handleStartChange(event) {
     axios({
-      "method":"GET",
-      "url":"https://andruxnet-world-cities-v1.p.rapidapi.com/",
-      "headers":{
-      "content-type":"application/octet-stream",
-      "x-rapidapi-host":"andruxnet-world-cities-v1.p.rapidapi.com",
-      "x-rapidapi-key":"a62194236emsh5fea71981b5dd1bp1025fejsna249327b54d0"
-      },"params":{
-      "query": this.state.start,
+      method: 'GET',
+      url: 'https://andruxnet-world-cities-v1.p.rapidapi.com/',
+      headers: {
+        'content-type': 'application/octet-stream',
+        'x-rapidapi-host': 'andruxnet-world-cities-v1.p.rapidapi.com',
+        'x-rapidapi-key': 'a62194236emsh5fea71981b5dd1bp1025fejsna249327b54d0',
+      },
+      params: {
+        query: this.state.start,
       // "searchby":"city"
-      }
+      },
+    })
+      .then((response) => {
+        const cities = response.data.slice(0, 5);
+        this.setState({ startCities: cities });
+        console.log(this.state.startCities);
       })
-      .then((response)=>{
-        let cities = response.data.slice(0, 5)
-        this.setState({ startCities: cities })
-        console.log(this.state.startCities)
-      })
-      .catch((error)=>{
-        console.log(error)
-      })
+      .catch((error) => {
+        console.log(error);
+      });
     this.setState({ start: event.target.value });
   }
-
 
 
   handleEndChange(event) {
@@ -80,43 +73,55 @@ class Destination extends React.Component {
   render() {
     // let cities = {response.data}
     return (
-      <div className="destination">
-        <h1> Top Destinations </h1>
-        <div>
-          <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
-          <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
-          <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
-        </div>
-        <form onSubmit={this.handleSubmit}>
-          <label className="formLabel">
-            <span style={{padding: "5px"}}> From: </span>
-            <input type="text" value={this.state.start} onChange={this.handleStartChange}/>
-            {/* <ul> { this.state.startCities.map((item, index) => (<li key={index}>{item}</li>)) }</ul> */}
-            {/* <div className="menu">
-              <div className="item"> {this.state.startCities[0]} </div>
-              <div className="item"> </div>
-              <div className="item"> </div>
-            </div>    */}
-          </label>
+      <div>
+        <Navbar />
+        <div className="destination">
+          <h1> Top Destinations </h1>
+          <div>
+            <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
+            <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
+            <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
+          </div>
 
-          <label className="formLabel">
-            To:
-            <input
-              type="text"
-              value={this.state.end}
-              required
-              onChange={this.handleEndChange}
-            />
-          </label>
-          <br />
-          <button type="button" className="user-flow" onClick={this.handleSubmit}>
-            <a href="/destination"> Next </a>
-          </button>
-        </form>
-        <div>
-          <div className="item"> {this.props.cities} </div>
-          <div className="item"> </div>
-          <div className="item"> </div>
+          <form className="form-inline" action="/action_page.php" onSubmit={this.handleSubmit}>
+            <label htmlFor="startFrom">
+              From:
+              <input
+                type="text"
+                id="startFrom"
+                value={this.state.start}
+                placeholder="Where are you coming from?"
+                onChange={this.handleStartChange}
+                size="25"
+              />
+            </label>
+
+            <label htmlFor="endTo">
+              To:
+              <input
+                type="text"
+                id="endTo"
+                value={this.state.end}
+                placeholder="Where would you like to go?"
+                onChange={this.handleEndChange}
+                size="25"
+              />
+            </label>
+            <button type="button" className="button" onClick={this.handleSubmit}>
+              <i className="fas fa-search-location" />
+              <a href="/travel-dates"> Next </a>
+            </button>
+          </form>
+
+          <div>
+            <div className="item">
+              {' '}
+              {this.props.cities}
+              {' '}
+            </div>
+            <div className="item"> </div>
+            <div className="item"> </div>
+          </div>
         </div>
       </div>
     );
@@ -124,3 +129,8 @@ class Destination extends React.Component {
 }
 
 export default Destination;
+
+// function that sets state and calls handleStartThrottle
+// remove set state from handleStartChange
+// call new function with input on change.
+// increase time
