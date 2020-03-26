@@ -88,6 +88,7 @@ class Destination extends Component {
           <form className="form-inline" action="/action_page.php" onSubmit={this.handleSubmit}>
             <label htmlFor="startFrom">
               From:
+              <br />
               <input
                 type="text"
                 id="startFrom"
@@ -100,6 +101,7 @@ class Destination extends Component {
 
             <label htmlFor="endTo">
               To:
+              <br />
               <input
                 type="text"
                 id="endTo"
