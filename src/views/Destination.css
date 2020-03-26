@@ -10,23 +10,17 @@
 }
 .user-flow {
 	margin: 5px;
-	background:linear-gradient(to bottom, #48a2df 5%, rgb(22, 63, 118) 100%);
+	background-color: rgb(55, 176, 218);
 	border-radius:4px;
 	color: white;
 	display:inline-block;
 	cursor:pointer;
-	font-family: 'Source Sans Pro';
 	font-size: 16px;
-	font-weight: bold;
 	padding:13px 32px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #3d768a;
 }
 
-.user-flow:active {
-	position:relative;
-	top:1px;
-}
 a {
   color: white;
   text-decoration: none;

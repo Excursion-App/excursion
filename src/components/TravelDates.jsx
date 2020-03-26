@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Calendar from 'react-calendar';
 import Navbar from './Navbar';
+import Breadcrumbs from './Breadcrumbs';
 import '../views/TravelDates.css';  
 
 class TravelDates extends Component {
@@ -21,6 +22,7 @@ class TravelDates extends Component {
     return (
       <div>
           <Navbar />
+          <Breadcrumbs />
         <div className="travel-dates">
           <h1> Travel Dates </h1>
           <h3> When are you planning on going?</h3>

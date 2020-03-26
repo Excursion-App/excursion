@@ -30,8 +30,9 @@
   border-radius: 12px; 
 }
 
-@media only screen and (min-height: 600px) {
+/* @media only screen and (min-height: 600px) {
   .home2 {
     margin-top: -125px;
   }
-}
+} */
+
