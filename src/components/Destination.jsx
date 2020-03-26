@@ -109,6 +109,7 @@ class Destination extends Component {
                 size="25"
               />
             </label>
+
             <button type="button" className="button" onClick={this.handleSubmit}>
               <i className="fas fa-search-location" />
               <a href="/travel-dates"> Next </a>
