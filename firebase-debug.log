@@ -24,3 +24,27 @@
 [warn] ⚠  hosting: Port 5000 is not available. Trying another port...
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5005
+[debug] [2020-03-26T06:29:12.776Z] ----------------------------------------------------------------------
+[debug] [2020-03-26T06:29:12.781Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2020-03-26T06:29:12.781Z] CLI Version:   7.16.1
+[debug] [2020-03-26T06:29:12.781Z] Platform:      darwin
+[debug] [2020-03-26T06:29:12.781Z] Node Version:  v12.16.1
+[debug] [2020-03-26T06:29:12.811Z] Time:          Wed Mar 25 2020 23:29:12 GMT-0700 (Pacific Daylight Time)
+[debug] [2020-03-26T06:29:12.811Z] ----------------------------------------------------------------------
+[debug] [2020-03-26T06:29:12.811Z] 
+[debug] [2020-03-26T06:29:12.874Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-26T06:29:12.875Z] > authorizing via signed-in user
+[debug] [2020-03-26T06:29:12.875Z] [iam] checking project the-excursion-app for permissions ["firebase.projects.get"]
+[debug] [2020-03-26T06:29:12.879Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/the-excursion-app:testIamPermissions  
+
+[debug] [2020-03-26T06:29:13.226Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-26T06:29:13.229Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/the-excursion-app  
+ 
+[debug] [2020-03-26T06:29:13.532Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-26T06:29:13.535Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/the-excursion-app/webApps/-/config  
+ 
+[debug] [2020-03-26T06:29:14.022Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5010
