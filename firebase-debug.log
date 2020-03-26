@@ -1,0 +1,26 @@
+[debug] [2020-03-26T06:25:43.126Z] ----------------------------------------------------------------------
+[debug] [2020-03-26T06:25:43.129Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2020-03-26T06:25:43.129Z] CLI Version:   7.16.1
+[debug] [2020-03-26T06:25:43.129Z] Platform:      darwin
+[debug] [2020-03-26T06:25:43.129Z] Node Version:  v12.16.1
+[debug] [2020-03-26T06:25:43.131Z] Time:          Wed Mar 25 2020 23:25:43 GMT-0700 (Pacific Daylight Time)
+[debug] [2020-03-26T06:25:43.131Z] ----------------------------------------------------------------------
+[debug] [2020-03-26T06:25:43.131Z] 
+[debug] [2020-03-26T06:25:43.340Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-26T06:25:43.341Z] > authorizing via signed-in user
+[debug] [2020-03-26T06:25:43.341Z] [iam] checking project the-excursion-app for permissions ["firebase.projects.get"]
+[debug] [2020-03-26T06:25:43.346Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/the-excursion-app:testIamPermissions  
+
+[debug] [2020-03-26T06:25:43.955Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-26T06:25:43.957Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/the-excursion-app  
+ 
+[debug] [2020-03-26T06:25:44.791Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Nyapal/Documents/GitHub/excursion'...
+[info] 
+[debug] [2020-03-26T06:25:44.794Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/the-excursion-app/webApps/-/config  
+ 
+[debug] [2020-03-26T06:25:48.146Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5005
