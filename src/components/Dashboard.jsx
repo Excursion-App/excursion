@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import '../views/Dashboard.css';
 import firebase from '../firebase';
+import Breadcrumbs from './Breadcrumbs';
 
 const db = firebase.firestore();
 
@@ -56,6 +57,7 @@ class Dashboard extends React.Component {
     return (
       <div>
         <Navbar />
+        <Breadcrumbs />
         <h1> Dashboard </h1>
         <div>
           {this.state.trips.map((el, indx) => (
