@@ -10,21 +10,17 @@
 }
 .user-flow {
 	margin: 5px;
-	background-color: rgb(55, 176, 218);
+	background-color: rgb(0, 149, 226);
 	border-radius:4px;
+	border: 1px solid #ddd;
 	color: white;
-	display:inline-block;
-	cursor:pointer;
-	font-size: 16px;
-	padding:13px 32px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #3d768a;
+	padding: 10px 20px;
 }
 
-a {
-  color: white;
-  text-decoration: none;
+.button a {
+	color: #fff;
 }
+
 .button {
 	border-radius: 4px;
 	margin-top: 20px;
@@ -49,17 +45,20 @@ a {
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-radius:4px;
-
   }
   
-  /* Style the submit button */
+  /* Style the next button */
   .form-inline button {
 	padding: 10px 20px;
 	background-color: rgb(0, 149, 226);
 	border: 1px solid #ddd;
 	color: white;
   }
-  
+  .form-inline button:hover {
+	background-color: rgb(0, 125, 193);
+  	color: aliceblue;
+  }
+
   /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
   @media (max-width: 800px) {
 	.form-inline input {

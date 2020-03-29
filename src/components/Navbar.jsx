@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Breadcrumbs from './Breadcrumbs';
 import '../views/Navbar.css';
 import brand from '../images/excursions-2020.png';
 
