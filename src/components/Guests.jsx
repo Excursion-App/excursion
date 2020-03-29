@@ -8,7 +8,7 @@ const Guests = () => (
     <Navbar />
     <Breadcrumbs />
     <div className="guests">
-      <h1> Add your guests </h1>
+      <h1> Add Your Guests </h1>
       <i className="fas fa-plus-circle" />
       <br />
       <div>
