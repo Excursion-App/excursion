@@ -23,7 +23,6 @@ const Navbar = () => (
         Log in
       </Link>
     </div>
-    {/* <Breadcrumbs /> */}
   </>
 );
 
