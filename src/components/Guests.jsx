@@ -28,7 +28,16 @@ class Guests extends Component {
     event.preventDefault();
     // let nextGuest = this.state.name, this.state.email
     this.state.guests.push({name: this.state.name, email: this.state.email})
-    console.log(this.state)
+    console.log(this.state.guests)
+    // Clearing Name & Email in input before next guest is added
+    this.setState({
+      name: '',
+      email: ''
+    });
+  }
+  handleGuest() {
+    // this function handles the guest table 
+    console.log(this.state.guests.length)
   }
   render() {
     return (
@@ -38,14 +47,10 @@ class Guests extends Component {
         <div className="guests">
           <h1> Guests </h1>
           <p> To invite a guest, enter their name and email and we'll notify them to join your trip! </p>
-          <table>
+          <table onChange={this.handleGuest}>
             <tr>
               <th> Name </th>
               <th> Email </th>
-            </tr>
-            <tr>
-              <th> Erica </th>
-              <th> erica@email.com </th>
             </tr>
           </table>
           <form>
@@ -53,7 +58,6 @@ class Guests extends Component {
             <input type="text" value={this.state.email} placeholder="Email" onChange={this.handleEmail} />
             <button onClick={this.handleClick}> Invite </button>
           </form>
-          {/* <button> Add Guest </button> */}
         </div>
       </div>
     )
