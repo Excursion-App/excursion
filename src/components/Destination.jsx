@@ -64,15 +64,12 @@ class Destination extends Component {
     this.setState({ start: event.target.value });
   }
 
-
   handleEndChange(event) {
     this.setState({ end: event.target.value });
     console.log(this.state);
   }
 
-
   render() {
-    // let cities = {response.data}
     return (
       <div>
         <Navbar />
