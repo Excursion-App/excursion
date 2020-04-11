@@ -26,18 +26,26 @@ class Guests extends Component {
   }
   handleClick(event) {
     event.preventDefault();
-    // let nextGuest = this.state.name, this.state.email
-    this.state.guests.push({name: this.state.name, email: this.state.email})
-    console.log(this.state.guests)
+    const newGuest = {name: this.state.name, email: this.state.email}
+    this.setState({
+      name: this.state.name, 
+      email: this.state.email,
+      guests: [...this.state.guests, newGuest]})
     // Clearing Name & Email in input before next guest is added
     this.setState({
       name: '',
       email: ''
     });
   }
-  handleGuest() {
-    // this function handles the guest table 
-    console.log(this.state.guests.length)
+  showGuests() {
+    return this.state.guests.map((guest) => {
+      return (
+        <tr>
+          <td>{guest.name}</td>
+          <td>{guest.email}</td>
+        </tr>
+      )
+    })
   }
   render() {
     return (
@@ -47,18 +55,26 @@ class Guests extends Component {
         <div className="guests">
           <h1> Guests </h1>
           <p> To invite a guest, enter their name and email and we'll notify them to join your trip! </p>
-          <table onChange={this.handleGuest}>
+          <table>
             <tr>
-              <th> Name </th>
+              <th> Guest Name </th>
               <th> Email </th>
             </tr>
+            {this.showGuests()}
           </table>
+          <br/>
           <form>
             <input type="text" value={this.state.name} placeholder="Name" onChange={this.handleName} />
             <input type="text" value={this.state.email} placeholder="Email" onChange={this.handleEmail} />
             <button onClick={this.handleClick}> Invite </button>
           </form>
         </div>
+        {/* done or go to dashboard would also work here  */}
+        <button> 
+          <a href="/dashboard"> 
+            Complete Trip 
+          </a>
+          </button>
       </div>
     )
   }
