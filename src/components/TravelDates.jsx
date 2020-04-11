@@ -16,7 +16,7 @@ class TravelDates extends Component {
 
   onChange(date) {
     this.setState({date})
-    console.log(this.state.date)
+    console.log(this.state.date[0], this.state.date[1])
   }
 
   render() {

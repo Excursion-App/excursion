@@ -64,8 +64,7 @@ class Dashboard extends React.Component {
             <p
               key={indx}
             >
-              {el.destination}
-              Trip
+              {el.destination} Trip
             </p>
           ))}
         </div>

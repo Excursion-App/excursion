@@ -56,11 +56,13 @@ class Guests extends Component {
           <h1> Guests </h1>
           <p> To invite a guest, enter their name and email and we'll notify them to join your trip! </p>
           <table>
-            <tr>
-              <th> Guest Name </th>
-              <th> Email </th>
-            </tr>
-            {this.showGuests()}
+            <tbody>
+              <tr>
+                <th> Guest Name </th>
+                <th> Email </th>
+              </tr>
+              {this.showGuests()}
+            </tbody>
           </table>
           <br/>
           <form>
@@ -72,7 +74,7 @@ class Guests extends Component {
         {/* done or go to dashboard would also work here  */}
         <button> 
           <a href="/dashboard"> 
-            Complete Trip 
+          Complete Trip 
           </a>
           </button>
       </div>
