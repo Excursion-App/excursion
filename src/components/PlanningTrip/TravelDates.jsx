@@ -11,7 +11,7 @@ class TravelDates extends Component {
     this.state = {
       date: new Date(),
     };
-    this.onChange = this.onChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(event) {
