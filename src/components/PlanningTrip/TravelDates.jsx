@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Calendar from 'react-calendar';
 import Navbar from '../Navbar';
 import Breadcrumbs from '../Breadcrumbs';
-// import '../views/TravelDates.css';
+// import firebase from '../firebase'
+// import '../views/TravelDates.css';  
 
 class TravelDates extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class TravelDates extends Component {
     this.state = {
       date: new Date(),
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   handleSubmit(event) {
@@ -34,17 +35,17 @@ class TravelDates extends Component {
           {/* <h3> yes {this.props.dataFromParent} </h3> */}
 
           <Calendar
-            selectRange={this.handleSubmit}
+            onChange={this.onChange}
             value={this.state.date}
+            selectRange={true}
           />
           <div>
             <button type="button" className="user-flow">
               <a href="/destination"> Back </a>
             </button>
 
-
             <button type="button" className="user-flow">
-              <a href="/guests"> Next </a>
+              {/* <a href="/guests"> Next </a> */}
             </button>
           </div>
         </div>
