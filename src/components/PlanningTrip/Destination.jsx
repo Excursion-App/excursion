@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { throttle } from 'lodash';
+// import { throttle } from 'lodash';
 import * as _ from 'underscore';
 // import { Dropdown } from 'semantic-ui-react';
-import '../views/Destination.css';
-import axios from 'axios';
-import Navbar from './Navbar';
-import paris from '../images/paris.jpg';
-import mexico from '../images/chichen-itza-mexico.jpg';
-import sydney from '../images/sydney-opera-house.jpg';
-import firebase from '../firebase';
-import Breadcrumbs from './Breadcrumbs';
+// import '../views/Destination.css';
+// import axios from 'axios';
+import Navbar from '../Navbar';
+// import paris from '../images/paris.jpg';
+// import mexico from '../images/chichen-itza-mexico.jpg';
+// import sydney from '../images/sydney-opera-house.jpg';
+import firebase from '../../firebase';
+import Breadcrumbs from '../Breadcrumbs';
 
 class Destination extends Component {
   constructor(props) {
@@ -40,27 +40,27 @@ class Destination extends Component {
   }
 
   handleStartChange(event) {
-    axios({
-      method: 'GET',
-      url: 'https://andruxnet-world-cities-v1.p.rapidapi.com/',
-      headers: {
-        'content-type': 'application/octet-stream',
-        'x-rapidapi-host': 'andruxnet-world-cities-v1.p.rapidapi.com',
-        'x-rapidapi-key': 'a62194236emsh5fea71981b5dd1bp1025fejsna249327b54d0',
-      },
-      params: {
-        query: this.state.start,
-      // "searchby":"city"
-      },
-    })
-      .then((response) => {
-        const cities = response.data.slice(0, 5);
-        this.setState({ startCities: cities });
-        console.log(this.state.startCities);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    // axios({
+    //   method: 'GET',
+    //   url: 'https://andruxnet-world-cities-v1.p.rapidapi.com/',
+    //   headers: {
+    //     'content-type': 'application/octet-stream',
+    //     'x-rapidapi-host': 'andruxnet-world-cities-v1.p.rapidapi.com',
+    //     'x-rapidapi-key': 'a62194236emsh5fea71981b5dd1bp1025fejsna249327b54d0',
+    //   },
+    //   params: {
+    //     query: this.state.start,
+    //   // "searchby":"city"
+    //   },
+    // })
+    // .then((response) => {
+    //   const cities = response.data.slice(0, 5);
+    //   this.setState({ startCities: cities });
+    //   console.log(this.state.startCities);
+    // })
+    // .catch((error) => {
+    //   console.log(error);
+    // });
     this.setState({ start: event.target.value });
   }
 
@@ -79,11 +79,11 @@ class Destination extends Component {
         <Breadcrumbs />
         <div className="destination">
           <h1> Top Destinations </h1>
-          <div>
+          {/* <div>
             <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
             <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
             <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
-          </div>
+          </div> */}
 
           <form className="form-inline" action="/action_page.php" onSubmit={this.handleSubmit}>
             <label htmlFor="startFrom">

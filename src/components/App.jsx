@@ -3,11 +3,11 @@ import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Dashboard from './Dashboard';
-import Destination from './Destination';
+import Destination from './PlanningTrip/Destination';
 import Existing from './Existing';
-import Guests from './Guests';
+import Guests from './PlanningTrip/Guests';
 import Home from './Home';
-import TravelDates from './TravelDates';
+import TravelDates from './PlanningTrip/TravelDates';
 
 const App = () => (
   <Router>
