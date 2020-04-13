@@ -1,12 +1,14 @@
-.title {
-  /* font-size: 40px; */
+#title {
+  color:  rgb(27,40,93);
+   font-size: 40px;
+}
+#tagline {
   font-family: 'Josefin Sans', sans-serif;
-  color: rgb(240, 162, 0);
 }
 .home {
   position: absolute;
   font-family: 'Josefin Sans', sans-serif;
-  background: url(https://source.unsplash.com/1600x900/?landmarks) no-repeat;
+  background: url(https://source.unsplash.com/1600x900/?vacation) no-repeat;
   width: 100vw;
   height: 90vh;
   background-size: 100% 100%;

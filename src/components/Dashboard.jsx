@@ -59,7 +59,7 @@ class Dashboard extends Component {
         <Navbar />
         <Breadcrumbs />
         <div className="dashboard">
-          <h1> Dashboard </h1>
+          <h1> Your Trips </h1>
           <div>
             {this.state.trips.map((el, indx) => (
               <p
