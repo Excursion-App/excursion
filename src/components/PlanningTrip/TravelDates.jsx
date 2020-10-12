@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import Calendar from 'react-calendar';
+<<<<<<< HEAD:src/components/TravelDates.jsx
 import Navbar from './Navbar';
 import Breadcrumbs from './Breadcrumbs';
 import '../views/TravelDates.css';
+=======
+import Navbar from '../Navbar';
+import Breadcrumbs from '../Breadcrumbs';
+// import Example from
+// import firebase from '../firebase'
+// import '../views/TravelDates.css';  
+>>>>>>> 6cf7ab1cc566bb5f910edb489247815b351d326e:src/components/PlanningTrip/TravelDates.jsx
 
 class TravelDates extends Component {
   constructor(props) {
@@ -15,10 +23,19 @@ class TravelDates extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    // add this info to the existing document 
+    //firebase. set (merge: true )
     console.log(this.state);
   }
 
   render() {
+    console.log('****************')
+    console.log(this.props)
+    console.log(this.state)
+    //<TravelDates destData={this.state.destData} />
+    console.log(this.props.destData);
+    console.log(this.props.tomato)
+
     return (
       <div>
         <Navbar />
@@ -26,19 +43,20 @@ class TravelDates extends Component {
         <div className="travel-dates">
           <h1> Travel Dates </h1>
           <h3> When are you planning on going?</h3>
+          {/* <h3> yes {this.props.dataFromParent} </h3> */}
 
           <Calendar
-            selectRange={this.handleSubmit}
+            onChange={this.onChange}
             value={this.state.date}
+            selectRange={true}
           />
           <div>
             <button type="button" className="user-flow">
               <a href="/destination"> Back </a>
             </button>
 
-
             <button type="button" className="user-flow">
-              <a href="/guests"> Next </a>
+              {/* <a href="/guests"> Next </a> */}
             </button>
           </div>
         </div>
