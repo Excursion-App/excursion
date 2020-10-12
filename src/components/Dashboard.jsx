@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Navbar from './Navbar';
 import '../views/Dashboard.css';
 import firebase from '../firebase';
 import Breadcrumbs from './Breadcrumbs';
 
-const db = firebase.firestore();
+// const db = firebase.firestore();
 
-class Dashboard extends React.Component {
+class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -58,26 +58,22 @@ class Dashboard extends React.Component {
       <div>
         <Navbar />
         <Breadcrumbs />
-        <h1> Dashboard </h1>
-        <div>
-          {this.state.trips.map((el, indx) => (
-            <p
-              key={indx}
-            >
-              {el.destination}
-              Trip
-            </p>
-          ))}
+        <div className="dashboard">
+          <h1> Your Trips </h1>
+          <div>
+            {this.state.trips.map((el, indx) => (
+              <p
+                key={indx}
+              >
+                {el.destination}
+                Trip
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     );
   }
 }
-// const Dashboard = () => (
-//   <div className="dashboard">
-//     <h1> Dashboard </h1>
-//     <p> My saved trips </p>
-//   </div>
-// );
 
 export default Dashboard;

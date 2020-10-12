@@ -3,12 +3,11 @@
   background-color: rgb(55, 176, 218);
   box-shadow: 0 4px 10px #13232f4d;
   padding-bottom: 19px;
-  padding-top: 10px;
+  padding-top: 12px;
 }
 .brand{
-  height: 50px;
-  padding-left: 30px;
-  padding-top: 10px;
+  height: 48px;
+  padding-left: 10px;
 }
 .navbar .list {
   display: flex;
@@ -17,7 +16,7 @@
   height: 100%;
   margin: 5px 10px 0 0;
   text-decoration: none;
-  color: aliceblue;
+  color:#fff;
   border: 1px solid white;
   border-radius: 30px;
   padding:18px;

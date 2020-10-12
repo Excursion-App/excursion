@@ -40,27 +40,6 @@ class Destination extends Component {
   }
 
   handleStartChange(event) {
-    axios({
-      method: 'GET',
-      url: 'https://andruxnet-world-cities-v1.p.rapidapi.com/',
-      headers: {
-        'content-type': 'application/octet-stream',
-        'x-rapidapi-host': 'andruxnet-world-cities-v1.p.rapidapi.com',
-        'x-rapidapi-key': 'a62194236emsh5fea71981b5dd1bp1025fejsna249327b54d0',
-      },
-      params: {
-        query: this.state.start,
-      // "searchby":"city"
-      },
-    })
-      .then((response) => {
-        const cities = response.data.slice(0, 5);
-        this.setState({ startCities: cities });
-        console.log(this.state.startCities);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
     this.setState({ start: event.target.value });
   }
 
@@ -88,6 +67,7 @@ class Destination extends Component {
           <form className="form-inline" action="/action_page.php" onSubmit={this.handleSubmit}>
             <label htmlFor="startFrom">
               From:
+              <br />
               <input
                 type="text"
                 id="startFrom"
@@ -100,6 +80,7 @@ class Destination extends Component {
 
             <label htmlFor="endTo">
               To:
+              <br />
               <input
                 type="text"
                 id="endTo"
