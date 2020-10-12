@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Calendar from 'react-calendar';
 import Navbar from '../Navbar';
 import Breadcrumbs from '../Breadcrumbs';
+// import Example from
 // import firebase from '../firebase'
 // import '../views/TravelDates.css';  
 
@@ -22,8 +23,12 @@ class TravelDates extends Component {
   }
 
   render() {
+    console.log('****************')
+    console.log(this.props)
     console.log(this.state)
+    //<TravelDates destData={this.state.destData} />
     console.log(this.props.destData);
+    console.log(this.props.tomato)
 
     return (
       <div>

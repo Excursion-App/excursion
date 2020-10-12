@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Dashboard from './Dashboard';
+import PlanningTrip from './PlanningTrip/PlanningTrip';
 import Destination from './PlanningTrip/Destination';
 import Existing from './Existing';
 import Guests from './PlanningTrip/Guests';
@@ -17,9 +18,6 @@ class App extends Component {
       guests: []
     }
   }
-  destData = (data) => {
-    return 
-  }
 
   render() {
     return (
@@ -32,7 +30,10 @@ class App extends Component {
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/existing" component={Existing} />
           <Route path="/guests" component={Guests} />
-          <Route path="/travel-dates" component={TravelDates} />
+          <Route 
+            path="/travel-dates"
+            render={() => <TravelDates destData="San Francisco, CA" tomato="Fruit" />} />
+          {/* <PlanningTrip /> */}
         </div>
       </Router>
     )
