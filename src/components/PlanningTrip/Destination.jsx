@@ -40,8 +40,6 @@ class Destination extends Component {
   }
 
   handleStartChange(event) {
-<<<<<<< HEAD:src/components/Destination.jsx
-=======
     // axios({
     //   method: 'GET',
     //   url: 'https://andruxnet-world-cities-v1.p.rapidapi.com/',
@@ -63,7 +61,6 @@ class Destination extends Component {
     // .catch((error) => {
     //   console.log(error);
     // });
->>>>>>> 6cf7ab1cc566bb5f910edb489247815b351d326e:src/components/PlanningTrip/Destination.jsx
     this.setState({ start: event.target.value });
   }
 
