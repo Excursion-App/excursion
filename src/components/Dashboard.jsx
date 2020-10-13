@@ -4,8 +4,6 @@ import '../views/Dashboard.css';
 import firebase from '../firebase';
 import Breadcrumbs from './Breadcrumbs';
 
-// const db = firebase.firestore();
-
 class Dashboard extends Component {
   constructor(props) {
     super(props);
@@ -23,52 +21,40 @@ class Dashboard extends Component {
         const Trips = [];
 
         querySnapshot.forEach((doc) => {
-          // console.log(doc.id, '=>', doc.data())
+          console.log('doc', doc.id)
           Trips.push({
             destination: doc.data().end,
-            //  Starting: doc.data().starting
           });
         });
-        // console.log(this.state.trips)
         this.setState({ trips: Trips });
       });
   }
 
-  // getTrips() {
-  //   db.collection('Trips').get().then(function(querySnapshot) {
-  //     querySnapshot.forEach(function(doc) {
-  //     })
-  //   })
-  //   let tripsCollectionRef = db.collection('Trips');
-  //   let allTrips = tripsCollectionRef.get()
-  //     .then(snapshot => {
-  //       snapshot.forEach(doc => {
-  //         console.log(doc.id, '=>', doc.data());
-  //       })
-  //     })
-  //     .catch(err => {
-  //       console.log('Error getting documents', err)
-  //     })
-  //   this.setState({trips: allTrips})
-  //   console.log(allTrips)
-  // }
+  displayTrips() {
+    const { trips } = this.state;
+    return trips.map((el, index) => (
+      <p key={index} onClick={this.displayTripDetails(el)}>
+        {el.destination}
+      </p>
+    ));
+    // {this.state.trips.map((el, indx) => (
+    //   <p key={indx}>
+    //     <span onClick={this.getTripDetails(el.destination)}> {el.destination} Trip </span>
+    //   </p>
+    // ))}
+  }
+
+  displayTripDetails(el) {
+    console.log(el)
+  }
 
   render() {
     return (
       <div>
         <Navbar />
         <Breadcrumbs />
-        <div className="dashboard">
-          <h1> Your Trips </h1>
-          <div>
-            {this.state.trips.map((el, indx) => (
-              <p key={indx}>
-                {el.destination}
-                Trip
-              </p>
-            ))}
-          </div>
-        </div>
+        <h1> Your Trips </h1>
+        {this.displayTrips()}
       </div>
     );
   }

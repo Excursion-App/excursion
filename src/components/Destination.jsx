@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
-import { throttle } from 'lodash';
+import React, { Component } from 'react'
 import * as _ from 'underscore';
-// import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import Navbar from './Navbar';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
@@ -28,16 +25,23 @@ class Destination extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    firebase
-      .firestore()
-      .collection('Trips')
-      .doc(this.state.end)
-      .set({
-        start: this.state.start,
-        end: this.state.end,
-      })
-      .then(() => { console.log('Successfully created new trip!'); })
-      .catch((error) => { console.error('Error creating new trip', error); });
+
+    const db = firebase.firestore();
+    const trips = db.collection('Trips');
+    let newTripRef = trips.push()
+    let key = newTripRef.id()
+    console.log(key)
+    // const newId = firebase.createId();
+    // firebase
+    //   
+    //   // .doc(newId)
+    //   .push({
+    //     name: `${this.state.end} Trip`,
+    //     start: this.state.start,
+    //     end: this.state.end,
+    //   })
+    //   .then(() => { console.log("Document written with ID: ", name.id) })
+    //   .catch((error) => { console.error('Error creating new trip', error); });
   }
 
   handleStartChange(event) {
