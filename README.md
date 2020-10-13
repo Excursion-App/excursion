@@ -1,12 +1,11 @@
 # Excursion 
 Group travel made easy.
 
-This project is still in development stages. Star 🌟 this repo for more updates/details.
-
-![Screen Shot 2020-04-11 at 10 27 38 PM](https://user-images.githubusercontent.com/26418542/79059079-c9e36f00-7c43-11ea-98f3-69e82ef63be1.png)
+This project is still in development stages. Star this repo for more updates/details.
 
 ## Table of contents
 * [Description](#description)
+* [Live](#live)
 * [Getting Started](#getting-started)
 * [Installing](#installing)
 * [Developing](#developing)
@@ -17,6 +16,8 @@ This project is still in development stages. Star 🌟 this repo for more update
 ## Description 
 This project helps groups coordinate trips for groups. It eliminates the use spreadsheets. One single user is the group travel lead and has access to adding members and coordinating the whole vacation. Other users can view the trip and see items that they need to pay for. It also allows members to chat with each other in the chatroom. Use the calendar to countdown your vacation. 
 
+## Live
+For the live version, go to [https://nyapal.github.io/excursion/](https://nyapal.github.io/excursion/).
 
 ## Getting Started
 
