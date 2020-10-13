@@ -21,7 +21,7 @@ class Dashboard extends Component {
         const Trips = [];
 
         querySnapshot.forEach((doc) => {
-          console.log('doc', doc.id)
+          console.log('doc', doc.id);
           Trips.push({
             destination: doc.data().end,
           });
