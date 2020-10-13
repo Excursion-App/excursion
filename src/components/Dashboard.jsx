@@ -62,7 +62,7 @@ class Dashboard extends Component {
           <h1> Your Trips </h1>
           <div>
             {this.state.trips.map((el, indx) => (
-              <p key={indx}>
+              <p key={indx} >
                 {el.destination}
                 Trip
               </p>
