@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 // import brand from '../images/excursions-2020.png';
 
+// class
 const Home = () => (
   <div>
     <Navbar />

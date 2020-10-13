@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import * as _ from 'underscore';
 import '../views/Destination.css';
 import { Link } from 'react-router-dom';
@@ -14,8 +14,7 @@ class Destination extends Component {
     super(props);
     this.state = {
       start: '',
-      end: '',
-      startCities: [],
+      destination: ''
     };
     this.handleStartThrottled = _.throttle(this.handleStartChange.bind(this), 100);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,21 +25,20 @@ class Destination extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
+    // connecting to database
     const db = firebase.firestore();
-    const trips = db.collection('Trips');
-    let newTripRef = trips.push()
-    let key = newTripRef.id()
-    console.log(key)
-    // const newId = firebase.createId();
-    // firebase
-    //   
-    //   // .doc(newId)
-    //   .push({
-    //     name: `${this.state.end} Trip`,
-    //     start: this.state.start,
-    //     end: this.state.end,
+    const trips = db.collection('Trips').doc();
+    const newTripId = trips.id;
+    const tripRef = db.collection('Trips').doc(newTripId).get();
+    console.log(tripRef)
+    // tripRef
+    //   .update({
+    //     id: newTripId,
+    //     name: `${this.state.destination} Trip`,
+    //     destination: this.state.destination,
+    //     origin: this.state.start
     //   })
-    //   .then(() => { console.log("Document written with ID: ", name.id) })
+    //   .then(() => { console.log(this.state.destination, `trip successfully created!`) })
     //   .catch((error) => { console.error('Error creating new trip', error); });
   }
 
@@ -51,7 +49,7 @@ class Destination extends Component {
 
   handleEndChange(event) {
     this.setState({ end: event.target.value });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
 
