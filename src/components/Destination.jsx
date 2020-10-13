@@ -3,6 +3,7 @@ import { throttle } from 'lodash';
 import * as _ from 'underscore';
 // import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from './Navbar';
 import paris from '../images/paris.jpg';
@@ -93,7 +94,7 @@ class Destination extends Component {
 
             <button type="button" className="button" onClick={this.handleSubmit}>
               <i className="fas fa-search-location" />
-              <a href="/travel-dates"> Next </a>
+              <Link to="/travel-dates"> Next </Link>
             </button>
           </form>
 
