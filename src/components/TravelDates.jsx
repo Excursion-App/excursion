@@ -3,14 +3,6 @@ import Calendar from 'react-calendar';
 import Navbar from './Navbar';
 import Breadcrumbs from './Breadcrumbs';
 import '../views/TravelDates.css';
-<<<<<<< HEAD:src/components/PlanningTrip/TravelDates.jsx
-import Navbar from '../Navbar';
-import Breadcrumbs from '../Breadcrumbs';
-// import Example from
-// import firebase from '../firebase'
-// import '../views/TravelDates.css';  
-=======
->>>>>>> 5af6393f9527ab471e749dca9266ac7a52861084:src/components/TravelDates.jsx
 
 class TravelDates extends Component {
   constructor(props) {
