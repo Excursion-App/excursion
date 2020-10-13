@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { throttle } from 'lodash';
 import * as _ from 'underscore';
 // import { Dropdown } from 'semantic-ui-react';
 import '../views/Destination.css';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import Navbar from './Navbar';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
