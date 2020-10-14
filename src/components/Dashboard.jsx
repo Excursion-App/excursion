@@ -53,8 +53,10 @@ class Dashboard extends Component {
       <div>
         <Navbar />
         <Breadcrumbs />
-        <h1> Your Trips </h1>
-        {this.displayTrips()}
+        <div className="dashboard">
+          <h1> Your Trips </h1>
+          {this.displayTrips()}
+        </div>
       </div>
     );
   }
