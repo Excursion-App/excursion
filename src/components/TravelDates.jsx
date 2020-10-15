@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Calendar from 'react-calendar';
 import Navbar from './Navbar';
 import Breadcrumbs from './Breadcrumbs';
 import '../views/TravelDates.css';
 
 class TravelDates extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: new Date(),
-      tripId: ""
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     date: new Date(),
+  //     tripId: ""
+  //   };
+  //   this.handleSubmit = this.handleSubmit.bind(this);
+  // }
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
+  }
+
+  logState() {
+    console.log('hi');
   }
 
   render() {
@@ -30,12 +34,14 @@ class TravelDates extends Component {
 
           <Calendar
             selectRange={this.handleSubmit}
-            value={this.state.date}
+            // value={this.state.date}
           />
           <div>
             <button type="button" className="user-flow">
               <a href="/destination"> Back </a>
             </button>
+
+            <button type="button" onClick={this.logState()}> Log State </button>
 
 
             <button type="button" className="user-flow">
@@ -48,4 +54,8 @@ class TravelDates extends Component {
   }
 }
 
-export default TravelDates;
+const mapStateToProps = (state) => ({
+  tripId: state.tripId 
+})
+
+export default connect(mapStateToProps)(TravelDates);
