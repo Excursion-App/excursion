@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import * as _ from 'underscore';
-import '../views/Destination.css';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../views/Destination.css';
 import Navbar from './Navbar';
 import paris from '../images/paris.jpg';
 import mexico from '../images/chichen-itza-mexico.jpg';
@@ -13,11 +12,11 @@ class Destination extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      start: '',
-      end: '',
-      startCities: [],
+      origin: '',
+      destination: '',
+      tripId: ''
     };
-    this.handleStartThrottled = _.throttle(this.handleStartChange.bind(this), 100);
+    // this.handleStartThrottled = _.throttle(this.handleStartChange.bind(this), 100);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleStartChange = this.handleStartChange.bind(this);
     this.handleEndChange = this.handleEndChange.bind(this);
@@ -27,36 +26,30 @@ class Destination extends Component {
     event.preventDefault();
 
     const db = firebase.firestore();
-    const trips = db.collection('Trips');
-    let newTripRef = trips.push()
-    let key = newTripRef.id()
-    console.log(key)
-    // const newId = firebase.createId();
-    // firebase
-    //   
-    //   // .doc(newId)
-    //   .push({
-    //     name: `${this.state.end} Trip`,
-    //     start: this.state.start,
-    //     end: this.state.end,
-    //   })
-    //   .then(() => { console.log("Document written with ID: ", name.id) })
-    //   .catch((error) => { console.error('Error creating new trip', error); });
+    db.collection('Trips').add({
+      destination: this.state.destination,
+      origin: this.state.origin,
+    })
+      .then((docRef) => {
+        console.log(`${this.state.destination} Trip successfully created with ID ${docRef.id}`);
+        this.setState({ tripId: docRef.id });
+      })
+      .catch((error) => {
+        console.error('Error adding document: ', error);
+      });
   }
 
   handleStartChange(event) {
-    this.setState({ start: event.target.value });
+    this.setState({ origin: event.target.value });
   }
 
 
   handleEndChange(event) {
-    this.setState({ end: event.target.value });
-    console.log(this.state);
+    this.setState({ destination: event.target.value });
   }
 
 
   render() {
-    // let cities = {response.data}
     return (
       <div>
         <Navbar />
@@ -76,7 +69,7 @@ class Destination extends Component {
               <input
                 type="text"
                 id="startFrom"
-                value={this.state.start}
+                value={this.state.origin}
                 placeholder="Where are you coming from?"
                 onChange={this.handleStartChange}
                 size="25"
@@ -89,7 +82,7 @@ class Destination extends Component {
               <input
                 type="text"
                 id="endTo"
-                value={this.state.end}
+                value={this.state.destination}
                 placeholder="Where would you like to go?"
                 onChange={this.handleEndChange}
                 size="25"
@@ -97,9 +90,12 @@ class Destination extends Component {
             </label>
 
             <button type="button" className="button" onClick={this.handleSubmit}>
-              <i className="fas fa-search-location" />
-              <Link to="/travel-dates"> Next </Link>
+              <Link to="/travel-dates">
+                <i className="fas fa-search-location" />
+                Next
+              </Link>
             </button>
+
           </form>
 
           <div>
