@@ -21,7 +21,7 @@ class Dashboard extends Component {
         const Trips = [];
 
         querySnapshot.forEach((doc) => {
-          console.log('doc', doc.id)
+          console.log('doc', doc.id);
           Trips.push({
             destination: doc.data().end,
           });
@@ -53,8 +53,10 @@ class Dashboard extends Component {
       <div>
         <Navbar />
         <Breadcrumbs />
-        <h1> Your Trips </h1>
-        {this.displayTrips()}
+        <div className="dashboard">
+          <h1> Your Trips </h1>
+          {this.displayTrips()}
+        </div>
       </div>
     );
   }
