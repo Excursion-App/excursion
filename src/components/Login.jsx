@@ -13,6 +13,7 @@ const Login = (props) => {
     emailError,
     passwordError,
   } = props;
+
   return (
     <section className="login">
       <div className="loginContainer">
@@ -30,7 +31,7 @@ const Login = (props) => {
           type="password"
           required
           value={password}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           name=""
           id=""
         />
@@ -40,6 +41,7 @@ const Login = (props) => {
             <>
               <button
                 type="button"
+                className="authentication"
                 onClick={handleLogin}
               >
                 Sign In
@@ -54,6 +56,7 @@ const Login = (props) => {
               <button
                 type="button"
                 onClick={handleSignup}
+                className="authentication"
               >
                 Sign up
               </button>
