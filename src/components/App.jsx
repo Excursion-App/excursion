@@ -8,12 +8,14 @@ import Existing from './Existing';
 import Guests from './Guests';
 import Home from './Home';
 import TravelDates from './TravelDates';
+import Authentication from './Authentication';
 
 const App = () => (
   <Router>
     <div>
       <Route path="/" exact component={Home} />
-      <Route path="/excursion" component={Home} />
+      <Route path="/excursion" exact component={Home} />
+      <Route path="/auth" component={Authentication} />
       <Route path="/destination" component={Destination} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/existing" component={Existing} />

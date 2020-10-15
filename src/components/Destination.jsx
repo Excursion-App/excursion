@@ -96,10 +96,16 @@ class Destination extends Component {
               />
             </label>
 
-            <button type="button" className="button" onClick={this.handleSubmit}>
-              <i className="fas fa-search-location" />
-              <Link to="/travel-dates"> Next </Link>
-            </button>
+            <Link to="/travel-dates">
+              <button
+                type="button"
+                className="button"
+                onClick={this.handleSubmit}
+              >
+                <i className="fas fa-search-location" />
+                Next
+              </button>
+            </Link>
           </form>
 
           <div>

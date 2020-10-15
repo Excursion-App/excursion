@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Breadcrumbs from './Breadcrumbs';
 import '../views/Guests.css';
@@ -12,12 +13,16 @@ const Guests = () => (
       <i className="fas fa-plus-circle" />
       <br />
       <div>
-        <button type="button" className="user-flow">
-          <a href="/travel-dates"> Back </a>
-        </button>
-        <button type="button" className="user-flow">
-          <a href="/dashboard"> Done </a>
-        </button>
+        <Link to="/travel-dates">
+          <button type="button" className="user-flow">
+            Back
+          </button>
+        </Link>
+        <Link to="/dashboard">
+          <button type="button" className="user-flow">
+            Done
+          </button>
+        </Link>
       </div>
     </div>
   </>

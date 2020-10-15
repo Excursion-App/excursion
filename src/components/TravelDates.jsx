@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Calendar from 'react-calendar';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Breadcrumbs from './Breadcrumbs';
 import '../views/TravelDates.css';
@@ -32,14 +33,17 @@ class TravelDates extends Component {
             value={this.state.date}
           />
           <div>
-            <button type="button" className="user-flow">
-              <a href="/destination"> Back </a>
-            </button>
+            <Link to="/destination">
+              <button type="button" className="user-flow">
+                Back
+              </button>
+            </Link>
 
-
-            <button type="button" className="user-flow">
-              <a href="/guests"> Next </a>
-            </button>
+            <Link href="/guests">
+              <button type="button" className="user-flow">
+                Next
+              </button>
+            </Link>
           </div>
         </div>
       </div>

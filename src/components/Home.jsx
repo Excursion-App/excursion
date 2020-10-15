@@ -18,9 +18,11 @@ const Home = () => (
           />
         </Link> */}
         <h2 inputMode="tagline"> Group Travel Made Easy. </h2>
-        <button type="button" className="user-flow">
-          <Link to="/destination"> Plan A New Trip </Link>
-        </button>
+        <Link to="/destination">
+          <button type="button" className="plan-trip">
+            Plan A New Trip
+          </button>
+        </Link>
       </div>
     </div>
   </div>
