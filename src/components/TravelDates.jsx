@@ -9,6 +9,7 @@ class TravelDates extends Component {
     super(props);
     this.state = {
       date: new Date(),
+      tripId: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
