@@ -19,7 +19,7 @@ const Home = () => (
         </Link> */}
         <h2 inputMode="tagline"> Group Travel Made Easy. </h2>
         <Link to="/destination">
-          <button type="button" className="plan-trip">
+          <button type="button" className="user-flow">
             Plan A New Trip
           </button>
         </Link>
