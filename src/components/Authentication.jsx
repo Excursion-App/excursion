@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import firebase from '../firebase';
 import Navbar from './Navbar';
 import Login from './Login';
+import Hero from './Hero';
 import '../views/Authentication.css';
 
 
@@ -68,8 +69,8 @@ function Authentication() {
 
   const authListener = () => {
     firebase.auth().onAuthStateChanged((user) => {
+      clearInputs();
       if (user) {
-        clearInputs();
         setUser(user);
       } else {
         setUser('');
@@ -84,17 +85,24 @@ function Authentication() {
   return (
     <div>
       <Navbar />
-      <Login
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
-        handleLogin={handleLogin}
-        handleSignup={handleSignup}
-        setHasAccount={setHasAccount}
-        emailError={emailError}
-        passwordError={passwordError}
-      />
+      {user ? (
+        <Hero handleLogout={handleLogout} />
+      ) : (
+        <Login
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          handleLogin={handleLogin}
+          handleSignup={handleSignup}
+          hasAccount={hasAccount}
+          setHasAccount={setHasAccount}
+          emailError={emailError}
+          passwordError={passwordError}
+        />
+      )}
+
+
     </div>
   );
 }
