@@ -11,8 +11,9 @@ import Home from './Home';
 import TravelDates from './TravelDates';
 
 const initialState = {
-  tripId: 1
+  tripId: '1million'
 }; 
+
 function reducer(state = initialState, action) {
   switch(action.type) {
     case "UPDATE TRIP ID":
@@ -24,7 +25,9 @@ function reducer(state = initialState, action) {
   }
   // return state;
 }
+
 const store = createStore(reducer);
+
 store.dispatch({ type: 'UPDATE TRIP ID' });
 
 const App = () => (
