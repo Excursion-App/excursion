@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Calendar from 'react-calendar';
 import Navbar from './Navbar';
 import Breadcrumbs from './Breadcrumbs';
@@ -10,7 +11,7 @@ class TravelDates extends Component {
   //   super(props);
   //   this.state = {
   //     date: new Date(),
-  //     tripId: ""
+  //     tripId: '',
   //   };
   //   this.handleSubmit = this.handleSubmit.bind(this);
   // }
@@ -37,16 +38,19 @@ class TravelDates extends Component {
             // value={this.state.date}
           />
           <div>
-            <button type="button" className="user-flow">
-              <a href="/destination"> Back </a>
-            </button>
+            <Link to="/destination">
+              <button type="button" className="user-flow">
+                Back
+              </button>
+            </Link>
 
             <button type="button" onClick={this.logState()}> Log State </button>
 
-
-            <button type="button" className="user-flow">
-              <a href="/guests"> Next </a>
-            </button>
+            <Link to="/guests">
+              <button type="button" className="user-flow">
+                Next
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -55,7 +59,7 @@ class TravelDates extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  tripId: state.tripId 
+  tripId: state.tripId,
 })
 
 export default connect(mapStateToProps)(TravelDates);
