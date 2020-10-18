@@ -13,40 +13,40 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    firebase
-      .firestore()
-      .collection('Trips')
-      .get()
-      .then((querySnapshot) => {
-        const Trips = [];
-
-        querySnapshot.forEach((doc) => {
-          console.log('doc', doc.id)
-          Trips.push({
-            destination: doc.data().end,
-          });
-        });
-        this.setState({ trips: Trips });
+    const db = firebase.firestore();
+    const tripsArr = [];
+    db.collection('Trips').get().then(function (querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        tripsArr.push(doc.data());
       });
-  }
+    });
+    // this.setState({ trips: tripsArr});
+    // return tripsArr.map((el, index) => (
+    //   <p ket={index}>
+    //     {el.destination}
 
-  displayTrips() {
-    const { trips } = this.state;
-    return trips.map((el, index) => (
-      <p key={index} onClick={this.displayTripDetails(el)}>
-        {el.destination}
-      </p>
-    ));
-    // {this.state.trips.map((el, indx) => (
-    //   <p key={indx}>
-    //     <span onClick={this.getTripDetails(el.destination)}> {el.destination} Trip </span>
     //   </p>
-    // ))}
+    // ));
+    // {this.state.trips.map((el, indx) => {
+    //   <p key={indx}>
+    //     <span> {el.destination} Trip </span>
+    //   </p>
+    // })
+    // }
   }
 
-  displayTripDetails(el) {
-    console.log(el)
-  }
+  // displayTrips() {
+  //   const { trips } = this.state;
+  //   return trips.map((el, index) => (
+  //     <p key={index} onClick={this.displayTripDetails(el)}>
+  //       {el.destination}
+  //     </p>
+  //   ));
+  // {this.state.trips.map((el, indx) => (
+  //   <p key={indx}>
+  //     <span onClick={this.getTripDetails(el.destination)}> {el.destination} Trip </span>
+  //   </p>
+  // ))}
 
   render() {
     return (

@@ -16,7 +16,6 @@ class Destination extends Component {
       destination: '',
       tripId: ''
     };
-    // this.handleStartThrottled = _.throttle(this.handleStartChange.bind(this), 100);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleStartChange = this.handleStartChange.bind(this);
     this.handleEndChange = this.handleEndChange.bind(this);
