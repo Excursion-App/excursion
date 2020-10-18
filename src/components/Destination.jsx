@@ -61,7 +61,7 @@ class Destination extends Component {
             <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
           </div>
 
-          <form className="form-inline" action="/action_page.php" onSubmit={this.handleSubmit}>
+          <form className="form-inline" onSubmit={this.handleSubmit}>
             <label htmlFor="startFrom">
               From:
               <br />
@@ -72,6 +72,7 @@ class Destination extends Component {
                 placeholder="Where are you coming from?"
                 onChange={this.handleStartChange}
                 size="25"
+                required
               />
             </label>
 
@@ -88,13 +89,12 @@ class Destination extends Component {
               />
             </label>
 
-            <button type="button" className="button" onClick={this.handleSubmit}>
-              <Link to="/travel-dates">
+            <button type="button" className="button">
+              {/* <Link to="/travel-dates"> */}
                 <i className="fas fa-search-location" />
                 Next
-              </Link>
+              {/* </Link> */}
             </button>
-
           </form>
 
           <div>
