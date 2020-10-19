@@ -52,10 +52,8 @@ class TravelDates extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    tripId: state.tripId,
-  };
-};
+const mapStateToProps = (state) => ({
+  tripId: state.tripId,
+});
 
 export default connect(mapStateToProps)(TravelDates);

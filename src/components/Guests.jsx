@@ -9,12 +9,33 @@ const Guests = () => (
     <Breadcrumbs />
     <div className="guests">
       <h1> Add Your Guests </h1>
-      <div>
-        <input type="text" placeholder="Name" style={{margin:"5px"}} />
-        <input type="text" placeholder="Email" style={{margin:"5px"}} />
-        <button type="submit"> Invite </button>
-      </div>
+      <form className="form-inline">
+        <label htmlFor="name">
+          Name:
+          <br />
+          <input
+            type="text"
+            placeholder="Type their name here"
+            size="25"
+            required
+          />
+        </label>
+        <label htmlFor="email">
+          Email:
+          <br />
+          <input type="text" placeholder="Type their email here" size="25" id="email" />
+        </label>
+        <button
+          type="submit"
+          className="user-flow"
+          style={{ marginTop: '23px' }}
+        >
+          Invite
+        </button>
+      </form>
       {/* <i className="fas fa-plus-circle" /> */}
+      <br />
+      <br />
       <div>
         <button type="button" className="user-flow">
           <a href="/travel-dates"> Back </a>

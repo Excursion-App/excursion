@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../views/Destination.css';
 import { Textbox } from 'react-inputs-validation';
 import Navbar from './Navbar';
-// import paris from '../images/paris.jpg';
+import paris from '../images/paris.jpg';
 // import mexico from '../images/chichen-itza-mexico.jpg';
 // import sydney from '../images/sydney-opera-house.jpg';
 import firebase from '../firebase';
@@ -60,11 +60,11 @@ class Destination extends Component {
 
         <div className="destination">
           <h1> Top Destinations </h1>
-          {/* <div>
+          <div>
             <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
-            <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
-            <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
-          </div> */}
+            {/* <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
+            <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" /> */}
+          </div>
 
           <form className="form-inline" action="/travel-dates" onSubmit={this.handleSubmit}>
             <label htmlFor="startFrom">
@@ -83,8 +83,8 @@ class Destination extends Component {
                 onBlur={(e) => {console.log(e)}} // Optional.[Func].Default: none. In order to validate the value on blur, you MUST provide a function, even if it is an empty function. Missing this, the validation on blur will not work.
                 validationOption={{
                   origin: 'Origin', // Optional.[String].Default: "". To display in the Error message. i.e Please enter your {name}.
-                  check: true, // Optional.[Bool].Default: true. To determin if you need to validate.
-                  required: true, // Optional.[Bool].Default: true. To determin if it is a required field.
+                  check: true, // Optional.[Bool].Default: true. To determine if you need to validate.
+                  required: true, // Optional.[Bool].Default: true. To determine if it is a required field.
                 }}
               /> */}
               <input
