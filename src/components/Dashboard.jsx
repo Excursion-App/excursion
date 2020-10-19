@@ -35,7 +35,8 @@ class Dashboard extends Component {
     // }
   }
 
-  // displayTrips() {
+  displayTrips() {
+    console.log('displayTrips')
   //   const { trips } = this.state;
   //   return trips.map((el, index) => (
   //     <p key={index} onClick={this.displayTripDetails(el)}>
@@ -46,7 +47,8 @@ class Dashboard extends Component {
   //   <p key={indx}>
   //     <span onClick={this.getTripDetails(el.destination)}> {el.destination} Trip </span>
   //   </p>
-  // ))}
+  // ))
+}
 
   render() {
     return (
