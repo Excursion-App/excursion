@@ -44,7 +44,6 @@ class Destination extends Component {
     this.setState({ origin: event.target.value });
   }
 
-
   handleEndChange(event) {
     this.setState({ destination: event.target.value });
   }
