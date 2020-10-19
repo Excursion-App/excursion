@@ -5,30 +5,31 @@ import firebase from '../firebase';
 import Breadcrumbs from './Breadcrumbs';
 
 class Dashboard extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     trips: [],
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      trips: [],
+    };
+  }
 
   displayTrips() {
     const db = firebase.firestore();
-    let  trips = [];
+    let tripsArr = [];
 
-    db.collection('Trips').get().then(function (querySnapshot) {
+    db.collection('Trips').get().then((querySnapshot) => {
       querySnapshot.forEach(function(doc) {
-        trips.push(doc.data());
-        console.log(trips)
+        tripsArr.push(doc.data());
       });
+      this.setState({ trips: tripsArr });
     });
 
-    // return (
-    //   <div>
-    //     hey
-    //     {trips}
-    //   </div>
-    // )
+    return (
+      <div>
+        {this.state.trips.map((trip, index) => (
+          <p key={index}> {trip.destination} trip </p>
+        ))}
+      </div>
+    );
 }
 
   render() {
@@ -37,11 +38,7 @@ class Dashboard extends Component {
         <Navbar />
         <Breadcrumbs />
         <h1> Your Trips </h1>
-        {/* <div>{this.state.trips.map((el, indx) => {
-          return (
-            <p key={indx}> {el} Trip </p>
-          )
-        })}</div> */}
+        {this.displayTrips()}
       </div>
     );
   }
