@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../views/Destination.css';
-import { Textbox } from 'react-inputs-validation';
+// import { Textbox } from 'react-inputs-validation';
 import Navbar from './Navbar';
 import paris from '../images/paris.jpg';
 // import mexico from '../images/chichen-itza-mexico.jpg';
@@ -71,7 +71,7 @@ class Destination extends Component {
             <label htmlFor="startFrom">
               From:
               <br />
-              <Textbox
+              {/* <Textbox
                 attributesInput={{
                   id: 'startFrom',
                   name: 'Name',
@@ -87,8 +87,8 @@ class Destination extends Component {
                   check: true, // Optional.[Bool].Default: true. To determin if you need to validate.
                   required: true, // Optional.[Bool].Default: true. To determin if it is a required field.
                 }}
-              />
-              {/* <input
+              /> */}
+              <input
                 type="text"
                 id="startFrom"
                 value={origin}
@@ -96,13 +96,13 @@ class Destination extends Component {
                 placeholder="Where are you coming from?"
                 onChange={this.handleStartChange}
                 size="25"
-              /> */}
+              />
             </label>
 
             <label htmlFor="endTo">
               To:
               <br />
-              {/* <input
+              <input
                 type="text"
                 id="endTo"
                 value={destination}
@@ -110,8 +110,8 @@ class Destination extends Component {
                 placeholder="Where would you like to go?"
                 onChange={this.handleEndChange}
                 size="25"
-              /> */}
-              <Textbox
+              />
+              {/* <Textbox
                 attributesInput={{
                   id: 'startFrom',
                   name: 'Name',
@@ -127,7 +127,7 @@ class Destination extends Component {
                   check: true,
                   required: true,
                 }}
-              />
+              /> */}
             </label>
 
             <button type="button" className="button">
