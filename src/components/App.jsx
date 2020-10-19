@@ -11,19 +11,20 @@ import Home from './Home';
 import TravelDates from './TravelDates';
 
 const initialState = {
-  tripId: 1
-}; 
+  tripId: 1,
+};
+
 function reducer(state = initialState, action) {
-  switch(action.type) {
-    case "UPDATE TRIP ID":
+  switch (action.type) {
+    case 'UPDATE TRIP ID':
       return {
         tripId: state.tripId,
       };
     default:
       return state;
   }
-  // return state;
 }
+
 const store = createStore(reducer);
 store.dispatch({ type: 'UPDATE TRIP ID' });
 
