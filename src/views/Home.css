@@ -17,9 +17,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: rgb(240, 132, 2);
+  letter-spacing: 5px;
 }
 
-.home2 {
+.blue-background-box {
   font-size: 25px;
   color: rgb(240, 132, 2);
   text-shadow: 1px 1px 2px #000;
@@ -27,12 +29,12 @@
   width: 960px;
   padding: 25px 10px 30px 10px;
   box-shadow: 0 4px 10px 4px #13232f4d;
-  max-width: 14em;
+  max-width: 19em;
   background-color: rgba(0, 176, 234, 0.4);
   border-radius: 12px; 
 }
 
-.home2 a{
+.blue-background-box  a{
   font-family: 'Josefin Sans', sans-serif;
   font-size: 19px;
   color: white;

@@ -7,7 +7,7 @@ const Home = () => (
   <div>
     <Navbar />
     <div className="home">
-      <div className="home2">
+      <div className="blue-background-box">
         <h1 id="title"> EXCURSION </h1>
         <h2 inputMode="tagline"> Group Travel Made Easy. </h2>
         <button type="button" className="user-flow">
