@@ -40,8 +40,6 @@ class TravelDates extends Component {
               </button>
             </Link>
 
-            <button type="button" className="user-flow"></button>
-
             <Link to="/guests">
               <button type="button" className="user-flow">
                 Next
