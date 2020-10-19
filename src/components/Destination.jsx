@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../views/Destination.css';
+import { Textbox } from 'react-inputs-validation';
 import Navbar from './Navbar';
 // import paris from '../images/paris.jpg';
 // import mexico from '../images/chichen-itza-mexico.jpg';
@@ -8,13 +9,14 @@ import Navbar from './Navbar';
 import firebase from '../firebase';
 import Breadcrumbs from './Breadcrumbs';
 
+
 class Destination extends Component {
   constructor(props) {
     super(props);
     this.state = {
       origin: '',
       destination: '',
-      tripId: ''
+      tripId: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleStartChange = this.handleStartChange.bind(this);
@@ -49,10 +51,14 @@ class Destination extends Component {
 
 
   render() {
+    const {
+      origin, destination, cities,
+    } = this.state;
     return (
       <div>
         <Navbar />
         <Breadcrumbs />
+
         <div className="destination">
           <h1> Top Destinations </h1>
           {/* <div>
@@ -61,31 +67,66 @@ class Destination extends Component {
             <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
           </div> */}
 
-          <form className="form-inline" onSubmit={this.handleSubmit}>
+          <form className="form-inline" action="/travel-dates" onSubmit={this.handleSubmit}>
             <label htmlFor="startFrom">
               From:
               <br />
-              <input
+              <Textbox
+                attributesInput={{
+                  id: 'startFrom',
+                  name: 'Name',
+                  type: 'text',
+                  placeholder: 'Where are you coming from?',
+                  size: '25',
+                }}
+                value={origin} // Optional.[String].Default: "".
+                onChange={this.handleStartChange}
+                onBlur={(e) => {console.log(e)}} // Optional.[Func].Default: none. In order to validate the value on blur, you MUST provide a function, even if it is an empty function. Missing this, the validation on blur will not work.
+                validationOption={{
+                  origin: 'Origin', // Optional.[String].Default: "". To display in the Error message. i.e Please enter your {name}.
+                  check: true, // Optional.[Bool].Default: true. To determin if you need to validate.
+                  required: true, // Optional.[Bool].Default: true. To determin if it is a required field.
+                }}
+              />
+              {/* <input
                 type="text"
                 id="startFrom"
-                value={this.state.origin}
+                value={origin}
+                required
                 placeholder="Where are you coming from?"
                 onChange={this.handleStartChange}
                 size="25"
-                required
-              />
+              /> */}
             </label>
 
             <label htmlFor="endTo">
               To:
               <br />
-              <input
+              {/* <input
                 type="text"
                 id="endTo"
-                value={this.state.destination}
+                value={destination}
+                required
                 placeholder="Where would you like to go?"
                 onChange={this.handleEndChange}
                 size="25"
+              /> */}
+              <Textbox
+                attributesInput={{
+                  id: 'startFrom',
+                  name: 'Name',
+                  type: 'text',
+                  placeholder: 'Where would you like to go?',
+                  size: '25',
+                }}
+                value={destination} // Optional.[String].Default: "".
+                onChange={this.handleStartChange}
+                onBlur={(e) => {console.log(e)}} // Optional.[Func].Default: none. In order to validate the value on blur, you MUST provide a function, even if it is an empty function. Missing this, the validation on blur will not work.
+                validationOption={{
+                  destination: 'Destination',
+                  check: true,
+                  required: true,
+                }}
               />
             </label>
 
@@ -99,9 +140,7 @@ class Destination extends Component {
 
           <div>
             <div className="item">
-              {' '}
-              {this.props.cities}
-              {' '}
+              {cities}
             </div>
             <div className="item"> </div>
             <div className="item"> </div>

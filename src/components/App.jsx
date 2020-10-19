@@ -14,16 +14,16 @@ const initialState = {
   tripId: '1million'
 }; 
 
+
 function reducer(state = initialState, action) {
-  switch(action.type) {
-    case "UPDATE TRIP ID":
+  switch (action.type) {
+    case 'UPDATE TRIP ID':
       return {
         tripId: state.tripId,
       };
     default:
       return state;
   }
-  // return state;
 }
 
 const store = createStore(reducer);

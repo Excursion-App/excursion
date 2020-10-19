@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Calendar from 'react-calendar';
 import Navbar from './Navbar';
 import Breadcrumbs from './Breadcrumbs';
 import '../views/TravelDates.css';
 
 class TravelDates extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: new Date(),
-      tripId: props.tripId,
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     date: new Date(),
+  //     tripId: '',
+  //   };
+  //   this.handleSubmit = this.handleSubmit.bind(this);
+  // }
 
   handleSubmit(event) {
     event.preventDefault();
@@ -33,13 +34,19 @@ class TravelDates extends Component {
             value={this.state.date}
           />
           <div>
-            <button type="button" className="user-flow">
-              <a href="/destination"> Back </a>
-            </button>
+            <Link to="/destination">
+              <button type="button" className="user-flow">
+                Back
+              </button>
+            </Link>
 
-            <button type="button" className="user-flow">
-              <a href="/guests"> Next </a>
-            </button>
+            <button type="button" className="user-flow"</button>
+
+            <Link to="/guests">
+              <button type="button" className="user-flow">
+                Next
+              </button>
+            </Link>
           </div>
         </div>
       </div>
