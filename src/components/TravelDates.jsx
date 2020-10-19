@@ -7,14 +7,14 @@ import Breadcrumbs from './Breadcrumbs';
 import '../views/TravelDates.css';
 
 class TravelDates extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     date: new Date(),
-  //     tripId: '',
-  //   };
-  //   this.handleSubmit = this.handleSubmit.bind(this);
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: new Date(),
+      tripId: '',
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
   handleSubmit(event) {
     event.preventDefault();
@@ -40,8 +40,6 @@ class TravelDates extends Component {
               </button>
             </Link>
 
-            <button type="button" className="user-flow"</button>
-
             <Link to="/guests">
               <button type="button" className="user-flow">
                 Next
@@ -54,10 +52,8 @@ class TravelDates extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    tripId: state.tripId,
-  };
-};
+const mapStateToProps = (state) => ({
+  tripId: state.tripId,
+});
 
 export default connect(mapStateToProps)(TravelDates);

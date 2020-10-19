@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../views/Destination.css';
 import { Textbox } from 'react-inputs-validation';
 import Navbar from './Navbar';
-// import paris from '../images/paris.jpg';
+import paris from '../images/paris.jpg';
 // import mexico from '../images/chichen-itza-mexico.jpg';
 // import sydney from '../images/sydney-opera-house.jpg';
 import firebase from '../firebase';
@@ -61,11 +61,11 @@ class Destination extends Component {
 
         <div className="destination">
           <h1> Top Destinations </h1>
-          {/* <div>
+          <div>
             <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
-            <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
-            <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />
-          </div> */}
+            {/* <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" />
+            <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" /> */}
+          </div>
 
           <form className="form-inline" action="/travel-dates" onSubmit={this.handleSubmit}>
             <label htmlFor="startFrom">
@@ -132,8 +132,8 @@ class Destination extends Component {
 
             <button type="button" className="button">
               {/* <Link to="/travel-dates"> */}
-                <i className="fas fa-search-location" />
-                Next
+              <i className="fas fa-search-location" />
+              Next
               {/* </Link> */}
             </button>
           </form>
