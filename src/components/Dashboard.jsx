@@ -5,48 +5,31 @@ import firebase from '../firebase';
 import Breadcrumbs from './Breadcrumbs';
 
 class Dashboard extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      trips: [],
-    };
-  }
-
-  componentDidMount() {
-    firebase
-      .firestore()
-      .collection('Trips')
-      .get()
-      .then((querySnapshot) => {
-        const Trips = [];
-
-        querySnapshot.forEach((doc) => {
-          console.log('doc', doc.id)
-          Trips.push({
-            destination: doc.data().end,
-          });
-        });
-        this.setState({ trips: Trips });
-      });
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     trips: [],
+  //   };
+  // }
 
   displayTrips() {
-    const { trips } = this.state;
-    return trips.map((el, index) => (
-      <p key={index} onClick={this.displayTripDetails(el)}>
-        {el.destination}
-      </p>
-    ));
-    // {this.state.trips.map((el, indx) => (
-    //   <p key={indx}>
-    //     <span onClick={this.getTripDetails(el.destination)}> {el.destination} Trip </span>
-    //   </p>
-    // ))}
-  }
+    const db = firebase.firestore();
+    let  trips = [];
 
-  displayTripDetails(el) {
-    console.log(el)
-  }
+    db.collection('Trips').get().then(function (querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        trips.push(doc.data());
+        console.log(trips)
+      });
+    });
+
+    // return (
+    //   <div>
+    //     hey
+    //     {trips}
+    //   </div>
+    // )
+}
 
   render() {
     return (
@@ -54,7 +37,11 @@ class Dashboard extends Component {
         <Navbar />
         <Breadcrumbs />
         <h1> Your Trips </h1>
-        {this.displayTrips()}
+        {/* <div>{this.state.trips.map((el, indx) => {
+          return (
+            <p key={indx}> {el} Trip </p>
+          )
+        })}</div> */}
       </div>
     );
   }

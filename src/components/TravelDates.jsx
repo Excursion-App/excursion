@@ -20,10 +20,6 @@ class TravelDates extends Component {
     event.preventDefault();
   }
 
-  logState() {
-    console.log('hi');
-  }
-
   render() {
     return (
       <div>
@@ -35,7 +31,7 @@ class TravelDates extends Component {
 
           <Calendar
             selectRange={this.handleSubmit}
-            // value={this.state.date}
+            value={this.state.date}
           />
           <div>
             <Link to="/destination">
@@ -44,7 +40,7 @@ class TravelDates extends Component {
               </button>
             </Link>
 
-            <button type="button" onClick={this.logState()}> Log State </button>
+            <button type="button" className="user-flow"</button>
 
             <Link to="/guests">
               <button type="button" className="user-flow">
@@ -58,8 +54,10 @@ class TravelDates extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  tripId: state.tripId,
-})
+const mapStateToProps = (state) => {
+  return {
+    tripId: state.tripId,
+  };
+};
 
 export default connect(mapStateToProps)(TravelDates);

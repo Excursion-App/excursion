@@ -31,6 +31,7 @@
 	border-radius: 4px;
 	margin-top: 20px;
 }
+
 .form-inline {
 	display: flex;
 	flex-flow: row wrap;

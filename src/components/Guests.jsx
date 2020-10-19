@@ -9,8 +9,12 @@ const Guests = () => (
     <Breadcrumbs />
     <div className="guests">
       <h1> Add Your Guests </h1>
-      <i className="fas fa-plus-circle" />
-      <br />
+      <div>
+        <input type="text" placeholder="Name" style={{margin:"5px"}} />
+        <input type="text" placeholder="Email" style={{margin:"5px"}} />
+        <button type="submit"> Invite </button>
+      </div>
+      {/* <i className="fas fa-plus-circle" /> */}
       <div>
         <button type="button" className="user-flow">
           <a href="/travel-dates"> Back </a>
