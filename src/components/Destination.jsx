@@ -44,7 +44,6 @@ class Destination extends Component {
     this.setState({ origin: event.target.value });
   }
 
-
   handleEndChange(event) {
     this.setState({ destination: event.target.value });
   }
@@ -84,8 +83,8 @@ class Destination extends Component {
                 onBlur={(e) => {console.log(e)}} // Optional.[Func].Default: none. In order to validate the value on blur, you MUST provide a function, even if it is an empty function. Missing this, the validation on blur will not work.
                 validationOption={{
                   origin: 'Origin', // Optional.[String].Default: "". To display in the Error message. i.e Please enter your {name}.
-                  check: true, // Optional.[Bool].Default: true. To determin if you need to validate.
-                  required: true, // Optional.[Bool].Default: true. To determin if it is a required field.
+                  check: true, // Optional.[Bool].Default: true. To determine if you need to validate.
+                  required: true, // Optional.[Bool].Default: true. To determine if it is a required field.
                 }}
               />
               {/* <input
