@@ -131,10 +131,10 @@ class Destination extends Component {
             </label>
 
             <button type="button" className="button">
-              {/* <Link to="/travel-dates"> */}
-              <i className="fas fa-search-location" />
-              Next
-              {/* </Link> */}
+              <Link to="/travel-dates">
+                <i className="fas fa-search-location" />
+                Next
+              </Link>
             </button>
           </form>
 
