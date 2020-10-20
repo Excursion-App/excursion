@@ -9,10 +9,11 @@ import Existing from './Existing';
 import Guests from './Guests';
 import Home from './Home';
 import TravelDates from './TravelDates';
+import TripDetails from './TripDetails';
 
 const initialState = {
-  tripId: '1million'
-}; 
+  tripId: '',
+};
 
 
 function reducer(state = initialState, action) {
@@ -41,6 +42,7 @@ const App = () => (
         <Route path="/existing" component={Existing} />
         <Route path="/guests" component={Guests} />
         <Route path="/travel-dates" component={TravelDates} />
+        <Route path="/tripDetails" component={TripDetails} />
       </div>
     </Router>
   </Provider>

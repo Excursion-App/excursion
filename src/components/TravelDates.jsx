@@ -30,7 +30,7 @@ class TravelDates extends Component {
           <h3> When are you planning on going?</h3>
 
           <Calendar
-            selectRange={this.handleSubmit}
+            selectRange={true}
             value={this.state.date}
           />
           <div>
