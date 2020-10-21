@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Breadcrumbs from './Breadcrumbs';
 import '../views/Guests.css';
@@ -25,21 +26,25 @@ const Guests = () => (
           <br />
           <input type="text" placeholder="jane.doe@hotmail.com" size="25" id="email" />
         </label>
-        <button
-          type="submit"
-          className="user-flow"
-          style={{ marginTop: '23px' }}
-        >
-          Invite
-        </button>
+        <Link to="/dashboard">
+          <button
+            type="submit"
+            className="user-flow"
+            style={{ marginTop: '23px' }}
+          >
+            Invite
+          </button>
+        </Link>
       </form>
       {/* <i className="fas fa-plus-circle" /> */}
       <br />
       <br />
       <div>
-        <button type="button" className="user-flow">
-          <a href="/travel-dates"> Back </a>
-        </button>
+        <Link to="/travel-dates">
+          <button type="button" className="user-flow">
+            Back
+          </button>
+        </Link>
         <button type="button" className="user-flow">
           <a href="/dashboard"> Done </a>
         </button>

@@ -37,7 +37,7 @@ class Dashboard extends Component {
     let tripsArr = [];
 
     db.collection('Trips').get().then((querySnapshot) => {
-      querySnapshot.forEach(function(doc) {
+      querySnapshot.forEach((doc) => {
         tripsArr.push(doc.data());
       });
       this.setState({ trips: tripsArr });
@@ -54,14 +54,14 @@ class Dashboard extends Component {
         ))}
       </div>
     );
-}
+  }
 
   render() {
     return (
       <div>
         <Navbar />
         <Breadcrumbs />
-        <h1> Your Trips </h1>
+        <h1 className="dashboard"> Your Trips </h1>
         {this.displayTrips()}
         <div className="dashboard">
           {/* {this.state.trips.map((trip, index) => (

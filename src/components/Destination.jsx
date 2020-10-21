@@ -7,7 +7,6 @@ import paris from '../images/paris.jpg';
 // import sydney from '../images/sydney-opera-house.jpg';
 import '../views/Destination.css';
 
-
 class Destination extends Component {
   constructor(props) {
     super(props);
