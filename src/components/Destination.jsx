@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import '../views/Destination.css';
-// import { Textbox } from 'react-inputs-validation';
 import Navbar from './Navbar';
+import Breadcrumbs from './Breadcrumbs';
+import firebase from '../firebase';
 import paris from '../images/paris.jpg';
 // import mexico from '../images/chichen-itza-mexico.jpg';
 // import sydney from '../images/sydney-opera-house.jpg';
-import firebase from '../firebase';
-import Breadcrumbs from './Breadcrumbs';
-
+import '../views/Destination.css';
 
 class Destination extends Component {
   constructor(props) {
@@ -16,7 +13,7 @@ class Destination extends Component {
     this.state = {
       origin: '',
       destination: '',
-      tripId: '',
+      tripId: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleStartChange = this.handleStartChange.bind(this);
@@ -25,15 +22,18 @@ class Destination extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+
     const db = firebase.firestore();
+    const { destination, origin } = this.state;
     db.collection('Trips').add({
-      destination: this.state.destination,
-      origin: this.state.origin,
-    
+      destination,
+      origin,
     })
       .then((docRef) => {
-        console.log(`${this.state.destination} Trip successfully created with ID ${docRef.id}`);
+        console.log(`${destination} Trip successfully created with ID ${docRef.id}`);
         this.setState({ tripId: docRef.id });
+        // store.dispatch('UPDATE TRIP ID'(docRef.id))
+        //update the id & add it to redux 
         this.props.history.push('/travel-dates');
       })
       .catch((error) => {
@@ -48,7 +48,6 @@ class Destination extends Component {
   handleEndChange(event) {
     this.setState({ destination: event.target.value });
   }
-
 
   render() {
     const { origin, destination } = this.state;
@@ -93,7 +92,9 @@ class Destination extends Component {
             </label>
 
             <button type="submit" className="button">
-                <i className="fas fa-search-location" />Next
+              <i className="fas fa-search-location" />
+              {' '}
+              Next
             </button>
           </form>
         </div>
