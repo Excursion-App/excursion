@@ -16,7 +16,7 @@ const initialState = {
 };
 
 
-function reducer(state = initialState, action) {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'UPDATE TRIP ID':
       return {
@@ -25,7 +25,7 @@ function reducer(state = initialState, action) {
     default:
       return state;
   }
-}
+};
 
 const store = createStore(reducer);
 
