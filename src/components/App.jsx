@@ -11,8 +11,8 @@ import Home from './Home';
 import TravelDates from './TravelDates';
 
 const initialState = {
-  tripId: '1million'
-}; 
+  tripId: '1million',
+};
 
 
 function reducer(state = initialState, action) {
