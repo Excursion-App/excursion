@@ -16,7 +16,7 @@ const Guests = () => (
           <br />
           <input
             type="text"
-            placeholder="Type their name here"
+            placeholder="Jane Doe"
             size="25"
             required
           />
@@ -24,7 +24,7 @@ const Guests = () => (
         <label htmlFor="email">
           Email:
           <br />
-          <input type="text" placeholder="Type their email here" size="25" id="email" />
+          <input type="text" placeholder="jane.doe@hotmail.com" size="25" id="email" />
         </label>
         <Link to="/dashboard">
           <button
