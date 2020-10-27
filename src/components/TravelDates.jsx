@@ -50,7 +50,8 @@ class TravelDates extends Component {
         <Breadcrumbs />
         <div className="travel-dates">
           <h1> Travel Dates </h1>
-          <h3> When are you planning on going?</h3>
+          <h3> When will you be traveling?</h3>
+          <h4>(It's okay to estimate)</h4>
 
           <Calendar
             onChange={this.onChange}

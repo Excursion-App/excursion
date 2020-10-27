@@ -5,18 +5,21 @@
 .home {
   position: absolute;
   font-family: 'Josefin Sans', sans-serif;
-  background: url(https://source.unsplash.com/1440x900/?seven-wonders-of-the-world) no-repeat;
+  /* background: url(https://source.unsplash.com/1440x900/?seven-wonders-of-the-world) no-repeat; */
+  background: url(https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=5884&h=3310&q=80);
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   background-size: 100% 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: rgb(240, 132, 2);
+  letter-spacing: 5px;
 }
 
-.home2 {
+.blue-background-box {
   font-size: 25px;
   color: rgb(240, 132, 2);
   text-shadow: 1px 1px 2px #000;
@@ -24,12 +27,13 @@
   width: 960px;
   padding: 36px 10px 30px 10px;
   box-shadow: 0 4px 10px 4px #13232f4d;
-  max-width: 14em;
+  max-width: 19em;
   background-color: rgba(0, 176, 234, 0.4);
   border-radius: 12px; 
+  margin-bottom: 9%;
 }
 
-.home2 a{
+.blue-background-box  a{
   font-family: 'Josefin Sans', sans-serif;
   font-size: 19px;
   color: white;

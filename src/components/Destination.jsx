@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
-import Breadcrumbs from './Breadcrumbs';
 import firebase from '../firebase';
-import paris from '../images/paris.jpg';
-// import mexico from '../images/chichen-itza-mexico.jpg';
-// import sydney from '../images/sydney-opera-house.jpg';
 import '../views/Destination.css';
+import Breadcrumbs from './Breadcrumbs';
+import MultipleImages from './MultipleImages';
 
 class Destination extends Component {
   constructor(props) {
@@ -26,8 +24,8 @@ class Destination extends Component {
     const db = firebase.firestore();
     const { destination, origin } = this.state;
     db.collection('Trips').add({
-      destination,
-      origin,
+      destination: this.state.destination,
+      origin: this.state.origin,
     })
       .then((docRef) => {
         console.log(`${destination} Trip successfully created with ID ${docRef.id}`);
@@ -55,48 +53,47 @@ class Destination extends Component {
       <div>
         <Navbar />
         <Breadcrumbs />
-        <div className="destination">
-          <h1> Top Destinations </h1>
+        <div>
           <div>
-            <img src={paris} width="240" height="160" alt="eiffel tower" className="destination-images" />
-            {/* <img src={sydney} width="240" height="160" alt="sydney opera house" className="destination-images" /> */}
-            {/* <img src={mexico} alt="chichen itza" width="240" height="160" className="destination-images" />  */}
+            <h1> Top Destinations </h1>
+            <MultipleImages />
           </div>
-          <form className="form-inline" action="/travel-dates" onSubmit={this.handleSubmit}>
-            <label htmlFor="startFrom">
-              From:
-              <br />
-              <input
-                type="text"
-                id="startFrom"
-                value={origin}
-                required
-                placeholder="Where are you coming from?"
-                onChange={this.handleStartChange}
-                size="25"
-              />
-            </label>
+          <div className="centerize">
+            <form className="form-inline" action="/travel-dates" onSubmit={this.handleSubmit}>
+              <label htmlFor="startFrom">
+                From:
+                <br />
+                <input
+                  type="text"
+                  id="startFrom"
+                  value={origin}
+                  required
+                  placeholder="Where are you coming from?"
+                  onChange={this.handleStartChange}
+                  size="25"
+                />
+              </label>
 
-            <label htmlFor="endTo">
-              To:
-              <br />
-              <input
-                type="text"
-                id="endTo"
-                value={destination}
-                required
-                placeholder="Where would you like to go?"
-                onChange={this.handleEndChange}
-                size="25"
-              />
-            </label>
+              <label htmlFor="endTo">
+                To:
+                <br />
+                <input
+                  type="text"
+                  id="endTo"
+                  value={destination}
+                  required
+                  placeholder="Where would you like to go?"
+                  onChange={this.handleEndChange}
+                  size="25"
+                />
+              </label>
 
-            <button type="submit" className="button">
-              <i className="fas fa-search-location" />
-              {' '}
-              Next
-            </button>
-          </form>
+              <button type="submit" className="user-flow" style={{ marginTop: '23px' }}>
+                <i className="fas fa-search-location" />
+                Next
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     );
