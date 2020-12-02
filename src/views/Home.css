@@ -1,38 +1,46 @@
-#title {
-  color:  rgb(27,40,93);
-   font-size: 40px;
-}
-#tagline {
-  font-family: 'Josefin Sans', sans-serif;
+#h2 {
+  line-height: 0 !important;
+  margin: 0 !important;
 }
 .home {
   position: absolute;
   font-family: 'Josefin Sans', sans-serif;
+<<<<<<< HEAD
   background: url(https://source.unsplash.com/1900x1200/?vacation) no-repeat;
   height: 100vh;
   background-size: 100%;
+=======
+  /* background: url(https://source.unsplash.com/1440x900/?seven-wonders-of-the-world) no-repeat; */
+  background: url(https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=5884&h=3310&q=80);
+  width: 100vw;
+  height: 100vh;
+  background-size: 100% 100%;
+>>>>>>> c179e3b0a4634376310a15d18eda328a3630f9cf
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: rgb(240, 132, 2);
+  letter-spacing: 5px;
 }
 
-.home2 {
+.blue-background-box {
   font-size: 25px;
   color: rgb(251, 159, 49);
   letter-spacing: 2px;
   text-shadow: 1px 1px 2px #000;
   text-align: center;
   width: 960px;
-  padding: 25px 10px 30px 10px;
+  padding: 36px 10px 30px 10px;
   box-shadow: 0 4px 10px 4px #13232f4d;
-  max-width: 14em;
+  max-width: 19em;
   background-color: rgba(0, 176, 234, 0.4);
   border-radius: 12px; 
+  margin-bottom: 9%;
 }
 
-.home2 a{
+.blue-background-box  a{
   font-family: 'Josefin Sans', sans-serif;
   font-size: 19px;
   color: white;
@@ -49,9 +57,4 @@ button.user-flow:hover{
   background-color: rgb(0, 125, 193);
   color: rgb(251, 159, 49);
 }
-/* @media only screen and (min-height: 600px) {
-  .home2 {
-    margin-top: -125px;
-  }
-} */
 

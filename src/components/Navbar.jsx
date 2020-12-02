@@ -14,7 +14,6 @@ const Navbar = () => (
           src={brand}
         />
       </Link>
-      {/* <h1 className="title"> EXCURSION </h1> */}
 
       <Link to="/auth" className="list" id="signup">
         <i className="fas fa-user-alt" />
