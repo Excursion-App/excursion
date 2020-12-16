@@ -1,6 +1,6 @@
 #title {
   color:  rgb(27,40,93);
-   font-size: 40px;
+  font-size: 40px;
 }
 #tagline {
   font-family: 'Josefin Sans', sans-serif;
@@ -9,7 +9,8 @@
   position: absolute;
   font-family: 'Josefin Sans', sans-serif;
   /* background: url(https://source.unsplash.com/1440x900/?seven-wonders-of-the-world) no-repeat; */
-  background: url(https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=5884&h=3310&q=80);
+  /* background: url(https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=5884&h=3310&q=80); */
+  background: url(../images/group-travel.jpeg);
   width: 100vw;
   height: 100vh;
   background-size: 100% 100%;
@@ -19,7 +20,7 @@
   justify-content: center;
   align-items: center;
   color: rgb(240, 132, 2);
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .blue-background-box {
