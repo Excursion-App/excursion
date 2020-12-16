@@ -1,6 +1,9 @@
-#h2 {
-  line-height: 0 !important;
-  margin: 0 !important;
+#title {
+  color:  rgb(27,40,93);
+   font-size: 40px;
+}
+#tagline {
+  font-family: 'Josefin Sans', sans-serif;
 }
 .home {
   position: absolute;
@@ -25,7 +28,7 @@
   text-shadow: 1px 1px 2px #000;
   text-align: center;
   width: 960px;
-  padding: 36px 10px 30px 10px;
+  padding: 25px 10px 30px 10px;
   box-shadow: 0 4px 10px 4px #13232f4d;
   max-width: 19em;
   background-color: rgba(0, 176, 234, 0.4);
@@ -45,4 +48,10 @@ button.user-flow:hover {
   background-color: rgb(0, 125, 193);
   color: aliceblue;
 }
+/* @media only screen and (min-height: 600px) {
+  .home2 {
+    margin-top: -125px;
+  }
+} */
 
+    
