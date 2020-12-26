@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import '../views/Dashboard.css';
 import firebase from '../firebase';
 import Breadcrumbs from './Breadcrumbs';
-import { findLastIndex } from 'lodash';
 
 const db = firebase.firestore();
 
@@ -16,27 +15,9 @@ class Dashboard extends Component {
     };
   }
 
-<<<<<<< HEAD
-  componentDidMount() {
-    firebase
-      .firestore()
-      .collection('Trips')
-      .get()
-      .then((querySnapshot) => {
-        const Trips = [];
-
-        querySnapshot.forEach((doc) => {
-          console.log('doc', doc.id);
-          Trips.push({
-            destination: doc.data().end,
-          });
-        });
-        this.setState({ trips: Trips });
-      });
-=======
   tripDetails(destination) {
     // get the id of the specific trip that has been clicked on
-    console.log('destination', destination.destination)
+    console.log('destination', destination.destination);
     // var docRef = db.collection('Trips').doc('here');
 
     // docRef.get().then(function(doc) {
@@ -49,11 +30,10 @@ class Dashboard extends Component {
     // }).catch(function(error) {
     //     console.log("Error getting document:", error);
     // });
->>>>>>> c179e3b0a4634376310a15d18eda328a3630f9cf
   }
 
   displayTrips() {
-    let tripsArr = [];
+    const tripsArr = [];
 
     db.collection('Trips').get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -80,18 +60,12 @@ class Dashboard extends Component {
       <div>
         <Navbar />
         <Breadcrumbs />
-<<<<<<< HEAD
-        <div className="dashboard">
-          <h1> Your Trips </h1>
-          {this.displayTrips()}
-=======
         <h1 className="dashboard"> Your Trips </h1>
         {this.displayTrips()}
         <div className="dashboard">
           {/* {this.state.trips.map((trip, index) => (
             <p key={index}> {trip.destination} trip </p>
           ))} */}
->>>>>>> c179e3b0a4634376310a15d18eda328a3630f9cf
         </div>
       </div>
     );

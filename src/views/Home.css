@@ -5,17 +5,10 @@
 .home {
   position: absolute;
   font-family: 'Josefin Sans', sans-serif;
-<<<<<<< HEAD
-  background: url(https://source.unsplash.com/1900x1200/?vacation) no-repeat;
-  height: 100vh;
-  background-size: 100%;
-=======
-  /* background: url(https://source.unsplash.com/1440x900/?seven-wonders-of-the-world) no-repeat; */
   background: url(https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=5884&h=3310&q=80);
   width: 100vw;
   height: 100vh;
   background-size: 100% 100%;
->>>>>>> c179e3b0a4634376310a15d18eda328a3630f9cf
   position: relative;
   display: flex;
   flex-direction: column;

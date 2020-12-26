@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { createStore } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Calendar from 'react-calendar';
-import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Breadcrumbs from './Breadcrumbs';
 import firebase from '../firebase';

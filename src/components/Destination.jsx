@@ -88,47 +88,11 @@ class Destination extends Component {
                 />
               </label>
 
-<<<<<<< HEAD
-            <label htmlFor="endTo">
-              To:
-              <br />
-              <input
-                type="text"
-                id="endTo"
-                value={this.state.end}
-                placeholder="Where would you like to go?"
-                onChange={this.handleEndChange}
-                size="25"
-              />
-            </label>
-
-            <Link to="/travel-dates">
-              <button
-                type="button"
-                className="button"
-                onClick={this.handleSubmit}
-              >
-                <i className="fas fa-search-location" />
-                Next
-              </button>
-            </Link>
-          </form>
-
-          <div>
-            <div className="item">
-              {' '}
-              {this.props.cities}
-              {' '}
-            </div>
-            <div className="item"> </div>
-            <div className="item"> </div>
-=======
               <button type="submit" className="user-flow" style={{ marginTop: '23px' }}>
                 <i className="fas fa-search-location" />
                 Next
               </button>
             </form>
->>>>>>> c179e3b0a4634376310a15d18eda328a3630f9cf
           </div>
         </div>
       </div>

@@ -45,20 +45,12 @@ const Guests = () => (
             Back
           </button>
         </Link>
-<<<<<<< HEAD
-        <Link to="/dashboard">
-          <button type="button" className="user-flow">
-            Done
-          </button>
-        </Link>
-=======
         <button type="button" className="user-flow">
           <a href="/dashboard"> Done </a>
         </button>
->>>>>>> c179e3b0a4634376310a15d18eda328a3630f9cf
       </div>
     </div>
-  </>
+  </> 
 );
 
 export default Guests;

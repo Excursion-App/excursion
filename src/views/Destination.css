@@ -6,21 +6,10 @@
 	color: white;
 	padding: 10px 20px;
 }
-<<<<<<< HEAD
-
-/* .button a {
-	color: #fff;
-} */
-
-.button {
-	border-radius: 4px;
-	margin-top: 20px;
-=======
 .centerize {
 	display: flex;
 	align-items: center;
 	justify-content: center;
->>>>>>> c179e3b0a4634376310a15d18eda328a3630f9cf
 }
 .form-inline {
 	display: flex;
