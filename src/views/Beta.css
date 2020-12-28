@@ -1,0 +1,66 @@
+.header {
+  height: 75px;
+  background-color: rgb(55, 176, 218);
+  box-shadow: 0 4px 10px #13232f4d;
+  padding: 19px 10px 19px 10px;
+}
+
+.brand{
+  height: 48px;
+  padding-left: 10px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: green;
+  background: url(../images/beta.jpg);
+  background-size: 100%;
+  min-height: 100vh;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+.betaTitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding: 20px;
+  color: rgb(27, 40, 93);
+  text-shadow: 1px 1px 2px #808080;
+}
+
+.betaTagline {
+  font-size: 20px;
+  padding-left: 20px;
+  color: rgb(27, 40, 93);
+  text-shadow: 1px 1px 2px #808080;
+}
+
+.betaButton {
+  float: right;
+  color: rgb(27, 40, 93);
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.emailButton {
+  width: 18%;
+  padding: 5px;
+  margin-left: 5px;
+  color: white;
+  background-color: rgb(27, 40, 93);
+  border-radius: 5px;
+}
+
+.emailInput {
+  margin-left: 20px;
+  padding: 5px;
+  width: 200px;
+  border-radius: 5px;
+}
+
