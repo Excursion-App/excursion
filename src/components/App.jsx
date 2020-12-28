@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import Beta from './Beta';
 import Dashboard from './Dashboard';
 import Destination from './Destination';
 import Existing from './Existing';
@@ -14,7 +15,6 @@ import TripDetails from './TripDetails';
 const initialState = {
   tripId: '',
 };
-
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -35,7 +35,7 @@ const App = () => (
   <Provider store={store}>
     <Router>
       <div>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={Beta} />
         <Route path="/excursion" component={Home} />
         <Route path="/destination" component={Destination} />
         <Route path="/dashboard" component={Dashboard} />
