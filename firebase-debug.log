@@ -1,0 +1,119 @@
+[debug] [2020-12-29T06:27:19.221Z] ----------------------------------------------------------------------
+[debug] [2020-12-29T06:27:19.223Z] Command:       /usr/local/Cellar/node/14.4.0/bin/node /usr/local/bin/firebase init hosting:github
+[debug] [2020-12-29T06:27:19.224Z] CLI Version:   9.1.0
+[debug] [2020-12-29T06:27:19.224Z] Platform:      darwin
+[debug] [2020-12-29T06:27:19.224Z] Node Version:  v14.4.0
+[debug] [2020-12-29T06:27:19.225Z] Time:          Mon Dec 28 2020 22:27:19 GMT-0800 (Pacific Standard Time)
+[debug] [2020-12-29T06:27:19.225Z] ----------------------------------------------------------------------
+[debug] [2020-12-29T06:27:19.225Z] 
+[debug] [2020-12-29T06:27:19.230Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-29T06:27:19.231Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/stephaniecherubin/sites/courses/Software-Product-Development/excursion
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using the-excursion-app. 
+[debug] [2020-12-29T06:27:19.245Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/the-excursion-app  
+ 
+[debug] [2020-12-29T06:27:19.438Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 29 Dec 2020 06:27:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /Users/stephaniecherubin/sites/courses/Software-Product-Development/excursion 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=997451456&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2020-12-29T06:27:20.420Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"1179642042a41b6c8dd5","redirect_uri":"http://localhost:9005","state":"997451456"}
+[debug] [2020-12-29T06:27:20.945Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Tue, 29 Dec 2020 06:27:20 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","status":"200 OK","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","etag":"W/\"dc8c2c03a6fc45831129674ec26078e3\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"1; mode=block","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-5029ae85.js gist.github.com/socket-worker-5029ae85.js","x-github-request-id":"E00D:1E25:6B03F9E:9A01091:5FEACC48"}
+[debug] [2020-12-29T06:27:20.947Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2020-12-29T06:27:21.314Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2020-12-29T06:27:21.315Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"StephanieCherubin","id":26418542,"node_id":"MDQ6VXNlcjI2NDE4NTQy","avatar_url":"https://avatars1.githubusercontent.com/u/26418542?v=4","gravatar_id":"","url":"https://api.github.com/users/StephanieCherubin","html_url":"https://github.com/StephanieCherubin","followers_url":"https://api.github.com/users/StephanieCherubin/followers","following_url":"https://api.github.com/users/StephanieCherubin/following{/other_user}","gists_url":"https://api.github.com/users/StephanieCherubin/gists{/gist_id}","starred_url":"https://api.github.com/users/StephanieCherubin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/StephanieCherubin/subscriptions","organizations_url":"https://api.github.com/users/StephanieCherubin/orgs","repos_url":"https://api.github.com/users/StephanieCherubin/repos","events_url":"https://api.github.com/users/StephanieCherubin/events{/privacy}","received_events_url":"https://api.github.com/users/StephanieCherubin/received_events","type":"User","site_admin":false,"name":"Stephanie Cherubin","company":null,"blog":"http://linkedin.com/in/stephanie-cherubin","location":"San Francisco, CA","email":"seraphin.cherubin@gmail.com","hireable":true,"bio":"#NeverStopLearning \r\n#CloneAndContribute #FOSS\r\n","twitter_username":null,"public_repos":103,"public_gists":12,"followers":63,"following":100,"created_at":"2017-03-14T20:00:53Z","updated_at":"2020-12-28T21:34:54Z","private_gists":1,"total_private_repos":10,"owned_private_repos":8,"disk_usage":259512,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] ✔  Success! Logged into GitHub as StephanieCherubin 
+[info] 
+[debug] [2020-12-29T06:28:05.924Z] >>> [apiv2][query] GET https://api.github.com/repos/Excursion/excursion/actions/secrets/public-key type=owner
+[debug] [2020-12-29T06:28:06.247Z] <<< [apiv2][status] GET https://api.github.com/repos/Excursion/excursion/actions/secrets/public-key 403
+[debug] [2020-12-29T06:28:06.247Z] <<< [apiv2][body] GET https://api.github.com/repos/Excursion/excursion/actions/secrets/public-key {"message":"Must have admin rights to Repository.","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2020-12-29T06:28:17.722Z] ----------------------------------------------------------------------
+[debug] [2020-12-29T06:28:17.725Z] Command:       /usr/local/Cellar/node/14.4.0/bin/node /usr/local/bin/firebase init hosting:github
+[debug] [2020-12-29T06:28:17.725Z] CLI Version:   9.1.0
+[debug] [2020-12-29T06:28:17.725Z] Platform:      darwin
+[debug] [2020-12-29T06:28:17.725Z] Node Version:  v14.4.0
+[debug] [2020-12-29T06:28:17.726Z] Time:          Mon Dec 28 2020 22:28:17 GMT-0800 (Pacific Standard Time)
+[debug] [2020-12-29T06:28:17.727Z] ----------------------------------------------------------------------
+[debug] [2020-12-29T06:28:17.727Z] 
+[debug] [2020-12-29T06:28:17.732Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-29T06:28:17.732Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/stephaniecherubin/sites/courses/Software-Product-Development/excursion
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using the-excursion-app. 
+[debug] [2020-12-29T06:28:17.746Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/the-excursion-app  
+ 
+[debug] [2020-12-29T06:28:17.955Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 29 Dec 2020 06:28:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /Users/stephaniecherubin/sites/courses/Software-Product-Development/excursion 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=260494334&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2020-12-29T06:28:18.804Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"28fe6a041eb31119bea1","redirect_uri":"http://localhost:9005","state":"260494334"}
+[debug] [2020-12-29T06:28:19.151Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Tue, 29 Dec 2020 06:28:19 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","status":"200 OK","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","etag":"W/\"374685a2d02463b6bff5f9aa325e67e4\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"1; mode=block","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-5029ae85.js gist.github.com/socket-worker-5029ae85.js","x-github-request-id":"E01A:1BF0:83A9089:B94AA25:5FEACC82"}
+[debug] [2020-12-29T06:28:19.153Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2020-12-29T06:28:19.528Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2020-12-29T06:28:19.528Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"StephanieCherubin","id":26418542,"node_id":"MDQ6VXNlcjI2NDE4NTQy","avatar_url":"https://avatars1.githubusercontent.com/u/26418542?v=4","gravatar_id":"","url":"https://api.github.com/users/StephanieCherubin","html_url":"https://github.com/StephanieCherubin","followers_url":"https://api.github.com/users/StephanieCherubin/followers","following_url":"https://api.github.com/users/StephanieCherubin/following{/other_user}","gists_url":"https://api.github.com/users/StephanieCherubin/gists{/gist_id}","starred_url":"https://api.github.com/users/StephanieCherubin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/StephanieCherubin/subscriptions","organizations_url":"https://api.github.com/users/StephanieCherubin/orgs","repos_url":"https://api.github.com/users/StephanieCherubin/repos","events_url":"https://api.github.com/users/StephanieCherubin/events{/privacy}","received_events_url":"https://api.github.com/users/StephanieCherubin/received_events","type":"User","site_admin":false,"name":"Stephanie Cherubin","company":null,"blog":"http://linkedin.com/in/stephanie-cherubin","location":"San Francisco, CA","email":"seraphin.cherubin@gmail.com","hireable":true,"bio":"#NeverStopLearning \r\n#CloneAndContribute #FOSS\r\n","twitter_username":null,"public_repos":103,"public_gists":12,"followers":63,"following":100,"created_at":"2017-03-14T20:00:53Z","updated_at":"2020-12-28T21:34:54Z","private_gists":1,"total_private_repos":10,"owned_private_repos":8,"disk_usage":259512,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] ✔  Success! Logged into GitHub as StephanieCherubin 
+[info] 
+[debug] [2020-12-29T06:29:08.532Z] >>> [apiv2][query] GET https://api.github.com/repos/Excursion-App/excursion/actions/secrets/public-key type=owner
+[debug] [2020-12-29T06:29:08.884Z] <<< [apiv2][status] GET https://api.github.com/repos/Excursion-App/excursion/actions/secrets/public-key 403
+[debug] [2020-12-29T06:29:08.885Z] <<< [apiv2][body] GET https://api.github.com/repos/Excursion-App/excursion/actions/secrets/public-key {"message":"Must have admin rights to Repository.","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2020-12-29T06:31:34.728Z] >>> [apiv2][query] GET https://api.github.com/repos/(Excursion-App/excursion)/actions/secrets/public-key type=owner
+[debug] [2020-12-29T06:31:35.038Z] <<< [apiv2][status] GET https://api.github.com/repos/(Excursion-App/excursion)/actions/secrets/public-key 404
+[debug] [2020-12-29T06:31:35.038Z] <<< [apiv2][body] GET https://api.github.com/repos/(Excursion-App/excursion)/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
