@@ -9,12 +9,12 @@ class Destination extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      origin: '',
+      // origin: '',
       destination: '',
       tripId: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleStartChange = this.handleStartChange.bind(this);
+    // this.handleStartChange = this.handleStartChange.bind(this);
     this.handleEndChange = this.handleEndChange.bind(this);
   }
 
@@ -22,33 +22,33 @@ class Destination extends Component {
     event.preventDefault();
 
     const db = firebase.firestore();
-    const { destination, origin } = this.state;
+    const { destination,} = this.state;
     db.collection('Trips').add({
       destination: this.state.destination,
-      origin: this.state.origin,
+      // origin: this.state.origin,
     })
       .then((docRef) => {
         console.log(`${destination} Trip successfully created with ID ${docRef.id}`);
         this.setState({ tripId: docRef.id });
         // store.dispatch('UPDATE TRIP ID'(docRef.id))
         //update the id & add it to redux 
-        this.props.history.push('/travel-dates');
+        this.props.history.push('/dashboard');
       })
       .catch((error) => {
         console.error('Error adding document: ', error);
       });
   }
 
-  handleStartChange(event) {
-    this.setState({ origin: event.target.value });
-  }
+  // handleStartChange(event) {
+  //   this.setState({ origin: event.target.value });
+  // }
 
   handleEndChange(event) {
     this.setState({ destination: event.target.value });
   }
 
   render() {
-    const { origin, destination } = this.state;
+    const { destination } = this.state;
     return (
       <div>
         <Navbar />
@@ -60,7 +60,7 @@ class Destination extends Component {
           </div>
           <div className="centerize">
             <form className="form-inline" action="/travel-dates" onSubmit={this.handleSubmit}>
-              <label htmlFor="startFrom">
+              {/* <label htmlFor="startFrom">
                 From:
                 <br />
                 <input
@@ -72,7 +72,7 @@ class Destination extends Component {
                   onChange={this.handleStartChange}
                   size="25"
                 />
-              </label>
+              </label> */}
 
               <label htmlFor="endTo">
                 To:
