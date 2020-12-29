@@ -43,11 +43,12 @@ class Dashboard extends Component {
     });
 
     return (
-      <div style={ {'display': 'flex', 'justifyContent': 'center'} }>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
         {this.state.trips.map((trip, index) => (
-          <p key={index} style={{'margin': '25px'}}> 
+          <p key={index} style={{ margin: '25px' }}>
             <Link to="/tripDetails">
-              {trip.destination} Trip
+              {trip.destination}
+              Trip
             </Link>
           </p>
         ))}

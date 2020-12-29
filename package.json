@@ -8,6 +8,8 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "axios": "^0.19.2",
     "firebase": "^7.23.0",
+    "firebase-admin": "^9.4.2",
+    "firebase-functions": "^3.13.0",
     "gh-pages": "^2.2.0",
     "lodash": "^4.17.20",
     "react": "^16.13.1",

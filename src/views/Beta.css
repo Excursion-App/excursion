@@ -1,0 +1,75 @@
+.header {
+  height: 75px;
+  background-color: rgb(55, 176, 218);
+  box-shadow: 0 4px 10px #13232f4d;
+  padding: 19px 10px 19px 10px;
+}
+
+.brand{
+  height: 48px;
+  padding-left: 40px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: green;
+  background: url(../images/beta.jpg);
+  background-size: 100%;
+  min-height: 100vh;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+.betaTitle {
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 0px;
+  padding: 70px 20px 20px 80px;
+  color: rgb(27, 40, 93);
+  text-shadow: 1px 1px 2px #000;
+}
+
+.betaTagline {
+  font-size: 30px;
+  padding-left: 80px;
+  color: rgb(27, 40, 93);
+  text-shadow: 1px 1px 2px #000;
+}
+
+.betaButton {
+  float: right;
+  color: rgb(27, 40, 93);
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.emailButton {
+  width: 200px;
+  padding: 5px;
+  margin-left: 5px;
+  color: white;
+  background-color: rgb(27, 40, 93);
+  border-radius: 5px;
+}
+.emailInputDiv{
+  margin-left: 60px;
+}
+.emailInput {
+  margin-left: 20px;
+  padding: 5px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.text-danger {
+  margin-left: 10px;
+  font-size: 16px;
+  color:red;
+  padding: 5px 10px 10px 10px;
+  text-shadow: 1px 1px 2px #000;
+}
