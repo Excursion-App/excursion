@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import '../views/Dashboard.css';
 import firebase from '../firebase';
 import Breadcrumbs from './Breadcrumbs';
-import { findLastIndex } from 'lodash';
+// import { findLastIndex } from 'lodash';
 
 const db = firebase.firestore();
 
@@ -34,7 +34,7 @@ class Dashboard extends Component {
   }
 
   displayTrips() {
-    let tripsArr = [];
+    const tripsArr = [];
 
     db.collection('Trips').get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -44,11 +44,12 @@ class Dashboard extends Component {
     });
 
     return (
-      <div style={ {'display': 'flex', 'justifyContent': 'center'} }>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
         {this.state.trips.map((trip, index) => (
-          <p key={index} style={{'margin': '25px'}}> 
+          <p key={index} style={{ margin: '25px' }}>
             <Link to="/tripDetails">
-              {trip.destination} Trip
+              {trip.destination}
+              Trip
             </Link>
           </p>
         ))}
