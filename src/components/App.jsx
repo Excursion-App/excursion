@@ -4,9 +4,11 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Beta from './Beta';
 import Dashboard from './Dashboard';
 import Destination from './Destination';
+import Authentication from './Authentication';
 import Existing from './Existing';
 import Guests from './Guests';
 import Home from './Home';
+import TripDetails from './TripDetails';
 import TravelDates from './TravelDates';
 
 const App = () => (
