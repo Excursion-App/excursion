@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import '../views/Dashboard.css';
 import firebase from '../firebase';
 import Breadcrumbs from './Breadcrumbs';
-// import { findLastIndex } from 'lodash';
 
 const db = firebase.firestore();
 
@@ -18,7 +17,7 @@ class Dashboard extends Component {
 
   tripDetails(destination) {
     // get the id of the specific trip that has been clicked on
-    console.log('destination', destination.destination)
+    console.log('destination', destination.destination);
     // var docRef = db.collection('Trips').doc('here');
 
     // docRef.get().then(function(doc) {
