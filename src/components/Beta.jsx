@@ -21,7 +21,7 @@ class Beta extends Component {
     db.collection('Email-List').add({
       email,
     })
-      .then((docRef) => {
+      .then(() => {
         console.log('Email Successfully Added');
       })
       .catch((error) => {
