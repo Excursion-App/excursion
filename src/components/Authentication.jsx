@@ -5,7 +5,6 @@ import Login from './Login';
 import Hero from './Hero';
 import '../views/Authentication.css';
 
-
 function Authentication() {
   const [user, setUser] = useState('');
   const [email, setEmail] = useState('');
@@ -55,7 +54,7 @@ function Authentication() {
           case 'auth/invalid-email':
             setEmailError(err.message);
             break;
-          case 'auth/wea-password':
+          case 'auth/weak-password':
             setPasswordError(err.message);
             break;
           default:
@@ -101,7 +100,6 @@ function Authentication() {
           passwordError={passwordError}
         />
       )}
-
 
     </div>
   );
