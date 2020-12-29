@@ -31,19 +31,19 @@ class Beta extends Component {
     const db = firebase.firestore();
     const { email } = this.state;
 
-    if(this.validate()){
+    if (this.validate()) {
       console.log(this.state);
 
-      let input = '';
+      const input = '';
       // input["email"] = "";
-      this.setState({input:input});
+      this.setState({ input });
 
       db.collection('Email-List').add({
         email: this.state.input,
       })
-      .then(() => {
-        console.log('Email Successfully Added');
-        alert("Thanks for your interest! We'll be in touch.");
+        .then(() => {
+          console.log('Email Successfully Added');
+          alert("Thanks for your interest! We'll be in touch.");
         })
         .catch((error) => {
           console.error('Error adding email please try again.');
@@ -69,7 +69,7 @@ class Beta extends Component {
       }
     }
     this.setState({
-      errors: errors
+      errors,
     });
 
     return isValid;
@@ -95,7 +95,7 @@ class Beta extends Component {
         <div className="body">
           <p className="betaTitle"> Group Travel Made Easy </p>
           <p className="betaTagline"> Take the hassle out of planning a group trip or vacation. </p>
-          <div>
+          <div className="emailInputDiv">
             <input
               className="emailInput"
               type="text"
