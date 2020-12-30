@@ -1,51 +1,30 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
 import Beta from './Beta';
 import Dashboard from './Dashboard';
 import Destination from './Destination';
+import Authentication from './Authentication';
 import Existing from './Existing';
 import Guests from './Guests';
 import Home from './Home';
-import TravelDates from './TravelDates';
 import TripDetails from './TripDetails';
-
-const initialState = {
-  tripId: '',
-};
-
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'UPDATE TRIP ID':
-      return {
-        tripId: state.tripId,
-      };
-    default:
-      return state;
-  }
-};
-
-const store = createStore(reducer);
-
-store.dispatch({ type: 'UPDATE TRIP ID' });
+import TravelDates from './TravelDates';
 
 const App = () => (
-  <Provider store={store}>
-    <Router>
-      <div>
-        <Route path="/" exact component={Beta} />
-        <Route path="/excursion" component={Home} />
-        <Route path="/destination" component={Destination} />
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/existing" component={Existing} />
-        <Route path="/guests" component={Guests} />
-        <Route path="/travel-dates" component={TravelDates} />
-        <Route path="/tripDetails" component={TripDetails} />
-      </div>
-    </Router>
-  </Provider>
+  <Router>
+    <div>
+      <Route path="/" exact component={Beta} />
+      <Route path="/excursion" exact component={Home} />
+      <Route path="/auth" component={Authentication} />
+      <Route path="/destination" component={Destination} />
+      <Route path="/dashboard" component={Dashboard} />
+      <Route path="/existing" component={Existing} />
+      <Route path="/guests" component={Guests} />
+      <Route path="/travel-dates" component={TravelDates} />
+      <Route path="/tripDetails" component={TripDetails} />
+    </div>
+  </Router>
 );
 
 export default App;

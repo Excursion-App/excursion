@@ -30,6 +30,7 @@ class Dashboard extends Component {
   // tripDetails(destination) {
     // get the id of the specific trip that has been clicked on
     // console.log('destination', destination.destination)
+
     // var docRef = db.collection('Trips').doc('here');
 
     // docRef.get().then(function(doc) {

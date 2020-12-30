@@ -50,7 +50,7 @@ const Guests = () => (
         </button>
       </div>
     </div>
-  </>
+  </> 
 );
 
 export default Guests;

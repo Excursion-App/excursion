@@ -6,7 +6,7 @@ import brand from '../images/excursion-logo.png';
 const Navbar = () => (
   <>
     <div className="navbar">
-      <Link to="/" className="brand">
+      <Link to="/excursion" className="brand">
         <img
           alt="brandName"
           className="brand"
@@ -14,7 +14,7 @@ const Navbar = () => (
         />
       </Link>
 
-      <Link to="/dashboard" className="list" id="signup">
+      <Link to="/auth" className="list" id="signup">
         <i className="fas fa-user-alt" />
         Sign up
       </Link>
