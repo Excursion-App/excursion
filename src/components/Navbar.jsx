@@ -6,7 +6,7 @@ import brand from '../images/excursion-logo.png';
 const Navbar = () => (
   <>
     <div className="navbar">
-      <Link to="/" className="brand">
+      <Link to="/excursion" className="brand">
         <img
           alt="brandName"
           className="brand"
