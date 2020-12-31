@@ -1,9 +1,10 @@
-.dashboard {
+ul {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+
+li {
+  list-style-type: none;
 }
 
 h1 {
