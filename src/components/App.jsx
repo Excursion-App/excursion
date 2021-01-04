@@ -7,7 +7,9 @@ import Destination from './Destination';
 import Existing from './Existing';
 import Guests from './Guests';
 import Home from './Home';
-import TravelDates from './TravelDates';
+import Authentication from './Authentication';
+// import TravelDates from './TravelDates';
+import TripDetails from './TripDetails';
 
 const App = () => (
   <Router>
@@ -19,8 +21,8 @@ const App = () => (
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/existing" component={Existing} />
       <Route path="/guests" component={Guests} />
-      <Route path="/travel-dates" component={TravelDates} />
-       <Route path="/tripDetails" component={TripDetails} />
+      {/* <Route path="/travel-dates" component={TravelDates} /> */}
+      <Route path="/tripDetails" component={TripDetails} />
     </div>
   </Router>
 );
