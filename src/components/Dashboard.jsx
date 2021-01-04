@@ -28,7 +28,7 @@ class Dashboard extends Component {
   }
 
   details() {
-    console.log('fuck this')
+    console.log(this.state.trips)
   }
 
   render() {
@@ -36,13 +36,16 @@ class Dashboard extends Component {
       <div>
         <Navbar />
         <div className="dashboard">
-          <h3 style={{'padding': '50px 0px 0px 25px'}}> Upcoming Trips </h3>
+          <button type="button" className="user-flow">
+            <Link to="/destination"> New Trip </Link>
+          </button>
+          <h3> Upcoming Trips </h3>
           {this.state.trips.map((trip) => (
             <ul>
               <li 
                 key={trip.id} 
-                onClick={console.log(trip)}> 
-                {trip.destination} Trip 
+                onClick={this.details}> 
+                {trip.destination}
               </li>
             </ul>
           ))}
