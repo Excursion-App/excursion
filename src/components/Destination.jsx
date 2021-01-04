@@ -45,7 +45,7 @@ class Destination extends Component {
         <Breadcrumbs />
         <div>
           <div>
-            <h1> Top Destinations </h1>
+            <h1 className="destination-title"> Top Destinations </h1>
             <MultipleImages />
           </div>
           <div className="centerize">
