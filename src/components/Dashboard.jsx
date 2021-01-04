@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { findLastIndex } from 'lodash';
 import Navbar from './Navbar';
 import firebase from '../firebase';
 import '../views/Dashboard.css';
@@ -28,7 +26,7 @@ class Dashboard extends Component {
   }
 
   details() {
-    console.log('fuck this')
+    console.log('trip details')
   }
 
   render() {
@@ -36,13 +34,14 @@ class Dashboard extends Component {
       <div>
         <Navbar />
         <div className="dashboard">
-          <h3 style={{'padding': '50px 0px 0px 25px'}}> Upcoming Trips </h3>
+          <h3 style={{ padding: '50px 0px 0px 25px' }}> Upcoming Trips </h3>
           {this.state.trips.map((trip) => (
             <ul>
               <li 
                 key={trip.id} 
                 onClick={console.log(trip)}> 
-                {trip.destination} Trip 
+                {trip.destination}
+                Trip
               </li>
             </ul>
           ))}
