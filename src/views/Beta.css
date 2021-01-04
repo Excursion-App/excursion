@@ -14,10 +14,10 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: green;
   background: url(../images/beta.jpg);
+  /* background-image: url(https://unsplash.com/photos/hmBz6fWZB7k); */
   background-size: 100%;
-  min-height: 100vh;
+  min-height: 93vh;
 }
 
 .wrapper {
