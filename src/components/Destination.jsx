@@ -9,12 +9,9 @@ class Destination extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // origin: '',
       destination: '',
-      tripId: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleStartChange = this.handleStartChange.bind(this);
     this.handleEndChange = this.handleEndChange.bind(this);
   }
 
@@ -22,26 +19,19 @@ class Destination extends Component {
     event.preventDefault();
 
     const db = firebase.firestore();
-    const { destination,} = this.state;
+    const { destination } = this.state;
     db.collection('Trips').add({
       destination: this.state.destination,
-      // origin: this.state.origin,
     })
       .then((docRef) => {
+        docRef.update({ id: docRef.id });
         console.log(`${destination} Trip successfully created with ID ${docRef.id}`);
-        this.setState({ tripId: docRef.id });
-        // store.dispatch('UPDATE TRIP ID'(docRef.id))
-        //update the id & add it to redux 
         this.props.history.push('/dashboard');
       })
       .catch((error) => {
         console.error('Error adding document: ', error);
       });
   }
-
-  // handleStartChange(event) {
-  //   this.setState({ origin: event.target.value });
-  // }
 
   handleEndChange(event) {
     this.setState({ destination: event.target.value });
@@ -60,22 +50,7 @@ class Destination extends Component {
           </div>
           <div className="centerize">
             <form className="form-inline" action="/travel-dates" onSubmit={this.handleSubmit}>
-              {/* <label htmlFor="startFrom">
-                From:
-                <br />
-                <input
-                  type="text"
-                  id="startFrom"
-                  value={origin}
-                  required
-                  placeholder="Where are you coming from?"
-                  onChange={this.handleStartChange}
-                  size="25"
-                />
-              </label> */}
-
               <label htmlFor="endTo">
-                To:
                 <br />
                 <input
                   type="text"
@@ -87,7 +62,6 @@ class Destination extends Component {
                   size="25"
                 />
               </label>
-
               <button type="submit" className="user-flow" style={{ marginTop: '23px' }}>
                 <i className="fas fa-search-location" />
                 Next
@@ -101,8 +75,3 @@ class Destination extends Component {
 }
 
 export default Destination;
-
-// function that sets state and calls handleStartThrottle
-// remove set state from handleStartChange
-// call new function with input on change.
-// increase time
