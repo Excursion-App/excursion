@@ -10,6 +10,7 @@ class Beta extends Component {
     this.state = {
       input: {},
       errors: {},
+      success: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,21 +30,19 @@ class Beta extends Component {
     e.preventDefault();
 
     const db = firebase.firestore();
-    const { email } = this.state;
+    // const { email } = this.state;
 
     if (this.validate()) {
       console.log(this.state);
 
       const input = '';
-      // input["email"] = "";
       this.setState({ input });
 
       db.collection('Email-List').add({
         email: this.state.input,
       })
         .then(() => {
-          console.log('Email Successfully Added');
-          alert("Thanks for your interest! We'll be in touch.");
+          this.setState({ success: 'Your email has been received. Thank you.' });
         })
         .catch((error) => {
           console.error('Error adding email please try again.');
@@ -108,6 +107,7 @@ class Beta extends Component {
             />
             <button className="emailButton" type="submit" onClick={this.handleSubmit}> Request Early Access </button>
             <div className="text-danger">{this.state.errors.email}</div>
+            <div className="success">{this.state.success}</div>
           </div>
         </div>
       </div>
