@@ -7,17 +7,17 @@
 
 .brand{
   height: 48px;
-  padding-left: 10px;
+  padding-left: 40px;
 }
 
 .body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: green;
   background: url(../images/beta.jpg);
+  /* background-image: url(https://unsplash.com/photos/hmBz6fWZB7k); */
   background-size: 100%;
-  min-height: 100vh;
+  min-height: 93vh;
 }
 
 .wrapper {
@@ -25,19 +25,19 @@
 }
 
 .betaTitle {
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 60px;
+  font-weight: 900;
   margin-bottom: 0px;
-  padding: 20px;
+  padding: 70px 20px 20px 80px;
   color: rgb(27, 40, 93);
-  text-shadow: 1px 1px 2px #808080;
+  text-shadow: 1px 1px 2px #000;
 }
 
 .betaTagline {
-  font-size: 20px;
-  padding-left: 20px;
+  font-size: 30px;
+  padding-left: 80px;
   color: rgb(27, 40, 93);
-  text-shadow: 1px 1px 2px #808080;
+  text-shadow: 1px 1px 2px #000;
 }
 
 .betaButton {
@@ -56,7 +56,9 @@
   background-color: rgb(27, 40, 93);
   border-radius: 5px;
 }
-
+.emailInputDiv{
+  margin-left: 60px;
+}
 .emailInput {
   margin-left: 20px;
   padding: 5px;
@@ -64,3 +66,10 @@
   border-radius: 5px;
 }
 
+.text-danger {
+  margin-left: 10px;
+  font-size: 16px;
+  color:red;
+  padding: 5px 10px 10px 10px;
+  text-shadow: 1px 1px 2px #000;
+}

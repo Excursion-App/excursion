@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
-import '../views/Dashboard.css';
-import firebase from '../firebase';
-import Breadcrumbs from './Breadcrumbs';
 import { findLastIndex } from 'lodash';
+import Navbar from './Navbar';
+import firebase from '../firebase';
+import '../views/Dashboard.css';
 
 const db = firebase.firestore();
 
@@ -13,28 +12,12 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       trips: [],
+      details: {},
     };
   }
 
-  tripDetails(destination) {
-    // get the id of the specific trip that has been clicked on
-    console.log('destination', destination.destination)
-    // var docRef = db.collection('Trips').doc('here');
-
-    // docRef.get().then(function(doc) {
-    //     if (doc.exists) {
-    //         console.log("Document data:", doc.data());
-    //     } else {
-    //         // doc.data() will be undefined in this case
-    //         console.log("No such document!");
-    //     }
-    // }).catch(function(error) {
-    //     console.log("Error getting document:", error);
-    // });
-  }
-
-  displayTrips() {
-    let tripsArr = [];
+  componentDidMount() {
+    const tripsArr = [];
 
     db.collection('Trips').get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -42,31 +25,30 @@ class Dashboard extends Component {
       });
       this.setState({ trips: tripsArr });
     });
+  }
 
-    return (
-      <div style={ {'display': 'flex', 'justifyContent': 'center'} }>
-        {this.state.trips.map((trip, index) => (
-          <p key={index} style={{'margin': '25px'}}> 
-            <Link to="/tripDetails">
-              {trip.destination} Trip
-            </Link>
-          </p>
-        ))}
-      </div>
-    );
+  details() {
+    console.log(this.state.trips)
   }
 
   render() {
     return (
       <div>
         <Navbar />
-        <Breadcrumbs />
-        <h1 className="dashboard"> Your Trips </h1>
-        {this.displayTrips()}
         <div className="dashboard">
-          {/* {this.state.trips.map((trip, index) => (
-            <p key={index}> {trip.destination} trip </p>
-          ))} */}
+          <button type="button" className="user-flow">
+            <Link to="/destination"> New Trip </Link>
+          </button>
+          <h3> Upcoming Trips </h3>
+          {this.state.trips.map((trip) => (
+            <ul>
+              <li 
+                key={trip.id} 
+                onClick={this.details}> 
+                {trip.destination}
+              </li>
+            </ul>
+          ))}
         </div>
       </div>
     );

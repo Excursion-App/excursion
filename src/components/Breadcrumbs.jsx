@@ -7,7 +7,7 @@ const Breadcrumbs = () => (
   <div id="breadcrumbs">
     <ul id="breadcrumb">
       <li>
-        <Link to="/">
+        <Link to="/excursion">
           <i className="fas fa-home" />
           Home
         </Link>
@@ -18,7 +18,7 @@ const Breadcrumbs = () => (
           Destination
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="/travel-dates">
           <i className="fas fa-calendar-alt" />
           Travel Dates
@@ -29,7 +29,7 @@ const Breadcrumbs = () => (
           <i className="fas fa-users" />
           Add Guests
         </Link>
-      </li>
+      </li> */}
       <li>
         <Link to="/dashboard">
           <i className="fas fa-money-check" />

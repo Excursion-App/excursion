@@ -17,7 +17,7 @@ This project is still in development stages. Star this repo for more updates/det
 This project helps groups coordinate trips for groups. It eliminates the use spreadsheets. One single user is the group travel lead and has access to adding members and coordinating the whole vacation. Other users can view the trip and see items that they need to pay for. It also allows members to chat with each other in the chatroom. Use the calendar to countdown your vacation. 
 
 ## Live
-For the live version, go to [https://the-excursion-app.web.app//](https://the-excursion-app.web.app/).
+For the live version, go to [the-excursion-app.web.app](the-excursion-app.web.app/).
 
 ## Getting Started
 
