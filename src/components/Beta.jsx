@@ -42,7 +42,8 @@ class Beta extends Component {
         email: this.state.input,
       })
         .then(() => {
-          this.setState({ success: 'Your email has been received. Thank you.' });
+          this.setState({ 
+            success: 'Your email has been received. Thank you.' });
         })
         .catch((error) => {
           console.error('Error adding email please try again.');
@@ -57,14 +58,14 @@ class Beta extends Component {
 
     if (!input) {
       isValid = false;
-      errors['email'] = 'Please enter your email address.';
+      errors.email = 'Please enter your email address.';
     }
 
     if (typeof input !== 'undefined') {
       const pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
       if (!pattern.test(input)) {
         isValid = false;
-        errors['email'] = 'Please enter valid email address.';
+        errors.email = 'Please enter a valid email address.';
       }
     }
     this.setState({
@@ -107,7 +108,7 @@ class Beta extends Component {
             />
             <button className="emailButton" type="submit" onClick={this.handleSubmit}> Request Early Access </button>
             <div className="text-danger">{this.state.errors.email}</div>
-            <div className="success">{this.state.success}</div>
+            <div className="text-success">{this.state.success}</div>
           </div>
         </div>
       </div>
