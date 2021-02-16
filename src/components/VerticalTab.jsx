@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Tab, TabList } from 'react-tabs';
+import {
+  Tabs, Tab, TabList, TabPanel,
+} from 'react-tabs';
 import firebase from '../firebase';
+import 'react-tabs/style/react-tabs.css';
 
 const db = firebase.firestore();
 
@@ -18,9 +21,18 @@ export default function VerticalTabs() {
 
   return (
     <div>
-      <TabList>
-        { trips.map((trip) => <Tab key={trip.id}>{trip.destination}</Tab>) }
-      </TabList>
+      <Tabs>
+        <TabList>
+          { trips.map((trip) => <Tab key={trip.id}>{trip.destination}</Tab>) }
+        </TabList>
+        { trips.map((trip) => (
+          <TabPanel>
+            <div key={trip.id}>
+              {trip.destination} Trip
+            </div>
+          </TabPanel>
+        ))}
+      </Tabs>
     </div>
   );
 }
