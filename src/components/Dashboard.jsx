@@ -24,28 +24,22 @@ export default function Dashboard() {
     <div>
       <Navbar />
       <div className="dashboard">
-        <h3>
-          Welcome Back,
-          <br />
-          Jaquisha!
-        </h3>
-        <div>
-          <Tabs>
-            <TabList>
-              { trips.map((trip) => <Tab key={trip.id}>{trip.destination}</Tab>) }
-            </TabList>
-            { trips.map((trip) => (
-              <TabPanel>
-                <div key={trip.id}>
-                  {trip.destination}
-                  Trip
-                </div>
-                <button> Invite Friends </button>
-                <button> Add Dates </button>
-              </TabPanel>
-            ))}
-          </Tabs>
-        </div>
+        <Tabs style={{ display: 'flex' }}>
+          <TabList style={{ margin: '50px' }}>
+            { trips.map((trip) => <Tab key={trip.id}>{trip.destination}</Tab>) }
+          </TabList>
+          { trips.map((trip) => (
+            <TabPanel>
+              <div key={trip.id}>
+                {trip.destination}
+              </div>
+              <div>
+                <input type="text" />
+                <button type="submit"> Invite </button>
+              </div>
+            </TabPanel>
+          ))}
+        </Tabs>
       </div>
     </div>
   );
