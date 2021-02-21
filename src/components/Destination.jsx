@@ -1,3 +1,10 @@
+// Notes for Everlaw
+// This is a project my and I have been working on for the past few weeks called Excursion
+// Excursion is a group travel app
+// On this page the user picks a destination and creates a new trip
+// I chose this specific page to showcase my technical skills because prior to working on this project
+// I had zero knowledge of firebase, I had to learn how create a new document and add it to the database
+
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import firebase from '../firebase';

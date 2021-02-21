@@ -1,58 +1,52 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { findLastIndex } from 'lodash';
-import Navbar from './Navbar';
+import React, { useState, useEffect } from 'react';
+import {
+  Tabs, Tab, TabList, TabPanel,
+} from 'react-tabs';
 import firebase from '../firebase';
+import Navbar from './Navbar';
 import '../views/Dashboard.css';
 
 const db = firebase.firestore();
 
-class Dashboard extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      trips: [],
-      details: {},
-    };
-  }
+export default function Dashboard() {
+  const [trips, setList] = useState([]);
 
-  componentDidMount() {
-    const tripsArr = [];
-
+  useEffect(() => {
     db.collection('Trips').get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        tripsArr.push(doc.data());
+        const data = doc.data();
+        setList((trip) => trip.concat(data));
       });
-      this.setState({ trips: tripsArr });
     });
-  }
+  }, []);
 
-  details() {
-    console.log(this.state.trips)
-  }
-
-  render() {
-    return (
-      <div>
-        <Navbar />
-        <div className="dashboard">
-          <button type="button" className="user-flow">
-            <Link to="/destination"> New Trip </Link>
-          </button>
-          <h3> Upcoming Trips </h3>
-          {this.state.trips.map((trip) => (
-            <ul>
-              <li 
-                key={trip.id} 
-                onClick={this.details}> 
-                {trip.destination}
-              </li>
-            </ul>
-          ))}
+  return (
+    <div>
+      <Navbar />
+      <div className="dashboard">
+        <h3>
+          Welcome Back,
+          <br />
+          Jaquisha!
+        </h3>
+        <div>
+          <Tabs>
+            <TabList>
+              { trips.map((trip) => <Tab key={trip.id}>{trip.destination}</Tab>) }
+            </TabList>
+            { trips.map((trip) => (
+              <TabPanel>
+                <div key={trip.id}>
+                  {trip.destination}
+                  Trip
+                </div>
+                <button> Invite Friends </button>
+                <button> Add Dates </button>
+              </TabPanel>
+            ))}
+          </Tabs>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
-
-export default Dashboard;

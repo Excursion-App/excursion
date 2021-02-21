@@ -10,6 +10,7 @@ import Guests from './Guests';
 import Home from './Home';
 import TripDetails from './TripDetails';
 import TravelDates from './TravelDates';
+import VerticalTab from './VerticalTab.jsx';
 
 const App = () => (
   <Router>
@@ -21,6 +22,7 @@ const App = () => (
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/existing" component={Existing} />
       <Route path="/guests" component={Guests} />
+      <Route path="/vt" component={VerticalTab} />
       <Route path="/travel-dates" component={TravelDates} />
       <Route path="/tripDetails" component={TripDetails} />
     </div>
