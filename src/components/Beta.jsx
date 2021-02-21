@@ -102,7 +102,7 @@ class Beta extends Component {
               value={this.state.input.email}
               onChange={this.handleChange}
               placeholder="jaquisha@excursion.com"
-              // pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+              pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
               required
             />
             <button
