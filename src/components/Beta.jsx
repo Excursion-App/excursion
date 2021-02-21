@@ -42,8 +42,7 @@ class Beta extends Component {
         email: this.state.input,
       })
         .then(() => {
-          this.setState({ 
-            success: 'Your email has been received. Thank you.' });
+          this.setState({ success: 'Your email has been received. Thank you.' });
         })
         .catch((error) => {
           console.error('Error adding email please try again.');
@@ -52,8 +51,8 @@ class Beta extends Component {
   }
 
   validate() {
-    let input = this.state.input;
-    let errors = {};
+    const input = this.state;
+    const errors = {};
     let isValid = true;
 
     if (!input) {
@@ -95,7 +94,7 @@ class Beta extends Component {
         <div className="body">
           <p className="betaTitle"> Group Travel Made Easy </p>
           <p className="betaTagline"> Take the hassle out of planning a group trip or vacation. </p>
-          <div className="emailInputDiv">
+          <div className="emailInputDiv" id="hidden-div">
             <input
               className="emailInput"
               type="text"
