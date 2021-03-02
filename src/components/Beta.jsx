@@ -17,7 +17,6 @@ class Beta extends Component {
   }
 
   handleChange(e) {
-    let input = this.state.input;
     // input[e.target.name] = e.target.value;
 
     this.setState({
@@ -49,7 +48,7 @@ class Beta extends Component {
   }
 
   validate() {
-    const input = this.state;
+    const { input } = this.state;
     const errors = {};
     let isValid = true;
 
