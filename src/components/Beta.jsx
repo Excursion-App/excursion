@@ -33,8 +33,6 @@ class Beta extends Component {
     // const { email } = this.state;
 
     if (this.validate()) {
-      console.log(this.state);
-
       const input = '';
       this.setState({ input });
 
