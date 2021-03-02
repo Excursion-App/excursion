@@ -91,7 +91,7 @@ class Beta extends Component {
         <div className="body">
           <p className="betaTitle"> Group Travel Made Easy </p>
           <p className="betaTagline"> Take the hassle out of planning a group trip or vacation. </p>
-          <div className="emailInputDiv" id="hidden-div">
+          <div className="emailInputDiv">
             <input
               className="emailInput"
               type="text"
@@ -99,37 +99,30 @@ class Beta extends Component {
               value={this.state.input.email}
               onChange={this.handleChange}
               placeholder="jaquisha@excursion.com"
-              pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+              // pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
               required
             />
             <button
               className="emailButton"
               type="submit"
-              // onClick={() => {
-                // this.handleSubmit.bind(this);
-                // document.getElementById('hidden-div').style.display = 'none';
-              // }}
               onClick={this.handleSubmit}
             >
               Request Early Access
             </button>
-          </div>
-          <div className="text-danger">{this.state.errors.email}</div>
-          <div className="text-success">{this.state.success}</div>
-          <Link
-            className="typeform-share button"
-            to="https://form.typeform.com/to/dZ5dZwOd?typeform-medium=embed-snippet"
-            data-mode="popup"
-            style={{
-              display: 'inline-block', textDecoration: 'none', backgroundColor: '#1B2C5D', color: 'white', cursor: 'pointer', fontFamily: 'sans-serif', fontSize: '14px', lineHeight: '50px', textAlign: 'center', margin: 0, height: '50px', padding: '0px 5px', marginLeft: '21px', boxShadow: '0 50px 70px -20px #fff', borderRadius: '5px', width: '170px', maxWidth: '100%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale',
-            }}
-            data-size={100}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Take our survey
-          </Link>
 
+            <Link
+              className="typeform-share button"
+              to="https://form.typeform.com/to/dZ5dZwOd?typeform-medium=embed-snippet"
+              data-mode="popup"
+              data-size={100}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Take our survey
+            </Link>
+            <div className="text-danger">{this.state.errors.email}</div>
+            <div className="text-success">{this.state.success}</div>
+          </div>
         </div>
       </div>
     );
