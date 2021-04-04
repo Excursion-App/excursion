@@ -6,18 +6,7 @@ import brand from '../images/excursion-logo.png';
 
 // import authentication
 const defaultAuth = firebase.auth();
-
-const testing = () => {
-  defaultAuth.onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      console.log('user is signed in')
-    } else {
-      // No user is signed in.
-      console.log('no one is signed in')
-    }
-  });
-}
+const user = firebase.auth().currentUser;
 
 const Navbar = () => (
   <div>
@@ -29,7 +18,7 @@ const Navbar = () => (
           src={brand}
         />
       </Link>
-
+      {user ? (console.log('yess')) : (console.log('no'))}
       {/* if the user is not logged in they will see this:  */}
       <Link to="/auth" className="list" id="signup">
         <i className="fas fa-user-alt" />

@@ -16,7 +16,7 @@ const App = () => (
   <Router>
     <div>
       <Route path="/" exact component={Beta} />
-      <Route path="/excursion" exact component={Home} />
+      <Route path="/new-trip" exact component={Home} />
       <Route path="/auth" component={Authentication} />
       <Route path="/destination" component={Destination} />
       <Route path="/dashboard" component={Dashboard} />
