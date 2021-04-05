@@ -17,7 +17,7 @@ const Login = (props) => {
   return (
     <section className="login">
       <div className="loginContainer">
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username"> Username </label>
         <input
           type="text"
           autoFocus
@@ -62,9 +62,7 @@ const Login = (props) => {
               </button>
               <p>
                 Have an account?
-                <span
-                  onClick={() => setHasAccount(!hasAccount)}
-                >
+                <span onClick={() => setHasAccount(!hasAccount)}>
                   Sign in
                 </span>
               </p>

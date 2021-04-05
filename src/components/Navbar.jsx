@@ -5,20 +5,21 @@ import '../views/Navbar.css';
 import brand from '../images/excursion-logo.png';
 
 // import authentication
-const defaultAuth = firebase.auth();
+// const defaultAuth = firebase.auth();
 const user = firebase.auth().currentUser;
 
 const Navbar = () => (
   <div>
     <div className="navbar">
-      <Link to="/excursion" className="brand">
+      <Link to="/new-trip" className="brand">
         <img
           alt="brandName"
           className="brand"
           src={brand}
         />
       </Link>
-      {user ? (console.log('yess')) : (console.log('no'))}
+      { console.log(user) }
+      {/* {user ? (console.log('yess')) : (console.log('no'))} */}
       {/* if the user is not logged in they will see this:  */}
       <Link to="/auth" className="list" id="signup">
         <i className="fas fa-user-alt" />

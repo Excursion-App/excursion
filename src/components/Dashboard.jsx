@@ -24,9 +24,16 @@ export default function Dashboard() {
     <div>
       <Navbar />
       <div className="dashboard">
-        <Tabs style={{ display: 'flex' }}>
-          <TabList style={{ margin: '50px' }}>
+        <div className="sidebar">
+          <p> Welcome Back, *User Name* </p>
+        </div>
+        <div className="spreadsheet">
+          <h1> Trip Info Table... </h1>
+        </div>
+        {/* <Tabs style={{ display: 'flex' }}>
+            <p> Upcoming Trips: </p>
             { trips.map((trip) => <Tab key={trip.id}>{trip.destination}</Tab>) }
+          <TabList style={{ margin: '50px' }}>
           </TabList>
           { trips.map((trip) => (
             <TabPanel>
@@ -39,7 +46,7 @@ export default function Dashboard() {
               </div>
             </TabPanel>
           ))}
-        </Tabs>
+        </Tabs> */}
       </div>
     </div>
   );

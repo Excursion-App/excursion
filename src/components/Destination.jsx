@@ -12,6 +12,11 @@ import '../views/Destination.css';
 import Breadcrumbs from './Breadcrumbs';
 import MultipleImages from './MultipleImages';
 
+
+// Feature to be added.. if the user is not logged in redirect
+// them to the signup/log in page 
+// 
+
 class Destination extends Component {
   constructor(props) {
     super(props);
