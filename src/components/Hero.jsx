@@ -9,6 +9,7 @@ const Hero = ({ handleLogout }) => (
         type="button"
         onClick={handleLogout}
       >
+        <i className="fas fa-sign-in-alt" />
         Log Out
       </button>
     </nav>
