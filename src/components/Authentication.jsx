@@ -67,13 +67,14 @@ function Authentication() {
   };
 
   const authListener = () => {
-    firebase.auth().onAuthStateChanged((user) => {
-      clearInputs();
-      if (user) {
-        setUser(user);
-      } else {
-        setUser('');
-      }
+    firebase.auth().onAuthStateChanged(() => {
+      setUser(user);
+      // clearInputs();
+      // if (user) {
+      //   setUser(user);
+      // } else {
+      //   setUser('');
+      // }
     });
   };
 
@@ -89,18 +90,17 @@ function Authentication() {
       ) : (
         <Login
           email={email}
-          setEmail={setEmail}
           password={password}
+          setEmail={setEmail}
           setPassword={setPassword}
           handleLogin={handleLogin}
           handleSignup={handleSignup}
-          hasAccount={hasAccount}
           setHasAccount={setHasAccount}
+          hasAccount={hasAccount}
           emailError={emailError}
           passwordError={passwordError}
         />
       )}
-
     </div>
   );
 }
