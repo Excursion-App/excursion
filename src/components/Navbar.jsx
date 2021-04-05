@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import firebase from '../firebase';
+// import firebase from '../firebase';
 import '../views/Navbar.css';
 import brand from '../images/excursion-logo.png';
 

@@ -10,7 +10,7 @@ import Guests from './Guests';
 import Home from './Home';
 import TripDetails from './TripDetails';
 import TravelDates from './TravelDates';
-import VerticalTab from './VerticalTab.jsx';
+import VerticalTab from './VerticalTab';
 
 const App = () => (
   <Router>
