@@ -27,7 +27,7 @@ export default function Dashboard() {
         <h3>
           Welcome Back,
           <br />
-          Jaquisha!
+          user
         </h3>
         <div>
           <Tabs>
@@ -40,8 +40,8 @@ export default function Dashboard() {
                   {trip.destination}
                   Trip
                 </div>
-                <button> Invite Friends </button>
-                <button> Add Dates </button>
+                <button type="button"> Invite Friends </button>
+                <button type="button"> Add Dates </button>
               </TabPanel>
             ))}
           </Tabs>
