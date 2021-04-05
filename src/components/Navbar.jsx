@@ -1,23 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import firebase from '../firebase';
+// import firebase from '../firebase';
 import '../views/Navbar.css';
 import brand from '../images/excursion-logo.png';
 
 // import authentication
-const defaultAuth = firebase.auth();
+// const defaultAuth = firebase.auth();
 
-const testing = () => {
-  defaultAuth.onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      console.log('user is signed in')
-    } else {
-      // No user is signed in.
-      console.log('no one is signed in')
-    }
-  });
-}
+// const testing = () => {
+//   defaultAuth.onAuthStateChanged((user) => {
+//     if (user) {
+//       // User is signed in.
+//       console.log('user is signed in');
+//     } else {
+//       // No user is signed in.
+//       console.log('no one is signed in');
+//     }
+//   });
+// };
 
 const Navbar = () => (
   <div>
