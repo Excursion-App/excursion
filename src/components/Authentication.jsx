@@ -70,8 +70,10 @@ function Authentication() {
     firebase.auth().onAuthStateChanged((user) => {
       clearInputs();
       if (user) {
+        console.log('here i go', user);
         setUser(user);
       } else {
+        console.log('no user');
         setUser('');
       }
     });
