@@ -11,7 +11,7 @@
     "firebase": "^9.6.4",
     "firebase-admin": "^11.4.1",
     "firebase-functions": "^3.24.1",
-    "follow-redirects": "^1.14.8",
+    "follow-redirects": "^1.15.4",
     "gh-pages": "^3.2.3",
     "lodash": "^4.17.21",
     "node-fetch": "^3.2.10",
